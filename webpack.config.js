@@ -90,7 +90,8 @@ let config = {
         alias: {
             'assets' : path.resolve('./assets'),
             'img':path.resolve('./assets/img/'),
-            'fontAwesomefonts':path.resolve('./node_modules/font-awesome/fonts/')
+            'fontAwesomefonts':path.resolve('./node_modules/font-awesome/fonts/'),
+            'node_modules':path.resolve('./node_modules')
         }
     },
 
