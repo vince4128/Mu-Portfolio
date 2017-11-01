@@ -15,6 +15,18 @@ const fakeProject = [
         desc: "Description du projet",
         img: "img2",
         id: 1
+    },
+    {
+        projet: "projet3",
+        desc: "Description du projet",
+        img: "img3",
+        id: 2
+    },
+    {
+        projet: "projet4",
+        desc: "Description du projet",
+        img: "img4",
+        id: 3
     }
 ];
 
@@ -32,15 +44,17 @@ class App extends Component {
     render() {
         return (
             <section>
-                <ProjectViewer 
+                <ProjectViewer
                     projets={fakeProject}
-                    onProjectSelect={selectedProject => this.setState({selectedProject})}//update app state 
+                    onProjectSelect={selectedProject => this.setState({selectedProject})}//update app state
+                    projectSelected={this.state.selectedProject} 
                 />
                 <p>selectedProject : {this.state.selectedProject}</p>
-                <ul>
+                <ul className="c-projectPagination">
                     <ProjectPagination 
                         projectSelected={this.state.selectedProject}
                         totalProject={this.state.totalProject}
+                        onProjectSelect={selectedProject => this.setState({selectedProject})}//update app state
                     />
                 </ul>
             </section>
