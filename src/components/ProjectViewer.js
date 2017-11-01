@@ -9,12 +9,13 @@ const ProjectViewer = (props) => {
             projet={project}
             key={project.id}
             onProjectSelect={props.onProjectSelect}
+            projectSelect={props.projectSelected}
             />
         );
     });
 
     return(
-        <ul>
+        <ul className="c-projectViewer">
             {projectItems}
         </ul>
     )
