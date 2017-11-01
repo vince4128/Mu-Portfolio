@@ -18,7 +18,12 @@ const ProjectPagination = (props) => {
 
     for(let i = 0; i<props.totalProject; i++){
         dot.push(
-            <li key={i}>{isActive(i)}</li>
+            <li 
+                key={i}
+                onClick={()=>props.onProjectSelect(i)}
+            >
+                {isActive(i)}
+            </li>
         )
     }
 
