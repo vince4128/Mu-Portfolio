@@ -10,6 +10,7 @@ const ProjectViewer = (props) => {
             key={project.id}
             onProjectSelect={props.onProjectSelect}
             projectSelect={props.projectSelected}
+            totalProject={props.totalProject}
             />
         );
     });
