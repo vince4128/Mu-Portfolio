@@ -1,5 +1,5 @@
 .c-projectScreen{
-    display: inline-block;
+    display: none;
     position: absolute;
     top:0;
     left:0;
@@ -13,16 +13,18 @@
 .c-projectScreen--prev{
     right:100%;
     background-color: red;
+    display: inline-block;
 }
 
 .c-projectScreen + .c-projectScreen,
 .c-projectScreen--next{
-    left:100%;
     background-color: green;
+    //left:100%;
 }
 
 .c-projectScreen--active{
     background-color: yellow;
+    display: inline-block;
 }
 
 .test{
