@@ -1,22 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const ProjectScreen = (props) => {
+class ProjectScreen extends Component {
 
-    function isWhat(index){
-        if(index === props.projet.id){
-            return "c-projectScreen--active"
-        }else if(index === (props.projet.id - 1)){
-            return "c-projectScreen--prev"
-        }else if(index === (props.projet.id + 1)){
-            return "c-projetScreen--next"
+    constructor(props){
+        super(props);
+
+        this.state = {
+            status: ''
         }
+
     }
 
-    return(
-        <li className={"c-projectScreen " + isWhat(props.projet.id)} onClick={()=>props.onProjectSelect(props.projet.id)}>
-            <p>projet : {props.projet.projet}</p>
-        </li>
-    )
+    componentWillReceiveProps(nextProps, oldProps){
+
+        //projet en cours
+        if(nextProps.projet.id === nextProps.projectSelect){
+            this.setState({
+                status: 'c-projectScreen--active slideInRight'
+            });
+        //projet precedent
+        }else if(nextProps.projet.id === this.props.projectSelect){
+            this.setState({
+                status: 'c-projectScreen--prev slideOutLeft'
+            });
+        }
+        else{
+            this.setState({
+                status:''
+            });
+        }
+        
+    }
+
+    render(){
+        return(
+            <li className={"c-projectScreen animated " + this.state.status} onClick={()=>this.props.onProjectSelect(this.props.projet.id)}>
+                <p>projet : {this.props.projet.projet}</p>
+            </li>
+        )
+    }
 
 }
 
