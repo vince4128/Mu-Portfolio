@@ -47,7 +47,8 @@ class App extends Component {
                 <ProjectViewer
                     projets={fakeProject}
                     onProjectSelect={selectedProject => this.setState({selectedProject})}//update app state
-                    projectSelected={this.state.selectedProject} 
+                    projectSelected={this.state.selectedProject}
+                    totalProject={this.state.totalProject} 
                 />
                 <p>selectedProject : {this.state.selectedProject}</p>
                 <ul className="c-projectPagination">
