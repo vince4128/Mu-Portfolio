@@ -11,3 +11,7 @@ ReactDOM.render(
     <App />, document.querySelector('.container')
   );
   
+require('../assets/img/img1.jpg');
+require('../assets/img/img2.jpg');
+require('../assets/img/img3.jpg');
+require('../assets/img/img4.jpg');
