@@ -2,30 +2,31 @@ import React, { Component } from 'react';
 
 import ProjectViewer from './ProjectViewer';
 import ProjectPagination from './ProjectPagination';
+import PrevNext from './PrevNext';
 
 const fakeProject = [
     {
         projet: "projet1",
         desc: "Description du projet",
-        img: "img1",
+        img: "img1.jpg",
         id: 0
     },
     {
         projet: "projet2",
         desc: "Description du projet",
-        img: "img2",
+        img: "img2.jpg",
         id: 1
     },
     {
         projet: "projet3",
         desc: "Description du projet",
-        img: "img3",
+        img: "img3.jpg",
         id: 2
     },
     {
         projet: "projet4",
         desc: "Description du projet",
-        img: "img4",
+        img: "img4.jpg",
         id: 3
     }
 ];
@@ -36,7 +37,7 @@ class App extends Component {
         super(props);
     
         this.state = {
-            selectedProject: null,
+            selectedProject: 0,
             totalProject: fakeProject.length
         };
     }
@@ -44,6 +45,11 @@ class App extends Component {
     render() {
         return (
             <section>
+                <PrevNext
+                    onProjectSelect={selectedProject => this.setState({selectedProject})}//update app state
+                    projectSelected={this.state.selectedProject}
+                    totalProject={this.state.totalProject}
+                />
                 <ProjectViewer
                     projets={fakeProject}
                     onProjectSelect={selectedProject => this.setState({selectedProject})}//update app state
