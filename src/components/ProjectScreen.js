@@ -36,6 +36,9 @@ class ProjectScreen extends Component {
         return(
             <li className={"c-projectScreen animated " + this.state.status} onClick={()=>this.props.onProjectSelect(this.props.projet.id)}>
                 <p>projet : {this.props.projet.projet}</p>
+                <div className="c-hero">
+                    <img className="c-hero__bg" src={"img/"+this.props.projet.img}/> 
+                </div>
             </li>
         )
     }
