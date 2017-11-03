@@ -2,37 +2,31 @@ import React from 'react';
 
 const PrevNext = (props) => {
 
-    function nextProject(){
-        let newProj = 0;
-        if(props.projectSelected < totalProject){
-           newProj = props.projectSelected++;
-        }else{
-            newProj = 0;
-        }
-        alert('nextP ' + newProj);
-        return newProj;
-    }
-
-    function prevProject(){
-        let newProj = 0;
+    function prev(){
         if(props.projectSelected > 0){
-            newProj = props.projectSelected--;
+            return props.projectSelected - 1;
         }else{
-            newProj = props.projectSelected;
+            return props.totalProject-1;
         }
-        alert('prevP' + newProj);
-        return newProj;
-    }
+    };
+
+    function next(){
+        if(props.projectSelected < props.totalProject-1){
+            return props.projectSelected + 1;
+        }else{
+            return 0;
+        }
+    };
 
     return(
         <div className="c-prevnext">
             <div 
                 className="c-prevnext__prev"
-                onClick={()=>props.onProjectSelect(prevProject())}>prev
+                onClick={()=>props.onProjectSelect(prev())}>prev
             </div>
             <div 
                 className="c-prevnext__next"
-                onClick={()=>props.onProjectSelect(nextProject())}>next
+                onClick={()=>props.onProjectSelect(next())}>next
             </div>
         </div>
     )
