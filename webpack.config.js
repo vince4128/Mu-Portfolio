@@ -56,7 +56,7 @@ if(!dev){
     ];
 
     //si on est pas en dev on ajoute postcss-loader et autoprefixer
-    cssLoaders.push({
+    /*cssLoaders.push({
         loader: 'postcss-loader',
         options: {
             plugins: (loader) => [
@@ -65,7 +65,7 @@ if(!dev){
                 })
             ]
         }
-    })
+    })*/
 }
 
 //configuration
