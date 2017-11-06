@@ -31,6 +31,17 @@ class ProjectDetailScreen extends Component {
 
     }
 
+    componentWillMount() {
+    
+        //afficher la première image
+        if(this.props.image.index === this.props.currentImage){
+            this.setState({
+                status: 'c-projectScreen--active'
+            });
+        }
+
+    }
+
     render(){
         return(
             <li className={"c-projectScreen animated " + this.state.status}>
