@@ -28,7 +28,9 @@ class ProjectDetailViewer extends Component {
 
     render(){
         return(
-            <ul>
+            <section>
+            <h1>Project viewer</h1>
+            {<ul>
                 {this.props.images.map((image) => {
                     return(
                         <section key={image.index}>
@@ -53,7 +55,8 @@ class ProjectDetailViewer extends Component {
                         </section>
                     );
                 })}
-            </ul>
+            </ul>}
+            </section>
         )
     }
 
