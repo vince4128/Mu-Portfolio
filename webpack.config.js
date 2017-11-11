@@ -82,7 +82,8 @@ let config = {
     //point de sortie
     output:{
         path:path.resolve('./dist'),
-        filename: dev ? '[name].js' : '[name].[chunkhash:8].js'
+        filename: dev ? '[name].js' : '[name].[chunkhash:8].js',
+        publicPath: '/'
     },
 
     //alias (experimental (ok pour les url dans sass))
@@ -162,8 +163,9 @@ let config = {
     },
 
     devServer: {
-        port:3003,
+        port:3005,
         contentBase: path.join(__dirname, "src"),
+        historyApiFallback: true
     },
 
     plugins: [
