@@ -1,32 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { createStore, applyMiddleware } from 'redux';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import promise from 'redux-promise'; 
 
-require("../style/style.scss");
-
-import App from './components/app';
+import reducers from './reducers';
 import ProjectList from './containers/ProjectList';
 import ProjectDetail from './containers/ProjectDetail';
 
-import reducers from './reducers';
+const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
+  <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <section>
+        <h1>Header</h1>
         <Switch>
-          <Route path="/" component={App}/>
+          <Route path="/projets/detail/:id" component={ProjectDetail}/>
           <Route path="/projets" component={ProjectList}/>
-          <Route path="/projets-detail/:id" component={ProjectDetail}/>
+          <Route path="/" component={ProjectList}/>
         </Switch>
       </section>
     </BrowserRouter>
   </Provider>
   , document.querySelector('.container')
   );
-  
+
+require("../style/style.scss");
 require('../assets/img/img1.jpg');
 require('../assets/img/img2.jpg');
 require('../assets/img/img3.jpg');
