@@ -1,24 +1,33 @@
+import _ from "lodash";
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectProject } from '../actions/index';
-import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
+import { fetchProjects } from '../actions/index';
 
 class ProjectList extends Component {
 
+    componentDidMount(){
+        this.props.fetchProjects();
+    }
+
     renderList() {
-        return this.props.projects.map((project) => {
+        return _.map(this.props.projects, project => {
             return (
                 <li
-                    key={project.title}
-                    onClick={() => this.props.selectProject(project)}
+                    key={project.id}
+                    //onClick={() => this.props.selectProject(project)}
                     className="c-project-list__item">
                     {project.title}
+                    <Link to={`/projets/detail/${project.id}`} >
+                        voir
+                    </Link>
                 </li>
             );
         })
     }
 
     render(){
+        console.log(this.props.projects);
         return(
             <ul className="c-project-list">
                 {this.renderList()}
@@ -29,19 +38,7 @@ class ProjectList extends Component {
 }
 
 function mapStateToProps(state){
-    //peu importe ce qui est retourné, est présent dans les props
-    return {
-        projects:state.projects
-    };
+    return { projects: state.projects };
 }
 
-//Peu importe ce qui est retourné par cette fonction va finir par être présent dans les props dans le ProjectList containers
-function mapDispatchToProps(dispatch){
-    //Quand selectProject est invoqué, le résultat sera passé à tous les reducers
-    return bindActionCreators({ selectProject: selectProject}, dispatch)
-}
-
-//Elever ProjectList de component a container
-//Pour cela il faut utiliser la méthode dispatch, (et selectProject en paramètre)
-//rendre accessible dans les props
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);
+export default connect(mapStateToProps, { fetchProjects })(ProjectList);
