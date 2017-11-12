@@ -1,3 +1,4 @@
+.c-projectSlider,
 .c-projectScreen{
     display: none;
     position: absolute;
@@ -10,11 +11,13 @@
     background-color: blue;
 }
 
+.c-projectSlider--prev,
 .c-projectScreen--prev{
     right:100%;
     display: inline-block;
 }
 
+.c-projectSlider--active,
 .c-projectScreen--active{
     display: inline-block;
 }
