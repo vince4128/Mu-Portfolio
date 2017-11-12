@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchProjects } from '../actions/index';
 
+import ProjectDetailViewer from '../components/ProjectDetailViewer';
+
 class ProjectList extends Component {
 
     componentDidMount(){
@@ -18,7 +20,7 @@ class ProjectList extends Component {
                     //onClick={() => this.props.selectProject(project)}
                     className="c-project-list__item">
                     {project.title}
-                    <Link to={`/projets/detail/${project.id}`} >
+                    <Link to={`/projets/${project.id}/detail`} >
                         voir
                     </Link>
                 </li>
