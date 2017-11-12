@@ -9,7 +9,6 @@ class ProjectDetail extends Component {
 
     componentDidMount(){
         const { id } = this.props.match.params;
-        alert(id);
         this.props.fetchProject(id);
     }
 
@@ -28,7 +27,10 @@ class ProjectDetail extends Component {
                     <div>Titre : {this.props.project.title}</div>
                     <div>Description : {this.props.project.description}</div>
                 </div>
-                <ProjectDetailViewer images={this.props.project.images}/>
+                <ProjectDetailViewer 
+                    images={this.props.project.images}
+                    selectProject={this.selectProject}
+                />
             </section>
         );
     }
