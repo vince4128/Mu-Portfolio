@@ -6,21 +6,7 @@ import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
 
-//import ProjectDetail from 'ProjectDetail';
-
 class ProjectSlider extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            currentProject: 0,
-            totalProjects: this.props.projects.length
-        };
-
-        this.selectProject = this.selectProject.bind(this);
-
-    };
 
     selectProject(proj){
         this.setState({ currentProject: proj})
@@ -41,7 +27,7 @@ class ProjectSlider extends Component {
                     <Link to={`/projets/${project.id}/detail`} >
                         voir
                     </Link>
-                    {/*<ProjectAllViewer image={project.images[0].src}/>*/}
+                    <ProjectAllViewer project={project}/>
                 </li>
             );
         })
