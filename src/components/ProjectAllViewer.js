@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 
 class ProjectAllViewer extends Component {
 
-    constructor(props){
-        super(props);
-
-        this.state = {
-            status:''
-        }
-    }
-
     componentWillReceiveProps(nextProps, oldProps){
         /*
         //image actuellement affichée
