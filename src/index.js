@@ -8,6 +8,7 @@ import promise from 'redux-promise';
 import reducers from './reducers';
 import ProjectList from './containers/ProjectList';
 import ProjectDetail from './containers/ProjectDetail';
+import ProjectSlider from './containers/ProjectSlider';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -17,7 +18,8 @@ ReactDOM.render(
       <section>
         <h1>Header</h1>
         <Switch>
-          <Route path="/projets/detail/:id" component={ProjectDetail}/>
+          <Route path="/projets/:id/detail" component={ProjectDetail}/>
+          <Route path="/projets/:id" component={ProjectSlider}/>
           <Route path="/projets" component={ProjectList}/>
           <Route path="/" component={ProjectList}/>
         </Switch>
