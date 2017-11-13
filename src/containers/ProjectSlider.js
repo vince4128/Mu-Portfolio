@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
+import PrevNext from '../components/PrevNext';
 
 class ProjectSlider extends Component {
 
@@ -13,19 +14,21 @@ class ProjectSlider extends Component {
 
         this.state = {
             status:'',
-            currentProject: 0
+            currentProject: 0,
+            totalProject: this.props.projects.length
         }
+
+        this.selectProject = this.selectProject.bind(this);
+
+    }
+
+    selectProject(projectId){
+        this.setState({ currentProject: projectId });
     }
 
     componentWillReceiveProps(nextProps, oldProps){
-
         const { id } = nextProps.match.params;
         this.setState({currentProject:id});
-
-    }
-
-    selectProject(proj){
-        this.setState({ currentProject: proj})
     }
 
     componentDidMount(){
@@ -42,6 +45,11 @@ class ProjectSlider extends Component {
                     project={project}
                     currentProject={this.state.currentProject}
                 />
+                {/*<PrevNext
+                    selectImage={this.selectProject}
+                    currentImage={this.state.currentProject}
+                    totalImages={this.state.totalImages}
+                />*/}
                 </li>
             );
         })
