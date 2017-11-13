@@ -8,26 +8,43 @@ import ProjectAllViewer from '../components/ProjectAllViewer';
 
 class ProjectSlider extends Component {
 
+    constructor(props){
+        super(props);
+
+        this.state = {
+            status:'',
+            currentProject: 0
+        }
+    }
+
+    componentWillReceiveProps(nextProps, oldProps){
+
+        const { id } = nextProps.match.params;
+        this.setState({currentProject:id});
+
+        alert(id);
+
+    }
+
     selectProject(proj){
         this.setState({ currentProject: proj})
     }
 
     componentDidMount(){
         this.props.fetchProjects();
+        const { id } = this.props.match.params;
+        this.setState({currentProject:id});
+        alert(id);
     }
 
     renderList() {
         return _.map(this.props.projects, project => {
             return (
-                <li
-                    key={project.id}
-                    //onClick={() => this.props.selectProject(project)}
-                    className="c-project-list__item">
-                    {project.title}
-                    <Link to={`/projets/${project.id}/detail`} >
-                        voir
-                    </Link>
-                    <ProjectAllViewer project={project}/>
+                <li key={project.id}>
+                <ProjectAllViewer 
+                    project={project}
+                    currentProject={this.state.currentProject}
+                />
                 </li>
             );
         })
@@ -38,6 +55,7 @@ class ProjectSlider extends Component {
         return(
             <section>
                 <h3>Project Slider</h3>
+                <p>{JSON.stringify(this.props)}</p>
                 <ul>
                     {this.renderList()}
                 </ul>
