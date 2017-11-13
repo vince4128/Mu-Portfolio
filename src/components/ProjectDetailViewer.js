@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import ProjectDetailScreen from './ProjectDetailScreen';
-import ProjectDetailPrevNext from './ProjectDetailPrevNext';
+import PrevNext from './PrevNext';
 import ProjectDetailPagination from './ProjectDetailPagination';
 
 class ProjectDetailViewer extends Component {
@@ -40,7 +41,7 @@ class ProjectDetailViewer extends Component {
                             selectImage={this.selectImage}
                             image={image}
                         />
-                        <ProjectDetailPrevNext
+                        <PrevNext
                             selectImage={this.selectImage}
                             currentImage={this.state.currentImage}
                             totalImages={this.state.totalImages}
