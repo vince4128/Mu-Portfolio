@@ -38,7 +38,7 @@ class ProjectAllViewer extends Component {
         //afficher le premier projet
         if(this.props.project.id == this.props.currentProject){
             this.setState({
-                status: 'c-projectScreen--active'
+                status: 'c-projectScreen--active',
             });
         }
     }
@@ -49,10 +49,9 @@ class ProjectAllViewer extends Component {
                 className={"c-projectScreen animated " + this.state.status}
             >                
                 ProjectAllViewer
-                {this.props.project.title}
-                {JSON.stringify(this.props)}
-                <img src={"/img/"+this.props.project.images[0].src}/>
-                <Link to={`/projets/${this.props.project.id}/detail`}>
+                {/*this.props.project.title*/}
+                <div className="c-img-project-wrapper" style={{backgroundImage : `url(../img/${ this.props.project.images[0].src })`}}></div>
+                <Link to={`/projets/${this.props.project.id}/0`}>
                     detail
                 </Link>
                 <Link to={`/projets/0`}>
