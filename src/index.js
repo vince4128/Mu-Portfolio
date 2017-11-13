@@ -18,7 +18,7 @@ ReactDOM.render(
       <section>
         <h1>Header</h1>
         <Switch>
-          <Route path="/projets/:id/detail" component={ProjectDetail}/>
+          <Route path="/projets/:id/:pid" component={ProjectDetail}/>
           <Route path="/projets/:id" component={ProjectSlider}/>
           <Route path="/projets" component={ProjectList}/>
           <Route path="/" component={ProjectList}/>
