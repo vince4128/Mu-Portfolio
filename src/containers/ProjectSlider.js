@@ -22,8 +22,6 @@ class ProjectSlider extends Component {
         const { id } = nextProps.match.params;
         this.setState({currentProject:id});
 
-        alert(id);
-
     }
 
     selectProject(proj){
@@ -34,7 +32,6 @@ class ProjectSlider extends Component {
         this.props.fetchProjects();
         const { id } = this.props.match.params;
         this.setState({currentProject:id});
-        alert(id);
     }
 
     renderList() {
