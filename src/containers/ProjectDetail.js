@@ -20,7 +20,7 @@ class ProjectDetail extends Component {
         return (
             <section>
                 <div className="c-project-detail">
-                    <Link to="/projets/">
+                    <Link to={`/projets/${this.props.project.id}`}>
                         <a>Retour</a>
                     </Link>
                     <h3>Détail pour le projet : </h3>
