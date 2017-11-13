@@ -45,7 +45,7 @@ class ProjectDetailScreen extends Component {
     render(){
         return(
             <li className={"c-projectScreen animated " + this.state.status}>
-                <img src={"/img/"+this.props.image.src}/>
+                <div className="c-img-project-wrapper" style={{backgroundImage : `url(../../img/${ this.props.image.src })`}}></div>
             </li>
         )
     }
