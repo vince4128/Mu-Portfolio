@@ -7,9 +7,26 @@ import ProjectDetailViewer from '../components/ProjectDetailViewer';
 
 class ProjectDetail extends Component {
 
+    constructor(props){
+        super(props);
+
+        this.state = {
+            pid:0
+        }
+    }
+
     componentDidMount(){
         const { id } = this.props.match.params;
         this.props.fetchProject(id);
+        const { pid } = this.props.match.params;
+        this.setState({ pid });
+        alert(this.state.pid);
+    }
+
+    componentWillReceiveProps(nextProps, oldProps){
+        const { pid } = nextProps.match.params;
+        this.setState({pid});
+        alert(this.state.pid);
     }
 
     render() {
@@ -29,7 +46,6 @@ class ProjectDetail extends Component {
                 </div>
                 <ProjectDetailViewer 
                     images={this.props.project.images}
-                    selectProject={this.selectProject}
                 />
             </section>
         );
