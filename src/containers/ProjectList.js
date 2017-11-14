@@ -20,7 +20,7 @@ class ProjectList extends Component {
                     //onClick={() => this.props.selectProject(project)}
                     className="c-project-list__item">
                     {project.title}
-                    <Link to={`/projets/${project.id}/detail`} >
+                    <Link to={`/projets/${project.id}`} >
                         voir
                     </Link>
                 </li>
