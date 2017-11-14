@@ -53,21 +53,6 @@ class ProjectAllViewer extends Component {
                 className={"c-projectScreen animated " + this.state.status}
             >                
                 <div className="c-img-project-wrapper" style={{backgroundImage : `url(../img/${ this.props.project.images[0].src })`}}></div>
-                <Link to={`/projets/${this.props.project.id}/0`}>
-                    detail
-                </Link>
-                <Link to={`/projets/0`}>
-                    0
-                </Link>
-                <Link to={`/projets/1`}>
-                    1
-                </Link>
-                <Link to={`/projets/2`}>
-                    2
-                </Link>
-                <Link to={`/projets/3`}>
-                    3
-                </Link>
             </div>
         )
     }
