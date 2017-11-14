@@ -5,6 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
+import DetailButton from '../components/DetailButton';
 import PrevNext from '../components/PrevNext';
 
 class ProjectSlider extends Component {
@@ -19,16 +20,11 @@ class ProjectSlider extends Component {
         }
 
         this.selectProject = this.selectProject.bind(this);
-        this.test = this.test.bind(this);
 
     }
 
     selectProject(projectId){
         this.props.history.push(`/projets/${projectId}`);
-    }
-
-    test(){
-        this.props.history.push("/projets")
     }
 
     componentWillReceiveProps(nextProps, oldProps){
@@ -46,7 +42,6 @@ class ProjectSlider extends Component {
         return _.map(this.props.projects, project => {
             return (
                 <li key={project.id}>
-                <button onClick={()=>this.test()}>test</button>
                 <ProjectAllViewer 
                     project={project}
                     currentProject={this.state.currentProject}
@@ -71,6 +66,9 @@ class ProjectSlider extends Component {
                 <ul>
                     {this.renderList()}
                 </ul>
+                <Link to={`/projets/${this.state.currentProject}/0`}>
+                    <DetailButton/>
+                </Link>
             </section>
         );
     }
