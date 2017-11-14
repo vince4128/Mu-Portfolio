@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
@@ -15,15 +15,20 @@ class ProjectSlider extends Component {
         this.state = {
             status:'',
             currentProject: 0,
-            totalProject: this.props.projects.length
+            totalProject: 4
         }
 
         this.selectProject = this.selectProject.bind(this);
+        this.test = this.test.bind(this);
 
     }
 
     selectProject(projectId){
-        this.setState({ currentProject: projectId });
+        this.props.history.push(`/projets/${projectId}`);
+    }
+
+    test(){
+        this.props.history.push("/projets")
     }
 
     componentWillReceiveProps(nextProps, oldProps){
@@ -41,15 +46,17 @@ class ProjectSlider extends Component {
         return _.map(this.props.projects, project => {
             return (
                 <li key={project.id}>
+                <button onClick={()=>this.test()}>test</button>
                 <ProjectAllViewer 
                     project={project}
                     currentProject={this.state.currentProject}
                 />
-                {/*<PrevNext
-                    selectImage={this.selectProject}
-                    currentImage={this.state.currentProject}
-                    totalImages={this.state.totalImages}
-                />*/}
+                {<PrevNext
+                    select={this.selectProject}
+                    current={parseInt(this.state.currentProject)}
+                    total={this.state.totalProject}
+                    obj={this.props.projects}
+                />}
                 </li>
             );
         })
