@@ -13,6 +13,10 @@ class ProjectAllViewer extends Component {
 
     componentWillReceiveProps(nextProps, oldProps){
 
+        //a ajouter :
+        //si il y a un projet a ajouter mais pas de projet a enlever
+        //ne pas animer ?
+
         //projet a afficher
         if(nextProps.project.id == nextProps.currentProject){
             //alert("nouvel slide !");
@@ -48,8 +52,6 @@ class ProjectAllViewer extends Component {
             <div
                 className={"c-projectScreen animated " + this.state.status}
             >                
-                ProjectAllViewer
-                {/*this.props.project.title*/}
                 <div className="c-img-project-wrapper" style={{backgroundImage : `url(../img/${ this.props.project.images[0].src })`}}></div>
                 <Link to={`/projets/${this.props.project.id}/0`}>
                     detail
