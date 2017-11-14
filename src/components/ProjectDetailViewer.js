@@ -42,9 +42,9 @@ class ProjectDetailViewer extends Component {
                             image={image}
                         />
                         <PrevNext
-                            selectImage={this.selectImage}
-                            currentImage={this.state.currentImage}
-                            totalImages={this.state.totalImages}
+                            select={this.selectImage}
+                            current={this.state.currentImage}
+                            total={this.state.totalImages}
                         />
                         <ul className="c-projectPagination">
                         <ProjectDetailPagination
