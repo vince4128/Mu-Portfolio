@@ -17,6 +17,14 @@ const PROJECT = [
             {
                 src:"img2.jpg",
                 index:1
+            },
+            {
+                src:"img3.jpg",
+                index:2
+            },
+            {
+                src:"img4.jpg",
+                index:3
             }
         ]
     },
@@ -26,12 +34,20 @@ const PROJECT = [
         description: 'Blabla2',
         images: [
             {
-                src:"img3.jpg",
+                src:"img5.jpg",
                 index:0
             },
             {
-                src:"img4.jpg",
+                src:"img6.jpg",
                 index:1
+            },
+            {
+                src:"img7.jpg",
+                index:2
+            },
+            {
+                src:"img8.jpg",
+                index:3
             }
         ]
     },
@@ -41,12 +57,20 @@ const PROJECT = [
         description: 'Blabla3',
         images: [
             {
-                src:"img1.jpg",
+                src:"img9.jpg",
                 index:0
             },
             {
-                src:"img2.jpg",
+                src:"img10.jpg",
                 index:1
+            },
+            {
+                src:"img11.jpg",
+                index:2
+            },
+            {
+                src:"img12.jpg",
+                index:3
             }
         ]
     },
@@ -56,12 +80,20 @@ const PROJECT = [
         description: 'Blabla4',
         images: [
             {
-                src:"img3.jpg",
+                src:"img13.jpg",
                 index:0
             },
             {
-                src:"img4.jpg",
+                src:"img14.jpg",
                 index:1
+            },
+            {
+                src:"img15.jpg",
+                index:2
+            },
+            {
+                src:"img16.jpg",
+                index:3
             }
         ]
     }
