@@ -15,18 +15,23 @@ class ProjectDetail extends Component {
         }
     }
 
+    selectImage(imageId){
+        this.props.history.push(`/projets/${this.props.project.id}/${imageId}`);
+    }
+
     componentDidMount(){
         const { id } = this.props.match.params;
         this.props.fetchProject(id);
         const { pid } = this.props.match.params;
         this.setState({ pid });
-        alert(this.state.pid);
+        //alert(this.state.pid);
     }
 
     componentWillReceiveProps(nextProps, oldProps){
-        const { pid } = nextProps.match.params;
-        this.setState({pid});
-        alert(this.state.pid);
+        //const { id } = this.props.match.params;
+        //const { pid } = nextProps.match.params;
+        //this.setState({pid});
+        //alert(this.state.pid);
     }
 
     render() {
