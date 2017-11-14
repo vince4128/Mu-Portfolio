@@ -3,17 +3,18 @@ import React from 'react';
 const PrevNext = (props) => {
 
     function prev(){
-        if(props.currentImage > 0){
-            return props.currentImage - 1;
-        }else{
-            return props.totalImages-1;
+        if(props.current > 0){            
+            return props.current - 1;
+        }else{            
+            return props.total-1;
         }
     };
 
     function next(){
-        if(props.currentImage < props.totalImages-1){
-            return props.currentImage + 1;
-        }else{
+        //alert(Object.keys(props.obj).length);
+        if(props.current < props.total-1){            
+            return props.current + 1;
+        }else{            
             return 0;
         }
     };
@@ -22,12 +23,13 @@ const PrevNext = (props) => {
         <div className="c-prevnext">
             <div
                 className="c-prevnext__prev"
-                onClick={()=>props.selectImage(prev())}>prev
+                onClick={()=>props.select(prev())}>prev
             >
+
             </div>
             <div
                 className="c-prevnext__next"
-                onClick={()=>props.selectImage(next())}>next
+                onClick={()=>props.select(next())}>next
             >
             </div>
         </div>
