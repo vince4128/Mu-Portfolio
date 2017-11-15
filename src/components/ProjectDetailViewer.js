@@ -12,6 +12,7 @@ class ProjectDetailViewer extends Component {
 
         this.state = {
             currentImage: 0,
+            currentProject:0,
             totalImages: this.props.images.length
         };
 
@@ -24,7 +25,7 @@ class ProjectDetailViewer extends Component {
     }
 
     componentWillReceiveProps(nextProps){
-        this.setState({currentImage:0});
+
     }
 
     render(){
@@ -42,9 +43,9 @@ class ProjectDetailViewer extends Component {
                             image={image}
                         />
                         <PrevNext
-                            select={this.selectImage}
-                            current={this.state.currentImage}
-                            total={this.state.totalImages}
+                            select={this.props.select}
+                            current={this.props.current}
+                            total={this.props.totalImages}
                         />
                         <ul className="c-projectPagination">
                         <ProjectDetailPagination
