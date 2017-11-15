@@ -12,13 +12,13 @@ class ProjectDetailScreen extends Component {
 
     componentWillReceiveProps(nextProps, oldProps){
 
-        //image actuellement affichée
-        if(nextProps.image.index === nextProps.currentImage){
+        //image a afficher
+        if(nextProps.image.index == nextProps.currentImage){
             this.setState({
                 status: 'c-projectScreen--active slideInRight'
             });
         }//image précédente
-        else if(nextProps.image.index === this.props.currentImage){
+        else if(nextProps.image.index == this.props.currentImage){
             this.setState({
                 status: 'c-projectScreen--prev slideOutLeft'
             });
@@ -31,13 +31,15 @@ class ProjectDetailScreen extends Component {
 
     }
 
-    componentWillMount() {
+    componentDidMount() {
     
         //afficher la première image
         if(this.props.image.index === this.props.currentImage){
             this.setState({
                 status: 'c-projectScreen--active'
             });
+        }else{
+
         }
 
     }
