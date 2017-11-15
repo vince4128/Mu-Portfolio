@@ -25,3 +25,7 @@ $fa-font-path: "~node_modules/font-awesome/fonts" !default;
 
 //COMPONENTS
 @import "components/components";
+
+body{
+    overflow:hidden;
+}
