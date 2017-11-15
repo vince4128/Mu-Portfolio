@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
@@ -63,7 +63,7 @@ class ProjectSlider extends Component {
             <section>
                 <h3>Project Slider</h3>
                 <p>{JSON.stringify(this.props)}</p>
-                <ul>
+                <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
                 <Link to={`/projets/${this.state.currentProject}/0`}>
