@@ -12,27 +12,28 @@ class ProjectAllViewer extends Component {
         }
     }
 
-    /*componentDidUpdate() {
-        alert('update !');
-    }*/
-
     componentWillUnmount() {
         this.setState({isAnimated : false});
     }
 
     componentWillReceiveProps(nextProps, oldProps){
 
-        //a ajouter :
-        //si il y a un projet a ajouter mais pas de projet a enlever
-        //ne pas animer ?
-
         //projet a afficher
         if(nextProps.project.id == nextProps.currentProject){
             //animation ?
             if(this.state.isAnimated){
-                this.setState({
-                    status: 'c-projectScreen--active slideInRight'
-                });
+                //sens de l'animation
+                if((nextProps.project.id > this.props.currentProject || (this.props.currentProject == 3 && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 &&  nextProps.currentProject == 3)){
+ 
+                    this.setState({
+                        status: 'c-projectScreen--active slideInRight'
+                    });
+                } else {
+                    this.setState({
+                        status: 'c-projectScreen--active slideInLeft'
+                    });
+                }
+                
             } else {
                 this.setState({
                     status: 'c-projectScreen--active'
@@ -42,9 +43,18 @@ class ProjectAllViewer extends Component {
         }//projet a faire défiler
         else if(nextProps.project.id == this.props.currentProject){
             if(this.state.isAnimated){
-                this.setState({
-                    status: 'c-projectScreen--prev slideOutLeft'
-                });
+                //sens de l'animation
+                if((nextProps.currentProject > this.props.currentProject || (this.props.currentProject == 3 && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 &&  nextProps.currentProject == 3)){
+
+                    this.setState({
+                        status: 'c-projectScreen--prev slideOutLeft'
+                    });
+                }else{
+                    this.setState({
+                        status: 'c-projectScreen--prev slideOutRight'
+                    }); 
+                }
+                
             } else {
                 this.setState({
                     status: ''

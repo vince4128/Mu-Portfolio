@@ -16,7 +16,7 @@ class ProjectSlider extends Component {
         this.state = {
             status:'',
             currentProject: 0,
-            totalProject:4
+            //totalProject:4
         }
 
         this.selectProject = this.selectProject.bind(this);
