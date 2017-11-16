@@ -9,6 +9,7 @@ import reducers from './reducers';
 import ProjectList from './containers/ProjectList';
 import ProjectDetail from './containers/ProjectDetail';
 import ProjectSlider from './containers/ProjectSlider';
+import Logo from './components/logo';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -16,11 +17,11 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <section>
-        <h1>Header</h1>
+        <Logo/>
         <Switch>
           <Route path="/projets/:id/:pid" component={ProjectDetail}/>
           <Route path="/projets/:id" component={ProjectSlider}/>
-          <Route path="/projets" component={ProjectList}/>
+          <Route path="/index" component={ProjectList}/>
           <Route path="/" component={ProjectList}/>
         </Switch>
       </section>
