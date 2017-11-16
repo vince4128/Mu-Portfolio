@@ -46,16 +46,9 @@ class ProjectDetail extends Component {
                 <li key={image.index}>
                 <ProjectDetailScreen 
                     currentImage={parseInt(this.state.currentImage)}
-                    totalImages={this.state.totalImages}
-                    //selectImage={this.selectImage}
+                    totalImages={Object.keys(this.props.project.images).length}
                     image={image}
                 />
-                {/*<PrevNext
-                    select={this.selectProject}
-                    current={parseInt(this.state.currentProject)}
-                    total={this.state.totalProject}
-                    obj={this.props.projects}
-                />*/}
                 </li>
             );
         })
@@ -76,17 +69,6 @@ class ProjectDetail extends Component {
                     <div>Titre : {this.props.project.title}</div>
                     <div>Description : {this.props.project.description}</div>
                 </div>
-                {/*<ProjectDetailViewer 
-                    images={this.props.project.images}
-                    current={parseInt}
-                    select={this.selectImageurl}
-                />*/}
-                {/*<ProjectDetailScreen 
-                    currentImage={parseInt(this.state.currentImage)}
-                    totalImages={this.state.totalImages}
-                    //selectImage={this.selectImage}
-                    image={this.props.project.images[this.state.currentImage]}
-                />*/}
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>

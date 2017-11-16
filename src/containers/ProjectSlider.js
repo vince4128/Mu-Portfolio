@@ -16,7 +16,7 @@ class ProjectSlider extends Component {
         this.state = {
             status:'',
             currentProject: 0,
-            totalProject: 4
+            totalProject:4
         }
 
         this.selectProject = this.selectProject.bind(this);
@@ -49,7 +49,7 @@ class ProjectSlider extends Component {
                 {<PrevNext
                     select={this.selectProject}
                     current={parseInt(this.state.currentProject)}
-                    total={this.state.totalProject}
+                    total={Object.keys(this.props.projects).length}
                     obj={this.props.projects}
                 />}
                 </li>
@@ -61,8 +61,6 @@ class ProjectSlider extends Component {
         console.log(this.props.projects);
         return(
             <section>
-                <h3>Project Slider</h3>
-                <p>{JSON.stringify(this.props)}</p>
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
