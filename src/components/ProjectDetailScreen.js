@@ -6,28 +6,44 @@ class ProjectDetailScreen extends Component {
         super(props);
 
         this.state = {
-            status:''
+            status:'',
+            isAnimated: false
         }
     }
 
     componentWillReceiveProps(nextProps, oldProps){
-
-        //image a afficher
+        //image a afficher        
         if(nextProps.image.index == nextProps.currentImage){
-            this.setState({
-                status: 'c-projectScreen--active slideInRight'
-            });
+            //animation ?
+            if(this.state.isAnimated){
+                this.setState({
+                    status: 'c-projectScreen--active slideInRight'
+                });
+            }else{
+                this.setState({
+                    status: 'c-projectScreen--active'
+                });
+            }            
         }//image précédente
         else if(nextProps.image.index == this.props.currentImage){
-            this.setState({
-                status: 'c-projectScreen--prev slideOutLeft'
-            });
+            if(this.state.isAnimated){
+                this.setState({
+                    status: 'c-projectScreen--prev slideOutLeft'
+                });
+            }else{
+                this.setState({
+                    status:''
+                })
+            }
+            
         }
         else{
             this.setState({
                 status:''
             })
         }
+
+        this.setState({isAnimated : true});
 
     }
 
@@ -41,6 +57,8 @@ class ProjectDetailScreen extends Component {
         }else{
 
         }
+
+        this.setState({isAnimated : true});
 
     }
 

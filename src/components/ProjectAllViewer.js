@@ -7,8 +7,17 @@ class ProjectAllViewer extends Component {
         super(props);
 
         this.state = {
-            status:''
+            status:'',
+            isAnimated: false
         }
+    }
+
+    /*componentDidUpdate() {
+        alert('update !');
+    }*/
+
+    componentWillUnmount() {
+        this.setState({isAnimated : false});
     }
 
     componentWillReceiveProps(nextProps, oldProps){
@@ -19,15 +28,29 @@ class ProjectAllViewer extends Component {
 
         //projet a afficher
         if(nextProps.project.id == nextProps.currentProject){
-            //alert("nouvel slide !");
-            this.setState({
-                status: 'c-projectScreen--active slideInRight'
-            });
+            //animation ?
+            if(this.state.isAnimated){
+                this.setState({
+                    status: 'c-projectScreen--active slideInRight'
+                });
+            } else {
+                this.setState({
+                    status: 'c-projectScreen--active'
+                })
+            }
+            
         }//projet a faire défiler
         else if(nextProps.project.id == this.props.currentProject){
-            this.setState({
-                status: 'c-projectScreen--prev slideOutLeft'
-            });
+            if(this.state.isAnimated){
+                this.setState({
+                    status: 'c-projectScreen--prev slideOutLeft'
+                });
+            } else {
+                this.setState({
+                    status: ''
+                })
+            }
+            
         }//projet a masquer
         else{
             this.setState({
@@ -35,9 +58,11 @@ class ProjectAllViewer extends Component {
             })
         }
 
+        this.setState({isAnimated : true});
+
     }
 
-    componentWillMount() {
+    componentDidMount() {
 
         //afficher le premier projet
         if(this.props.project.id == this.props.currentProject){
@@ -45,6 +70,8 @@ class ProjectAllViewer extends Component {
                 status: 'c-projectScreen--active',
             });
         }
+
+        this.setState({isAnimated : true});
     }
 
     render(){
