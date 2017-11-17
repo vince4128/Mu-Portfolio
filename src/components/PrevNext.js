@@ -11,7 +11,6 @@ const PrevNext = (props) => {
     };
 
     function next(){
-        //alert(Object.keys(props.obj).length);
         if(props.current < props.total-1){            
             return props.current + 1;
         }else{            
