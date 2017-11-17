@@ -6,6 +6,7 @@ import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
 import ProjectDetailPagination from '../components/ProjectDetailPagination';
+import Logo from '../components/logo';
 import DetailButton from '../components/DetailButton';
 import PrevNext from '../components/PrevNext';
 
@@ -67,6 +68,7 @@ class ProjectSlider extends Component {
                     current={parseInt(this.state.currentProject)}
                     total={Object.keys(this.props.projects).length}
                 />
+                <Logo/>
                 <ul className="c-projectPagination">
                 <ProjectDetailPagination
                     select={this.selectProject}
