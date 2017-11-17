@@ -13,11 +13,11 @@ class ProjectDetailScreen extends Component {
 
     componentWillReceiveProps(nextProps, oldProps) {
         //image a afficher        
-        if (nextProps.image.index == nextProps.currentImage) {
+        if (nextProps.image.index == nextProps.current) {
             //animation ?
             if (this.state.isAnimated) {
                 //sens de l'animation
-                if ((nextProps.image.index > this.props.currentImage || (this.props.currentImage == 3 && nextProps.currentImage == 0)) && !(this.props.currentImage == 0 && nextProps.currentImage == 3)) {
+                if ((nextProps.image.index > this.props.current || (this.props.current == nextProps.total && nextProps.current == 0)) && !(this.props.current == 0 && nextProps.current == nextProps.total)) {
 
                     this.setState({
                         status: 'c-projectScreen--active slideInRight'
@@ -33,10 +33,10 @@ class ProjectDetailScreen extends Component {
                 });
             }
         }//image précédente
-        else if (nextProps.image.index == this.props.currentImage) {
+        else if (nextProps.image.index == this.props.current) {
             if (this.state.isAnimated) {
                 //sens de l'animation
-                if ((nextProps.currentImage > this.props.currentImage || (this.props.currentImage == 3 && nextProps.currentImage == 0)) && !(this.props.currentImage == 0 && nextProps.currentImage == 3)) {
+                if ((nextProps.current > this.props.current || (this.props.current == nextProps.total && nextProps.current == 0)) && !(this.props.current == 0 && nextProps.current == nextProps.total)) {
 
                     this.setState({
                         status: 'c-projectScreen--prev slideOutLeft'
@@ -66,7 +66,7 @@ class ProjectDetailScreen extends Component {
     componentDidMount() {
 
         //afficher la première image
-        if (this.props.image.index === this.props.currentImage) {
+        if (this.props.image.index === this.props.current) {
             this.setState({
                 status: 'c-projectScreen--active'
             });
