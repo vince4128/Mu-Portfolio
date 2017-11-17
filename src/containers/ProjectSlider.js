@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
+import ProjectDetailPagination from '../components/ProjectDetailPagination';
 import DetailButton from '../components/DetailButton';
 import PrevNext from '../components/PrevNext';
 
@@ -15,8 +16,7 @@ class ProjectSlider extends Component {
 
         this.state = {
             status:'',
-            currentProject: 0,
-            //totalProject:4
+            currentProject: 0
         }
 
         this.selectProject = this.selectProject.bind(this);
@@ -45,13 +45,8 @@ class ProjectSlider extends Component {
                 <ProjectAllViewer 
                     project={project}
                     currentProject={this.state.currentProject}
+                    total={Object.keys(this.props.projects).length-1}
                 />
-                {<PrevNext
-                    select={this.selectProject}
-                    current={parseInt(this.state.currentProject)}
-                    total={Object.keys(this.props.projects).length}
-                    obj={this.props.projects}
-                />}
                 </li>
             );
         })
@@ -67,6 +62,18 @@ class ProjectSlider extends Component {
                 <Link to={`/projets/${this.state.currentProject}/0`}>
                     <DetailButton/>
                 </Link>
+                <PrevNext
+                    select={this.selectProject}
+                    current={parseInt(this.state.currentProject)}
+                    total={Object.keys(this.props.projects).length}
+                />
+                <ul className="c-projectPagination">
+                <ProjectDetailPagination
+                    select={this.selectProject}
+                    current={parseInt(this.state.currentProject)}
+                    total={Object.keys(this.props.projects).length}
+                />
+                </ul>
             </section>
         );
     }
