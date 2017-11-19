@@ -4,8 +4,8 @@ const ProjectDetailPagination = (props) => {
 
     let dot = [];
 
-    let active = "x";
-    let inactive = "0";
+    let active = true;
+    let inactive = false;
 
     function isActive(index){
         if(index === props.current){
@@ -16,14 +16,21 @@ const ProjectDetailPagination = (props) => {
     }
 
     for(let i = 0; i<props.total; i++){
-        dot.push(
-            <li
-                key={i}
-                onClick={()=>props.select(i)}
+        if(isActive(i)){
+            dot.push(<li
+            key={i}
+            onClick={()=>props.select(i)}
             >
-            {isActive(i)}
-            </li>
-        )
+            <i className="fa fa-circle" aria-hidden="true"></i>
+            </li>);    
+        }else{
+            dot.push(<li
+            key={i}
+            onClick={()=>props.select(i)}
+            >
+            <i className="fa fa-circle-o" aria-hidden="true"></i>
+            </li>);   
+        }
     }
 
     return(
