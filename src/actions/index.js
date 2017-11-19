@@ -9,6 +9,7 @@ const PROJECT = [
         id:0,
         title: 'Le projet 1',
         description: 'Blabla1',
+        category: 'cat1',
         images: [
             {
                 src:"img1.jpg",
@@ -32,6 +33,7 @@ const PROJECT = [
         id:1, 
         title: 'Le projet 2',
         description: 'Blabla2',
+        category: 'cat1',
         images: [
             {
                 src:"img5.jpg",
@@ -55,6 +57,7 @@ const PROJECT = [
         id:2, 
         title: 'Le projet 3',
         description: 'Blabla3',
+        category: 'cat2',
         images: [
             {
                 src:"img9.jpg",
@@ -78,6 +81,7 @@ const PROJECT = [
         id:3, 
         title: 'Le projet 4',
         description: 'Blabla4',
+        category: 'cat2',
         images: [
             {
                 src:"img13.jpg",
