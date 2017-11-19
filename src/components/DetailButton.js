@@ -4,11 +4,8 @@ const DetailButton = (props) => {
 
     return(
         <div className="c-button-detail">
-            <h1>DETAIL BUTTON</h1>
             <div>
-                <button>
-                    Détail
-                </button>
+                <h3>Détail</h3>
             </div>
         </div>
     )
