@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchProjects } from '../actions/index';
 
-import ProjectDetailViewer from '../components/ProjectDetailViewer';
-
 class ProjectList extends Component {
 
     componentDidMount(){

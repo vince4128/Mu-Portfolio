@@ -4,6 +4,7 @@ const Logo = () => {
 
     return(
         <div className="c-logo">
+            Logo
         </div>
     )
 

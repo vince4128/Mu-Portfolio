@@ -8,18 +8,18 @@ const ProjectDetailPagination = (props) => {
     let inactive = "0";
 
     function isActive(index){
-        if(index === props.currentImage){
+        if(index === props.current){
             return active;
         }else{
             return inactive;
         }
     }
 
-    for(let i = 0; i<props.totalImages; i++){
+    for(let i = 0; i<props.total; i++){
         dot.push(
             <li
                 key={i}
-                onClick={()=>props.selectImage(i)}
+                onClick={()=>props.select(i)}
             >
             {isActive(i)}
             </li>
