@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {FETCH_PROJECTS, FETCH_PROJECT} from '../actions';
+import {FETCH_PROJECTS, FETCH_PROJECT, FETCH_CATEGORY} from '../actions';
 
 export default function(state = {}, action) {
     switch(action.type) {
@@ -11,6 +11,9 @@ export default function(state = {}, action) {
 
         case FETCH_PROJECT:
         return { ...state, [action.payload.id]: action.payload };
+
+        case FETCH_CATEGORY:
+        return action.payload;
 
         default:
             return state;

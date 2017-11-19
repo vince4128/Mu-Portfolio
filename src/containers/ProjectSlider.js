@@ -9,6 +9,7 @@ import ProjectDetailPagination from '../components/ProjectDetailPagination';
 import Logo from '../components/logo';
 import DetailButton from '../components/DetailButton';
 import PrevNext from '../components/PrevNext';
+import ProjectName from '../components/ProjectName';
 
 class ProjectSlider extends Component {
 
@@ -69,6 +70,10 @@ class ProjectSlider extends Component {
                     total={Object.keys(this.props.projects).length}
                 />
                 <Logo/>
+                <ProjectName 
+                    title={JSON.stringify(this.props.projects[String(this.state.currentProject)])}
+                    category="coucou"
+                    year="2049"/>
                 <ul className="c-projectPagination">
                 <ProjectDetailPagination
                     select={this.selectProject}
