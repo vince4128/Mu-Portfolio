@@ -22,14 +22,11 @@ const PrevNext = (props) => {
         <div className="c-prevnext">
             <div
                 className="c-prevnext__prev"
-                onClick={()=>props.select(prev())}>prev
-            >
-
+                onClick={()=>props.select(prev())}>
             </div>
             <div
                 className="c-prevnext__next"
-                onClick={()=>props.select(next())}>next
-            >
+                onClick={()=>props.select(next())}>
             </div>
         </div>
     )
