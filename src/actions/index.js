@@ -3,13 +3,15 @@ import lodash from 'lodash';
 
 export const FETCH_PROJECTS = "fetch_projects";
 export const FETCH_PROJECT = "fetch_project";
+export const FETCH_CATEGORY = "fetch_category";
 
 const PROJECT = [
     {
         id:0,
         title: 'Le projet 1',
-        description: 'Blabla1',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium commodo magna et dapibus. Nulla porta elementum ipsum et vehicula.',
         category: 'cat1',
+        year:'2016',
         images: [
             {
                 src:"img1.jpg",
@@ -32,8 +34,9 @@ const PROJECT = [
     {
         id:1, 
         title: 'Le projet 2',
-        description: 'Blabla2',
+        description: 'Vestibulum aliquam pellentesque tempus. Integer ut dignissim elit, in feugiat mauris. Donec in congue odio, vel mattis augue. Vivamus egestas pharetra egestas.',
         category: 'cat1',
+        year: '2016',
         images: [
             {
                 src:"img5.jpg",
@@ -56,8 +59,9 @@ const PROJECT = [
     {
         id:2, 
         title: 'Le projet 3',
-        description: 'Blabla3',
+        description: 'Morbi sit amet tellus et velit pretium consequat eu sed magna. Vestibulum non condimentum augue, quis accumsan magna.',
         category: 'cat2',
+        year: '2016',
         images: [
             {
                 src:"img9.jpg",
@@ -80,8 +84,9 @@ const PROJECT = [
     {
         id:3, 
         title: 'Le projet 4',
-        description: 'Blabla4',
+        description: 'Sed nec porta mi. Nulla bibendum mi id tortor interdum, vitae hendrerit ipsum luctus. Vestibulum ligula ex, sagittis non gravida iaculis, vulputate non dui.',
         category: 'cat2',
+        year: '2015',
         images: [
             {
                 src:"img13.jpg",
@@ -121,5 +126,19 @@ export function fetchProject(id){
     return {
         type: FETCH_PROJECT,
         payload: project
+    }
+}
+
+export function fetchCategory(){
+    console.log("action fetchCategory lancée !");
+    //const category = _.mapValues(_.groupBy(PROJECT, 'category'),clist => clist.map(cat => _.omit(cat, 'category')));
+    const category = _.mapValues(_.groupBy(PROJECT, 'category'),
+    clist => clist.map(cat => _.omit(cat, 'make')));
+
+    console.log("category : " + JSON.stringify(category));
+
+    return {
+        type: FETCH_CATEGORY,
+        payload: category
     }
 }
