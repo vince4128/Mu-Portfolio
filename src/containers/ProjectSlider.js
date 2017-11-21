@@ -7,9 +7,9 @@ import { fetchProjects } from '../actions/index';
 import ProjectAllViewer from '../components/ProjectAllViewer';
 import ProjectDetailPagination from '../components/ProjectDetailPagination';
 import Logo from '../components/logo';
+import Menu from '../components/Menu';
 import DetailButton from '../components/DetailButton';
 import PrevNext from '../components/PrevNext';
-import ProjectName from '../components/ProjectName';
 
 class ProjectSlider extends Component {
 
@@ -70,17 +70,12 @@ class ProjectSlider extends Component {
                     total={Object.keys(this.props.projects).length}
                 />
                 <Logo/>
-                <ProjectName 
-                    title={JSON.stringify(this.props.projects[String(this.state.currentProject)])}
-                    category="coucou"
-                    year="2049"/>
-                <ul className="c-projectPagination">
+                <Menu/>
                 <ProjectDetailPagination
                     select={this.selectProject}
                     current={parseInt(this.state.currentProject)}
                     total={Object.keys(this.props.projects).length}
                 />
-                </ul>
             </section>
         );
     }
