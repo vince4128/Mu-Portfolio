@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ProjectName from './ProjectName';
 
 class ProjectAllViewer extends Component {
 
@@ -8,6 +9,7 @@ class ProjectAllViewer extends Component {
 
         this.state = {
             status:'',
+            titleStatus:'',
             isAnimated: false
         }
     }
@@ -22,6 +24,9 @@ class ProjectAllViewer extends Component {
         if(nextProps.project.id == nextProps.currentProject){
             //animation ?
             if(this.state.isAnimated){
+                this.setState({
+                    titleStatus: 'animated fadeIn'
+                });
                 //sens de l'animation
                 if((nextProps.project.id > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 &&  nextProps.currentProject == this.props.total)){
  
@@ -42,6 +47,9 @@ class ProjectAllViewer extends Component {
             
         }//projet a faire défiler
         else if(nextProps.project.id == this.props.currentProject){
+            this.setState({
+                titleStatus: 'animated fadeOut'
+            });
             if(this.state.isAnimated){
                 //sens de l'animation
                 if((nextProps.currentProject > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 &&  nextProps.currentProject == this.props.total)){
@@ -65,7 +73,10 @@ class ProjectAllViewer extends Component {
         else{
             this.setState({
                 status: ''
-            })
+            });
+            this.setState({
+                titleStatus: ''
+            });
         }
 
         this.setState({isAnimated : true});
@@ -90,6 +101,7 @@ class ProjectAllViewer extends Component {
                 className={"c-projectScreen animated " + this.state.status}
             >                
                 <div className="c-img-project-wrapper" style={{backgroundImage : `url(../img/${ this.props.project.images[0].src })`}}></div>
+                <ProjectName anim={this.state.titleStatus} project={this.props.project}/>
             </div>
         )
     }
