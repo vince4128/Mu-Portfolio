@@ -34,7 +34,9 @@ const ProjectDetailPagination = (props) => {
     }
 
     return(
-        dot
+        <ul className="c-projectPagination">
+            {dot}
+        </ul>
     )
 
 }

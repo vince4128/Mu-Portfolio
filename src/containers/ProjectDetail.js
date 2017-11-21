@@ -74,13 +74,11 @@ class ProjectDetail extends Component {
                     current={parseInt(this.state.currentImage)}
                     total={Object.keys(this.props.project.images).length}
                 />
-                <ul className="c-projectPagination">
                 <ProjectDetailPagination
                     select={this.selectImageurl}
                     current={parseInt(this.state.currentImage)}
                     total={Object.keys(this.props.project.images).length}
                 />
-                </ul>
             </section>
         );
     }
