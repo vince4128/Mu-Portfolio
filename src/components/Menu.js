@@ -1,10 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = (props) => {
 
     return(
         <ul className="c-menu">
-            <li>| Index</li>
+            <li>
+                <Link to={`/projets`}>
+                | Index
+                </Link>
+            </li>
             <li>| À propos</li>
         </ul>
     )
