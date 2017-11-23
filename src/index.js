@@ -22,7 +22,7 @@ ReactDOM.render(
           <Route path="/projets/:id/:pid" component={Logo}/>
           <Route path="/projets/:id" component={ProjectSlider}/>
           <Route path="/projets/:id" component={Logo}/>
-          <Route path="/index" component={ProjectList}/>
+          <Route path="/projets" component={ProjectList}/>
           <Route path="/" component={ProjectList}/>
         </Switch>
       </section>
