@@ -5,7 +5,8 @@ const DetailButton = (props) => {
     return(
         <div className="c-button-detail">
             <div>
-                <h3>Détail</h3>
+                {/*<h3>Détail</h3>*/}
+                <i className="fa fa-eye fa-3x" aria-hidden="true"></i>
             </div>
         </div>
     )
