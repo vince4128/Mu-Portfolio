@@ -5,7 +5,10 @@ import { fetchProject } from '../actions/index';
 
 import ProjectDetailScreen from '../components/ProjectDetailScreen';
 import ProjectDetailPagination from '../components/ProjectDetailPagination';
+import Logo from '../components/logo';
+import Menu from '../components/Menu';
 import PrevNext from '../components/PrevNext';
+import ProjectDescription from '../components/ProjectDesc';
 
 class ProjectDetail extends Component {
 
@@ -62,13 +65,13 @@ class ProjectDetail extends Component {
                     <Link to={`/projets/${this.props.project.id}`}>
                         <a>Retour</a>
                     </Link>
-                    <h3>Détail pour le projet : </h3>
-                    <div>Titre : {this.props.project.title}</div>
-                    <div>Description : {this.props.project.description}</div>
                 </div>
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
+                <Logo/>
+                <Menu/>
+                <ProjectDescription project={this.props.project}/>
                 <PrevNext
                     select={this.selectImageurl}
                     current={parseInt(this.state.currentImage)}
