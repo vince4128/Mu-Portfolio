@@ -1,12 +1,14 @@
 .c-prevnext{
     position:fixed;
+    box-sizing: border-box;
     top:0;
     left:0;
     width:100%;
     height:100%;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.1);
+    //background-color: rgba(0, 0, 0, 0.1);
     z-index:50;
+    transition: all .3s;
 }
 
 .c-prevnext__prev{
@@ -15,7 +17,23 @@
     left:0;
     width:50%;
     height:100%;
-    background-color: rgba(122, 122, 122, 0.1);
+    //background-color: rgba(122, 122, 122, 0.1);
+    text-align: left;
+    i{
+        cursor:pointer;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        left:45px;
+        transition:all .3s;
+    }
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        & i{
+            left:20px;
+        }
+    }
 }
 
 .c-prevnext__next{
@@ -24,5 +42,21 @@
     right:0;
     width:50%;
     height:100%;
-    background-color: rgba(180, 180, 180, 0.1);
+    //background-color: rgba(180, 180, 180, 0.1);
+    //text-align: right;
+    i{
+        cursor:pointer;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        right:45px;
+        transition:all .3s;
+    }
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        & i{
+            right:20px
+        }
+    }
 }
