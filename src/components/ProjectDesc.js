@@ -2,8 +2,13 @@ import React from 'react';
 
 const ProjectDesc = (props) => {
 
+    function close(){
+        alert('yo');
+    }
+
     return(
         <div className="c-project-description c-project-description--open animated fadeIn">
+            <button onClick={()=>close()}>fermer</button>
             <h1>{props.project.title}</h1>
             <p>{props.project.description}</p>
             <hr/>
