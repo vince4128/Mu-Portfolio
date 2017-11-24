@@ -8,6 +8,7 @@ const DetailButton = (props) => {
                 {/*<h3>Détail</h3>*/}
                 <i className="fa fa-eye fa-3x" aria-hidden="true"></i>
             </div>
+            <div className="c-button-detail--legend">voir le projet</div>
         </div>
     )
 
