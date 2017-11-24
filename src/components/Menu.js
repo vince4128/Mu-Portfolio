@@ -6,9 +6,9 @@ const Menu = (props) => {
     return(
         <ul className="c-menu">
             <li>
-                <Link to={`/projets`}>
+                <a href="/projets">
                 | Index
-                </Link>
+                </a>
             </li>
             <li>| À propos</li>
         </ul>
