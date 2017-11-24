@@ -8,12 +8,22 @@ import ProjectDetailList from '../components/ProjectListDetail';
 
 class ProjectList extends Component {
 
+    constructor(props){
+        super(props);
+
+        this.renderCategoryList = this.renderCategoryList.bind(this);
+        this.renderProjectList = this.renderProjectList.bind(this);
+    }
+
     componentDidMount(){
         this.props.fetchCategory();
     }
 
+    componentWillReceiveProps(nextProps) {
+        //this.props.fetchCategory();
+    }
+
     makeCategory(){
-        //return _.keys(this.props.projects, 'category');
         return _.mapValues(_.groupBy(this.props.projects, 'category'),clist => clist.map(cat => _.omit(cat, 'category')));
     }
 
@@ -49,6 +59,9 @@ class ProjectList extends Component {
                     <article className="c-project-list__item__cell">{project.year}</article>
                     <article className="c-project-list__item__cell"><strong>{project.title}</strong></article>
                     <article className="c-project-list__item__cell">{project.description}</article>
+                    <a href={`/projets/${project.id}`}>
+                        Voir le projet
+                    </a>
                     {/*<ProjectDetailList/>*/}
                 </li>
             );
@@ -56,6 +69,7 @@ class ProjectList extends Component {
     }
 
     render(){
+        //this.props.fetchCategory();
         console.log(this.props.projects);
         return(
             <ul className="c-project-list">
