@@ -17,8 +17,23 @@ class ProjectListDetail extends Component {
     //collapsible component
     render(){
         return(
-            <div>
-                <h1>Coucou</h1>
+            <div class="c-project-list__detail">
+                <ul>
+                    {
+                        _.map(this.props.images, image => {
+                            return (
+                                <li
+                                    key={image.index}
+                                    className="c-project-list__detail__image"
+                                    >
+                                    {/*<img src={`img/${image.src}`}/>*/}
+                                </li>
+                            )
+                        })
+                    }
+                    <li>
+                    </li>
+                </ul>
             </div>
         )
     }
