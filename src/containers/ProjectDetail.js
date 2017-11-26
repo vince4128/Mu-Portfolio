@@ -21,10 +21,29 @@ class ProjectDetail extends Component {
         }
 
         this.selectImageurl = this.selectImageurl.bind(this);
+        this.handleWheel = this.handleWheel.bind(this);
     }
 
     selectImageurl(imageId) {
         this.props.history.push(`/projets/${this.props.project.id}/${imageId}`);
+    }
+
+    handleWheel(e) {
+
+        if (e.deltaY < 0) {
+            if (this.state.currentImage < Object.keys(this.props.project.images).length - 1) {
+                this.selectImageurl(parseInt(this.state.currentImage) + 1);
+            } else {
+                this.selectImageurl(0);
+            }
+        } else if (e.deltaY > 0) {
+            if (this.state.currentImage > 0) {
+                this.selectImageurl(parseInt(this.state.currentImage) - 1);
+            } else {
+                this.selectImageurl(Object.keys(this.props.project.images).length - 1);
+            }
+        }
+
     }
 
     componentDidMount() {
@@ -45,11 +64,14 @@ class ProjectDetail extends Component {
     renderList() {
         return _.map(this.props.project.images, image => {
             return (
-                <ProjectDetailScreen
-                    current={parseInt(this.state.currentImage)}
-                    total={Object.keys(this.props.project.images).length - 1}
-                    image={image}
-                />
+                <span>
+                    <ProjectDetailScreen
+                        current={parseInt(this.state.currentImage)}
+                        total={Object.keys(this.props.project.images).length - 1}
+                        image={image}
+                    />
+                    <img style={{ display: 'none' }} src={`../../img/${image.src}`}/>
+                </span>
             );
         })
     }
@@ -60,17 +82,17 @@ class ProjectDetail extends Component {
         }
 
         return (
-            <section>
+            <section onWheel={(e) => this.handleWheel(e)}>
                 <div className="c-project-detail">
                     <Link to={`/projets/${this.props.project.id}`}>
-                        <a>Retour</a>
+                        <button className="animated fadeInUp">Retour total</button>
                     </Link>
                 </div>
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
-                <Logo/>
-                <Menu/>
+                <Logo />
+                <Menu />
                 <ProjectDescription project={this.props.project}/>
                 <PrevNext
                     select={this.selectImageurl}

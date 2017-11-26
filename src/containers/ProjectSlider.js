@@ -22,12 +22,15 @@ class ProjectSlider extends Component {
         }
 
         this.selectProject = this.selectProject.bind(this);
+        this.handleWheel = this.handleWheel.bind(this);
 
     }
 
     selectProject(projectId){
         this.props.history.push(`/projets/${projectId}`);
     }
+
+    //preloader les images
 
     componentWillReceiveProps(nextProps, oldProps){
         const { id } = nextProps.match.params;
@@ -40,6 +43,24 @@ class ProjectSlider extends Component {
         this.setState({currentProject:id});
     }
 
+    handleWheel(e){
+
+        if (e.deltaY < 0) {
+            if(this.state.currentProject < Object.keys(this.props.projects).length-1){
+                this.selectProject(parseInt(this.state.currentProject) + 1);
+            }else{
+                this.selectProject(0);               
+            }
+        }else if (e.deltaY > 0) {
+            if(this.state.currentProject > 0){
+                this.selectProject(parseInt(this.state.currentProject) - 1);
+            }else{
+                this.selectProject(Object.keys(this.props.projects).length-1);               
+            }
+        }
+        
+    }
+
     renderList() {
         return _.map(this.props.projects, project => {
             return (
@@ -49,6 +70,7 @@ class ProjectSlider extends Component {
                     currentProject={this.state.currentProject}
                     total={Object.keys(this.props.projects).length-1}
                 />
+                <img style={{ display: 'none' }} src={`../img/${project.images[0].src}`}/>
                 </li>
             );
         })
@@ -57,7 +79,7 @@ class ProjectSlider extends Component {
     render(){
         console.log(this.props.projects);
         return(
-            <section>
+            <section className="no-scroll" onWheel={(e) => this.handleWheel(e)}>
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
