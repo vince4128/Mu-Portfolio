@@ -7,10 +7,12 @@ const Menu = (props) => {
         <ul className="c-menu">
             <li>
                 <a href="/projets">
-                | Index
+                <h3>| <span>Index</span></h3>
                 </a>
             </li>
-            <li>| À propos</li>
+            <li>
+                <h3>| <span>À propos</span></h3>
+            </li>
         </ul>
     )
 
