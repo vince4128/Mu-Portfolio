@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCategory } from '../actions/index';
 
-import ProjectDetailList from '../components/ProjectListDetail';
+import ProjectListDetail from '../components/ProjectListDetail';
 
 class ProjectList extends Component {
 
@@ -50,6 +50,7 @@ class ProjectList extends Component {
     renderProjectList(_project) {
         return _.map(_project, project => {
             return(
+                <article>
                 <li
                     key={project.id}
                     className="c-project-list__item"
@@ -62,8 +63,9 @@ class ProjectList extends Component {
                     <a href={`/projets/${project.id}`}>
                         Voir le projet
                     </a>
-                    {/*<ProjectDetailList/>*/}
                 </li>
+                {/*<ProjectListDetail images={project.images}/>*/}
+                </article>
             );
         });
     }
