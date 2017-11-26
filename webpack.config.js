@@ -1,5 +1,7 @@
 'use strict';
 
+const webpack = require('webpack');
+
 //module path de node.js
 const path = require('path');
 //Uglify pour la minification
@@ -203,6 +205,11 @@ if(!dev){
         root: path.resolve('./'),
         verbose: true,
         dry: false
+      }))
+    config.plugins.push(new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('production')
+        }
       }))
   }
   
