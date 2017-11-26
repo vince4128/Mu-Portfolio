@@ -8,51 +8,99 @@ export const FETCH_CATEGORY = "fetch_category";
 const PROJECT = [
     {
         id:0,
-        title: 'Le projet 1',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium commodo magna et dapibus. Nulla porta elementum ipsum et vehicula.',
-        category: 'cat1',
-        year:'2016',
+        title: 'Désherbés',
+        description: 'Ce projet éditorial, mené à la Médiathéque Jean Falala de la ville de Reims sur les mois de novembre et de décembre 2013, s’intéresse aux différents ouvrages qui vont être définitivement retirés de la collection, soit parce qu’ils ne sont pas empruntés par le public, soit parce qu’ils vont être remplacés par une édition plus récente ou un autre support (version numérique). L’édition est divisée en dix catégories qui correspondent au système de classification Dewey des fonds de bibliothèque. Elle montre des ouvrages de chacune de ces catégories dans des compositions qui créent de nouvelles significations et de nouvelles images. Dans ce travail d’archivage, le fait d’emballer les ouvrages permet de traduire l’ambiance des sous-sols de la bibliothèque. L’édition joue sur la frustration du lecteur qui ne peut feuilleter les ouvrages qu’à travers les visuels qui lui sont proposés.',
+        category: 'Livre',
+        year:'2013',
         images: [
             {
-                src:"img1.jpg",
+                src:"DES_1.jpg",
                 index:0
             },
             {
-                src:"img2.jpg",
+                src:"DES_2.jpg",
                 index:1
             },
             {
-                src:"img3.jpg",
+                src:"DES_3.jpg",
                 index:2
             },
             {
-                src:"img4.jpg",
+                src:"DES_4.jpg",
                 index:3
+            },
+            {
+                src:"DES_5.jpg",
+                index:4
+            },
+            {
+                src:"DES_6.jpg",
+                index:5
+            },
+            {
+                src:"DES_7.jpg",
+                index:6
+            },
+            {
+                src:"DES_8.jpg",
+                index:7
+            },
+            {
+                src:"DES_9.jpg",
+                index:8
+            },
+            {
+                src:"DES_10.jpg",
+                index:9
             }
         ]
     },
     {
         id:1, 
-        title: 'Le projet 2',
-        description: 'Vestibulum aliquam pellentesque tempus. Integer ut dignissim elit, in feugiat mauris. Donec in congue odio, vel mattis augue. Vivamus egestas pharetra egestas.',
-        category: 'cat1',
-        year: '2016',
+        title: 'Association National des Visiteurs de Prison (ANVP)',
+        description: 'Création d’une série de visuels pour L’Association Nationale des Visiteurs de Prison. La rencontre de la main du prisonnier avec celle du visiteur de prison forme un oiseau, symbole d’un espace de liberté et de solidarité au sein du milieu carcéral. Entretenir un lien avec l’extérieur pour le prisonnier c’est sortir un temps de son enferment et lutter contre l’isolement.',
+        category: 'Identité visuelle',
+        year: '2015',
         images: [
             {
-                src:"img5.jpg",
+                src:"ANVP_1.jpg",
                 index:0
             },
             {
-                src:"img6.jpg",
+                src:"ANVP_2.jpg",
                 index:1
             },
             {
-                src:"img7.jpg",
+                src:"ANVP_3.jpg",
                 index:2
             },
             {
-                src:"img8.jpg",
+                src:"ANVP_4.jpg",
                 index:3
+            },
+            {
+                src:"ANVP_5.jpg",
+                index:4
+            },
+            {
+                src:"ANVP_6.jpg",
+                index:5
+            },
+            {
+                src:"ANVP_7.jpg",
+                index:6
+            },
+            {
+                src:"ANVP_8.jpg",
+                index:7
+            },
+            {
+                src:"ANVP_9.jpg",
+                index:8
+            },
+            {
+                src:"ANVP_10.jpg",
+                index:9
             }
         ]
     },
