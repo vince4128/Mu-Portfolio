@@ -1,18 +1,42 @@
 .c-project-description{
-    box-sizing: border-box;
     position:absolute;
     top:0;
     left:0;
+    z-index:100;
     width:50%;
+    overflow: hidden;
+}
+
+.c-project-description__desc{
+    box-sizing: border-box;
+    /*position:absolute;
+    top:0;
+    left:0;
+    width:50%;*/
+    min-height: 100vh;
     height:100%;
     background:rgba(255,255,255,0.8);
     padding:5rem 45px 3rem;
 }
 
+.c-project-description__toggle{
+    margin:10rem 0 0 45px;
+}
+
 .c-project-description--open{
-    display: inline-block;
+    .c-project-description__toggle{
+        display: none;
+    }
+    .c-project-description__desc{
+        display: inline-block;
+    }
 }
 
 .c-project-description--close{
-    display: none;
+    .c-project-description__desc{
+        display: none;
+    }
+    .c-project-description__toggle{
+        display: inline-block;
+    }
 }
