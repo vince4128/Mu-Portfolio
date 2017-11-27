@@ -33,14 +33,31 @@ class ProjectSlider extends Component {
     //preloader les images
 
     componentWillReceiveProps(nextProps, oldProps){
+        //alert("ProjectSlider DidMount");
         const { id } = nextProps.match.params;
         this.setState({currentProject:id});
     }
 
     componentDidMount(){
+        //alert("ProjectSlider DidMount");
         this.props.fetchProjects();
         const { id } = this.props.match.params;
         this.setState({currentProject:id});
+    }
+
+    componentDidUpdate(){
+        alert('update');
+    }
+
+    componentWillMount(){
+        alert('will mount');
+        this.props.fetchProjects();
+        alert(JSON.stringify(this.props.fetchProjects()));
+        alert(JSON.stringify(this.props.match.params));
+        const { id } = this.props.match.params;
+        alert(id);
+        this.setState({currentProject:id});
+        alert(this.state.currentProject);
     }
 
     handleWheel(e){

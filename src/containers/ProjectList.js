@@ -19,8 +19,12 @@ class ProjectList extends Component {
         this.props.fetchCategory();
     }
 
-    componentWillReceiveProps(nextProps) {
-        //this.props.fetchCategory();
+    /*componentWillReceiveProps(nextProps) {
+        this.props.fetchCategory();
+    }*/
+
+    componentWillMount(){
+        this.props.fetchCategory();
     }
 
     makeCategory(){
@@ -60,9 +64,9 @@ class ProjectList extends Component {
                     <article className="c-project-list__item__cell">{project.year}</article>
                     <article className="c-project-list__item__cell"><strong>{project.title}</strong></article>
                     <article className="c-project-list__item__cell">{project.description}</article>
-                    <a href={`/projets/${project.id}`}>
+                    <a href={`#/projets/${project.id}`}>
                         Voir le projet
-                    </a>
+            </a>
                 </li>
                 {/*<ProjectListDetail images={project.images}/>*/}
                 </article>
