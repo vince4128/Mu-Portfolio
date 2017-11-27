@@ -6,9 +6,12 @@ const Menu = (props) => {
     return(
         <ul className="c-menu">
             <li>
-                <a href="/projets">
+                {/*<a href="/">
                 <h3>| <span>Index</span></h3>
-                </a>
+    </a>*/}
+    <Link to="/">
+                <h3>| <span>Index</span></h3>
+                </Link>
             </li>
             <li>
                 <h3>| <span>À propos</span></h3>
