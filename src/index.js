@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { HashRouter, Route, Switch, Link } from "react-router-dom";
 import promise from 'redux-promise'; 
 
 import reducers from './reducers';
@@ -15,15 +15,15 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <BrowserRouter>
+    <HashRouter>
       <section>
         <Switch>
-          <Route path="/projets/:id/:pid" component={ProjectDetail}/>
-          <Route path="/projets/:id" component={ProjectSlider}/>
-          <Route path="/projets" component={ProjectList}/>
+          <Route exact path="/" component={ProjectList} render={function(){alert("coucou")}}/>
+          <Route path="/projets/:id/:pid" component={ProjectDetail} render={function(){alert("coucou")}}/>          
+          <Route path="/projets/:id" component={ProjectSlider} render={function(){alert("coucou")}}/>
         </Switch>
       </section>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
   , document.querySelector('.container')
   );
