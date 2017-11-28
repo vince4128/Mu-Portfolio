@@ -19,13 +19,9 @@ class ProjectList extends Component {
         this.props.fetchCategory();
     }
 
-    /*componentWillReceiveProps(nextProps) {
+    /*componentWillMount(){
         this.props.fetchCategory();
     }*/
-
-    componentWillMount(){
-        this.props.fetchCategory();
-    }
 
     makeCategory(){
         return _.mapValues(_.groupBy(this.props.projects, 'category'),clist => clist.map(cat => _.omit(cat, 'category')));
@@ -33,16 +29,17 @@ class ProjectList extends Component {
 
     renderCategoryList() {
         return _.map(this.props.projects, project => {
+
+            if (project[0]) {
+                project = project[0]
+            }
+
             return (
                 <li
                     key={project.id}
                     className="c-project-list--category"
                     >
-                    {/*<Link to={`/projets/${project.id}`} >
-                        voir
-            </Link>*/}
-                    <h1>{project[0].category}</h1>
-                    {/*<p>{JSON.stringify(project)}</p>*/}
+                    <h1>{project.category}</h1>
                     <ul>
                         {this.renderProjectList(project)}
                     </ul>
@@ -51,8 +48,8 @@ class ProjectList extends Component {
         })
     }
 
-    renderProjectList(_project) {
-        return _.map(_project, project => {
+    renderProjectList(project) {
+            console.log("###projectList### converti " + JSON.stringify(project));
             return(
                 <article>
                 <li
@@ -64,19 +61,15 @@ class ProjectList extends Component {
                     <article className="c-project-list__item__cell">{project.year}</article>
                     <article className="c-project-list__item__cell"><strong>{project.title}</strong></article>
                     <article className="c-project-list__item__cell">{project.description}</article>
-                    <a href={`#/projets/${project.id}`}>
+                    <Link to={`/projets/${project.id}`}>
                         Voir le projet
-            </a>
+            </Link>
                 </li>
-                {/*<ProjectListDetail images={project.images}/>*/}
                 </article>
             );
-        });
     }
 
     render(){
-        //this.props.fetchCategory();
-        console.log(this.props.projects);
         return(
             <ul className="c-project-list">
                 {this.renderCategoryList()}
@@ -90,5 +83,4 @@ function mapStateToProps(state){
     return { projects: state.projects };
 }
 
-//export default connect(mapStateToProps, { fetchProjects })(ProjectList);
 export default connect(mapStateToProps, { fetchCategory })(ProjectList);
