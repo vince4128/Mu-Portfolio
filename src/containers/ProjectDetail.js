@@ -47,7 +47,6 @@ class ProjectDetail extends Component {
     }
 
     componentDidMount() {
-        //alert("ProjectDetail DidMount");
         const { id } = this.props.match.params;
         const { pid } = this.props.match.params;
         this.props.fetchProject(id);
@@ -56,23 +55,12 @@ class ProjectDetail extends Component {
     }
 
     componentWillReceiveProps(nextProps, oldProps) {
-        //alert("ProjectDetail WillReceiveProps");
         const { id } = nextProps.match.params;
         const { pid } = nextProps.match.params;
         this.setState({ currentProject: id });
         this.setState({ currentImage: pid });
     }
 
-    componentDidUpdate(){
-        alert('update');
-    }
-
-    componentWillMount(){
-        alert('will mount');
-        const { id } = this.props.match.params;
-        this.setState({currentProject:id});
-        this.props.fetchProject(id);
-    }
 
     renderList() {
         return _.map(this.props.project.images, image => {

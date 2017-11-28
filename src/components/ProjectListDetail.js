@@ -26,7 +26,6 @@ class ProjectListDetail extends Component {
                                     key={image.index}
                                     className="c-project-list__detail__image"
                                     >
-                                    {/*<img src={`img/${image.src}`}/>*/}
                                 </li>
                             )
                         })
