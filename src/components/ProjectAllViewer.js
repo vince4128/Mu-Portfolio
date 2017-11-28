@@ -4,32 +4,32 @@ import ProjectName from './ProjectName';
 
 class ProjectAllViewer extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
-            status:'',
-            titleStatus:'',
+            status: '',
+            titleStatus: '',
             isAnimated: false
         }
     }
 
     componentWillUnmount() {
-        this.setState({isAnimated : false});
+        this.setState({ isAnimated: false });
     }
 
-    componentWillReceiveProps(nextProps, oldProps){
+    componentWillReceiveProps(nextProps, oldProps) {
 
         //projet a afficher
-        if(nextProps.project.id == nextProps.currentProject){
+        if (nextProps.project.id == nextProps.currentProject) {
             //animation ?
-            if(this.state.isAnimated){
+            if (this.state.isAnimated) {
                 this.setState({
                     titleStatus: 'animated fadeIn'
                 });
                 //sens de l'animation
-                if((nextProps.project.id > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 &&  nextProps.currentProject == this.props.total)){
- 
+                if ((nextProps.project.id > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 && nextProps.currentProject == this.props.total)) {
+
                     this.setState({
                         status: 'c-projectScreen--active slideInRight'
                     });
@@ -38,39 +38,39 @@ class ProjectAllViewer extends Component {
                         status: 'c-projectScreen--active slideInLeft'
                     });
                 }
-                
+
             } else {
                 this.setState({
                     status: 'c-projectScreen--active'
                 })
             }
-            
+
         }//projet a faire défiler
-        else if(nextProps.project.id == this.props.currentProject){
+        else if (nextProps.project.id == this.props.currentProject) {
             this.setState({
                 titleStatus: 'animated fadeOut'
             });
-            if(this.state.isAnimated){
+            if (this.state.isAnimated) {
                 //sens de l'animation
-                if((nextProps.currentProject > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 &&  nextProps.currentProject == this.props.total)){
+                if ((nextProps.currentProject > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 && nextProps.currentProject == this.props.total)) {
 
                     this.setState({
                         status: 'c-projectScreen--prev slideOutLeft'
                     });
-                }else{
+                } else {
                     this.setState({
                         status: 'c-projectScreen--prev slideOutRight'
-                    }); 
+                    });
                 }
-                
+
             } else {
                 this.setState({
                     status: ''
                 })
             }
-            
+
         }//projet a masquer
-        else{
+        else {
             this.setState({
                 status: ''
             });
@@ -79,29 +79,29 @@ class ProjectAllViewer extends Component {
             });
         }
 
-        this.setState({isAnimated : true});
+        this.setState({ isAnimated: true });
 
     }
 
     componentDidMount() {
 
         //afficher le premier projet
-        if(this.props.project.id == this.props.currentProject){
+        if (this.props.project.id == this.props.currentProject) {
             this.setState({
                 status: 'c-projectScreen--active',
             });
         }
 
-        this.setState({isAnimated : true});
+        this.setState({ isAnimated: true });
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div
                 className={"c-projectScreen animated " + this.state.status}
-            >                
-                <div className="c-img-project-wrapper" style={{backgroundImage : `url(../img/${ this.props.project.images[0].src })`}}></div>
-                <ProjectName anim={this.state.titleStatus} project={this.props.project}/>
+            >
+                <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../img/${this.props.project.images[0].src})` }}></div>
+                <ProjectName anim={this.state.titleStatus} project={this.props.project} />
             </div>
         )
     }
