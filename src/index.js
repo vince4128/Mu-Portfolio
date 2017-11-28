@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { HashRouter, Route, Switch, Link } from "react-router-dom";
-import promise from 'redux-promise'; 
+import promise from 'redux-promise';
 
 import reducers from './reducers';
 import ProjectList from './containers/ProjectList';
@@ -18,15 +18,15 @@ ReactDOM.render(
     <HashRouter>
       <section>
         <Switch>
-          <Route exact path="/" component={ProjectList} render={function(){alert("coucou")}}/>
-          <Route path="/projets/:id/:pid" component={ProjectDetail} render={function(){alert("coucou")}}/>          
-          <Route path="/projets/:id" component={ProjectSlider} render={function(){alert("coucou")}}/>
+          <Route exact path="/" component={ProjectList} />
+          <Route path="/projets/:id/:pid" component={ProjectDetail} />
+          <Route path="/projets/:id" component={ProjectSlider} />
         </Switch>
       </section>
     </HashRouter>
   </Provider>
   , document.querySelector('.container')
-  );
+);
 
 require("../style/style.scss");
 require('../assets/img/img1.jpg');
