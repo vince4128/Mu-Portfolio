@@ -8,23 +8,20 @@ import ProjectListDetail from '../components/ProjectListDetail';
 
 class ProjectList extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.renderCategoryList = this.renderCategoryList.bind(this);
         this.renderProjectList = this.renderProjectList.bind(this);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.fetchCategory();
     }
 
-    /*componentWillMount(){
-        this.props.fetchCategory();
-    }*/
 
-    makeCategory(){
-        return _.mapValues(_.groupBy(this.props.projects, 'category'),clist => clist.map(cat => _.omit(cat, 'category')));
+    makeCategory() {
+        return _.mapValues(_.groupBy(this.props.projects, 'category'), clist => clist.map(cat => _.omit(cat, 'category')));
     }
 
     renderCategoryList() {
@@ -38,7 +35,7 @@ class ProjectList extends Component {
                 <li
                     key={project.id}
                     className="c-project-list--category"
-                    >
+                >
                     <h1>{project.category}</h1>
                     <ul>
                         {this.renderProjectList(project)}
@@ -49,13 +46,13 @@ class ProjectList extends Component {
     }
 
     renderProjectList(project) {
-            console.log("###projectList### converti " + JSON.stringify(project));
-            return(
-                <article>
+        console.log("###projectList### converti " + JSON.stringify(project));
+        return (
+            <article>
                 <li
                     key={project.id}
                     className="c-project-list__item"
-                    >
+                >
                     <span className="c-project-list__item--line"></span>
                     <span className="c-project-list__item--point">•</span>
                     <article className="c-project-list__item__cell">{project.year}</article>
@@ -63,14 +60,14 @@ class ProjectList extends Component {
                     <article className="c-project-list__item__cell">{project.description}</article>
                     <Link to={`/projets/${project.id}`}>
                         Voir le projet
-            </Link>
+                    </Link>
                 </li>
-                </article>
-            );
+            </article>
+        );
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <ul className="c-project-list">
                 {this.renderCategoryList()}
             </ul>
@@ -79,7 +76,7 @@ class ProjectList extends Component {
 
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     return { projects: state.projects };
 }
 
