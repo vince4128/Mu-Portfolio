@@ -6,7 +6,7 @@ const Menu = (props) => {
     return (
         <ul className="c-menu">
             <li>
-                <NavLink to="/">
+                <NavLink to="/list">
                     <h3>| <span>Index</span></h3>
                 </NavLink>
             </li>
