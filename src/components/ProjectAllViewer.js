@@ -100,7 +100,7 @@ class ProjectAllViewer extends Component {
             <div
                 className={"c-projectScreen animated " + this.state.status}
             >
-                <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../img/${this.props.project.images[0].src})` }}></div>
+                <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../mu/img/${this.props.project.images[0].src})` }}></div>
                 <ProjectName anim={this.state.titleStatus} project={this.props.project} />
             </div>
         )

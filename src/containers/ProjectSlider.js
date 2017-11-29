@@ -43,11 +43,6 @@ class ProjectSlider extends Component {
         this.setState({ currentProject: id });
     }
 
-    /*componentWillMount() {
-        this.props.fetchProjects();
-        const { id } = this.props.match.params;
-        this.setState({ currentProject: id });
-    }*/
 
     handleWheel(e) {
 
@@ -82,7 +77,7 @@ class ProjectSlider extends Component {
                         currentProject={this.state.currentProject}
                         total={Object.keys(this.props.projects).length - 1}
                     />
-                    <img style={{ display: 'none' }} src={`../img/${project.images[0].src}`}/>
+                    <img style={{ display: 'none' }} src={`../mu/img/${project.images[0].src}`}/>
                 </li>
             );
         })
