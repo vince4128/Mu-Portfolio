@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ProjectName from './ProjectName';
+import ProjectDetailPagination from './ProjectDetailPagination';
 
 class ProjectAllViewer extends Component {
 
@@ -102,6 +103,11 @@ class ProjectAllViewer extends Component {
             >
                 <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../mu/img/${this.props.project.images[0].src})` }}></div>
                 <ProjectName anim={this.state.titleStatus} project={this.props.project} />
+                {/*<ProjectDetailPagination
+                    select={()=>{}}
+                    current={0}
+                    total={Object.keys(this.props.project.images).length}
+                />*/}
             </div>
         )
     }
