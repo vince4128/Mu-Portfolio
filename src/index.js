@@ -66,3 +66,5 @@ require('../assets/img/ANVP_7.jpg');
 require('../assets/img/ANVP_8.jpg');
 require('../assets/img/ANVP_9.jpg');
 require('../assets/img/ANVP_10.jpg');
+require('../assets/img/cursor-left.png');
+require('../assets/img/cursor-right.png');
