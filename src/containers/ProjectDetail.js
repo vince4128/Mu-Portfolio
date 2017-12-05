@@ -71,7 +71,7 @@ class ProjectDetail extends Component {
                         total={Object.keys(this.props.project.images).length - 1}
                         image={image}
                     />
-                    <img style={{ display: 'none' }} src={`../../img/${image.src}`}/>
+                    <img style={{ display: 'none' }} src={`../../mu/img/${image.src}`}/>
                 </span>
             );
         })
