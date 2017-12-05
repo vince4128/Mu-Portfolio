@@ -100,11 +100,12 @@ class ProjectSlider extends Component {
                 />
                 <Logo />
                 <Menu />
-                <ProjectDetailPagination
+                {<ProjectDetailPagination
                     select={this.selectProject}
                     current={parseInt(this.state.currentProject)}
+                    //total={Object.keys(this.props.projects).length}
                     total={Object.keys(this.props.projects).length}
-                />
+                />}
             </section>
         );
     }
