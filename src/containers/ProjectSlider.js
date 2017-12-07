@@ -35,7 +35,8 @@ class ProjectSlider extends Component {
 
     overList(id){
         //console.log("coucou" + id);
-        this.setState({currentBg : id});
+        //this.setState({currentBg : id});
+        this.props.history.push(`/projets/${this.state.currentProject}/${id}`);
     }
 
     //preloader les images
@@ -117,12 +118,10 @@ class ProjectSlider extends Component {
                 <Logo />
                 <Menu />
                 <ProjectDetailPagination
-                    //select={this.selectProject}
-                    over={this.overList}
+                    //select={this.overList}
                     current={0}
-                    //total={Object.keys(this.props.projects).length}
                     total={this.state.projectsLength[this.state.currentProject]}
-                    project={project}//bug tableau / pas tableau
+                    project={project}
                 />
             </section>
         );
