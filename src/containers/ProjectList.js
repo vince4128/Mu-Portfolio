@@ -55,7 +55,7 @@ class ProjectList extends Component {
                             <article className="c-project-list__item__cell">{unicProject.year}</article>
                             <article className="c-project-list__item__cell"><strong>{unicProject.title}</strong></article>
                             <article className="c-project-list__item__cell">{unicProject.description}</article>
-                            <Link to={`/projets/${unicProject.id}`}>
+                            <Link to={`/projets/${unicProject.id}/0`}>
                                 Voir le projet
                             </Link>
                         </li>
