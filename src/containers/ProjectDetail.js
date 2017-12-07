@@ -94,7 +94,7 @@ class ProjectDetail extends Component {
                 </ul>
                 <Logo />
                 <Menu />
-                <ProjectDescription project={this.props.project}/>
+                {/*<ProjectDescription project={this.props.project}/>*/}
                 <PrevNext
                     select={this.selectImageurl}
                     current={parseInt(this.state.currentImage)}
