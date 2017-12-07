@@ -5,7 +5,7 @@ class ProjectDesc extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open:true
+            open:false
         }
 
         this.isOpened = this.isOpened.bind(this);
