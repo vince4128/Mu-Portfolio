@@ -104,6 +104,7 @@ class ProjectDetail extends Component {
                     select={this.selectImageurl}
                     current={parseInt(this.state.currentImage)}
                     total={Object.keys(this.props.project.images).length}
+                    project={this.props.project}
                 />
             </section>
         );
