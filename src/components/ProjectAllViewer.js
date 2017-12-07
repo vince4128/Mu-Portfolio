@@ -97,16 +97,17 @@ class ProjectAllViewer extends Component {
     }
 
     render() {
+        //alert(JSON.stringify(this.props.project));
         return (
             <div
                 className={"c-projectScreen animated " + this.state.status}
             >
-                <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../mu/img/${this.props.project.images[0].src})` }}></div>
+                <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../mu/img/${this.props.project.images[this.props.background].src})` }}></div>
                 <ProjectName anim={this.state.titleStatus} project={this.props.project} />
                 {/*<ProjectDetailPagination
-                    select={()=>{}}
-                    current={0}
-                    total={Object.keys(this.props.project.images).length}
+                        current={0}
+                        total={this.props.project.images.length}
+                        images={this.props.project.images}
                 />*/}
             </div>
         )
