@@ -18,16 +18,24 @@ class ProjectSlider extends Component {
 
         this.state = {
             status: '',
-            currentProject: 0
+            currentProject: 0,
+            projectsLength: [],
+            currentBg: 0
         }
 
         this.selectProject = this.selectProject.bind(this);
         this.handleWheel = this.handleWheel.bind(this);
+        this.overList = this.overList.bind(this);
 
     }
 
     selectProject(projectId) {
         this.props.history.push(`/projets/${projectId}`);
+    }
+
+    overList(id){
+        //console.log("coucou" + id);
+        this.setState({currentBg : id});
     }
 
     //preloader les images
@@ -63,34 +71,42 @@ class ProjectSlider extends Component {
     }
 
     renderList() {
+
         return _.map(this.props.projects, project => {
 
             if (project[0]) {
                 project = project[0]
             }
 
+            this.state.projectsLength.push(project.images.length);
+
             return (
                 <li key={project.id}>
-                    {console.log('##projectSlider### ' + JSON.stringify(project))}
+                    {/*console.log('##projectSlider### ' + JSON.stringify(project) + "##projectsLength## " + this.state.projectsLength)*/}
                     <ProjectAllViewer
                         project={project}
                         currentProject={this.state.currentProject}
                         total={Object.keys(this.props.projects).length - 1}
+                        background={this.state.currentBg}
                     />
                     <img style={{ display: 'none' }} src={`../mu/img/${project.images[0].src}`}/>
+                    {/*console.log("### coucou ### " + project.images.length)*/}
                 </li>
             );
         })
     }
 
     render() {
-        console.log(this.props.projects);
+
+        var project = this.props.projects[this.state.currentProject]
+
+        //console.log(this.state.projectsLength[0]);
         return (
             <section className="no-scroll" onWheel={(e) => this.handleWheel(e)}>
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
-                <Link to={`/projets/${this.state.currentProject}/0`}>
+                <Link to={`/projets/${this.state.currentProject}/1`}>
                     <DetailButton />
                 </Link>
                 <PrevNext
@@ -100,12 +116,14 @@ class ProjectSlider extends Component {
                 />
                 <Logo />
                 <Menu />
-                {<ProjectDetailPagination
-                    select={this.selectProject}
-                    current={parseInt(this.state.currentProject)}
+                <ProjectDetailPagination
+                    //select={this.selectProject}
+                    over={this.overList}
+                    current={0}
                     //total={Object.keys(this.props.projects).length}
-                    total={Object.keys(this.props.projects).length}
-                />}
+                    total={this.state.projectsLength[this.state.currentProject]}
+                    project={project}//bug tableau / pas tableau
+                />
             </section>
         );
     }
