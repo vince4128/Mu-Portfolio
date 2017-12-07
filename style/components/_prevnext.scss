@@ -7,7 +7,7 @@
     height:100%;
     min-height: 100vh;
     //background-color: rgba(0, 0, 0, 0.1);
-    z-index:50;
+    //z-index:50;
     transition: all .3s;
 }
 
@@ -35,7 +35,7 @@
             opacity: 0.3;
         }
     }
-    cursor: url('~img/cursor-left.png') 4 12, progress;
+    cursor: url('~img/cursor-left.png') 0 50, progress;
     //cursor: url(/user-files/themes/nearestneighbour/images/arrow-left.png) 0 17,auto;
     //cursor: url('~img/img1.jpg');
 }   
@@ -64,5 +64,5 @@
             opacity: 0.3;
         }
     }
-    cursor: url('~img/cursor-right.png'), progress;
+    cursor: url('~img/cursor-right.png') 51 50, progress;
 }
