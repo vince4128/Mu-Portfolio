@@ -19,24 +19,18 @@ class ProjectList extends Component {
         this.props.fetchCategory();
     }
 
-
-    makeCategory() {
-        return _.mapValues(_.groupBy(this.props.projects, 'category'), clist => clist.map(cat => _.omit(cat, 'category')));
-    }
-
     renderCategoryList() {
-        return _.map(this.props.projects, project => {
 
-            if (project[0]) {
-                project = project[0]
-            }
+        const sortedCategory = _.mapValues(_.groupBy(this.props.projects, 'category'), clist => clist.map(cat => _.omit(cat, 'make')));
+
+        return _.map(sortedCategory, project => {
 
             return (
                 <li
                     key={project.id}
                     className="c-project-list--category"
                 >
-                    <h1>{project.category}</h1>
+                    <h1>{project[0].category}</h1>
                     <ul>
                         {this.renderProjectList(project)}
                     </ul>
@@ -46,22 +40,28 @@ class ProjectList extends Component {
     }
 
     renderProjectList(project) {
-        console.log("###projectList### converti " + JSON.stringify(project));
+
         return (
             <article>
-                <li
-                    key={project.id}
-                    className="c-project-list__item"
-                >
-                    <span className="c-project-list__item--line"></span>
-                    <span className="c-project-list__item--point">•</span>
-                    <article className="c-project-list__item__cell">{project.year}</article>
-                    <article className="c-project-list__item__cell"><strong>{project.title}</strong></article>
-                    <article className="c-project-list__item__cell">{project.description}</article>
-                    <Link to={`/projets/${project.id}`}>
-                        Voir le projet
-                    </Link>
-                </li>
+                { _.map(project, unicProject =>{
+
+                    return(
+                        <li
+                            key={unicProject.id}
+                            className="c-project-list__item"
+                        >
+                            <span className="c-project-list__item--line"></span>
+                            <span className="c-project-list__item--point">•</span>
+                            <article className="c-project-list__item__cell">{unicProject.year}</article>
+                            <article className="c-project-list__item__cell"><strong>{unicProject.title}</strong></article>
+                            <article className="c-project-list__item__cell">{unicProject.description}</article>
+                            <Link to={`/projets/${unicProject.id}`}>
+                                Voir le projet
+                            </Link>
+                        </li>
+                    )
+
+                })}
             </article>
         );
     }

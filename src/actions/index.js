@@ -108,7 +108,7 @@ const PROJECT = [
         id:2, 
         title: 'Le projet 3',
         description: 'Morbi sit amet tellus et velit pretium consequat eu sed magna. Vestibulum non condimentum augue, quis accumsan magna.',
-        category: 'cat2',
+        category: 'Livre',
         year: '2016',
         images: [
             {
@@ -180,13 +180,35 @@ export function fetchProject(id){
 export function fetchCategory(){
     console.log("action fetchCategory lancée !");
     //const category = _.mapValues(_.groupBy(PROJECT, 'category'),clist => clist.map(cat => _.omit(cat, 'category')));
-    const category = _.mapValues(_.groupBy(PROJECT, 'category'),
+
+    //const copyproject = clone(PROJECT);
+    //const copyproject = JSON.parse(JSON.stringify(PROJECT));
+
+    //2
+    /*const copyproject = JSON.parse(JSON.stringify(PROJECT));
+
+    const category = _.mapValues(_.groupBy(copyproject, 'category'),
     clist => clist.map(cat => _.omit(cat, 'make')));
 
-    console.log("category : " + JSON.stringify(category));
+    console.log("category : " + JSON.stringify(category));*/
 
     return {
         type: FETCH_CATEGORY,
-        payload: category
+        payload: PROJECT
     }
+}
+
+function clone(obj){
+    if(obj == null || typeof(obj) != 'object'){
+        return obj;
+        alert('va muter');
+    }
+        
+    var temp = new obj.constructor(); 
+    for(var key in obj)
+        temp[key] = clone(obj[key]);
+
+    alert(JSON.stringify(temp));
+
+    return temp;
 }
