@@ -26,7 +26,7 @@ const ProjectDetailPagination = (props) => {
             onMouseOut={()=>props.over(i)}
             >
             <i className="fa fa-circle" aria-hidden="true"></i>
-            <span><img width="150px" height="150px" src={`img/${props.project.images[i].src}`}/></span>
+            <span class="animated fadeIn"><img src={`img/${props.project.images[i].src}`}/></span>
             </li>);    
         }else{
             dot.push(<li
@@ -36,13 +36,13 @@ const ProjectDetailPagination = (props) => {
             onMouseOut={()=>props.over(0)}
             >
             <i className="fa fa-circle-o" aria-hidden="true"></i>
-            <span><img width="150px" height="150px" src={`img/${props.project.images[i].src}`}/></span>
+            <span class="animated fadeIn"><img src={`img/${props.project.images[i].src}`}/></span>
             </li>);   
         }
     }
 
     return(
-        <ul className="c-projectPagination">
+        <ul className="c-projectPagination animated fadeIn">
             {dot}
         </ul>
     )
