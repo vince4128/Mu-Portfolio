@@ -6,6 +6,7 @@ import { fetchProjects } from '../actions/index';
 
 import ProjectAllViewer from '../components/ProjectAllViewer';
 import ProjectDetailPagination from '../components/ProjectDetailPagination';
+import ProjectDescription from '../components/ProjectDesc';
 import Logo from '../components/logo';
 import Menu from '../components/Menu';
 import DetailButton from '../components/DetailButton';
@@ -42,11 +43,13 @@ class ProjectSlider extends Component {
     //preloader les images
 
     componentWillReceiveProps(nextProps, oldProps) {
+        //alert('projectslider will receive new props');
         const { id } = nextProps.match.params;
         this.setState({ currentProject: id });
     }
 
-    componentDidMount() {
+    componentWillMount() {
+        //alert('projectslider did mount');
         this.props.fetchProjects();
         const { id } = this.props.match.params;
         this.setState({ currentProject: id });
@@ -99,7 +102,10 @@ class ProjectSlider extends Component {
 
     render() {
 
-        var project = this.props.projects[this.state.currentProject]
+        var project = this.props.projects[this.state.currentProject];
+        var description = project;
+
+        //alert(JSON.stringify(project));
 
         //console.log(this.state.projectsLength[0]);
         return (
@@ -117,6 +123,9 @@ class ProjectSlider extends Component {
                 />
                 <Logo />
                 <Menu />
+                {<ProjectDescription
+                    project={project}
+                />}
                 <ProjectDetailPagination
                     //select={this.overList}
                     current={0}
