@@ -2,31 +2,19 @@
     position:absolute;
     top:0;
     left:0;
-    //bottom:0;
     z-index:175;
     width:50%;
     overflow: auto;
-    /**/
-    /*min-height: 100vh;*/
-    /*max-height: 100vh;*/
-    /*height:100%;*/
 }
 
 .c-project-description__desc{
     box-sizing: border-box;
-    /*position:absolute;
-    top:0;
-    left:0;
-    width:50%;*/
-    /*min-height: 100vh;*/
-    /*max-height: 100vh;*/
-    /*height:100%;*/
     padding:5rem 45px 3rem;
     background:rgba(255,255,255,0.8);
 }
 
 .c-project-description__toggle{
-    margin:10rem 0 0 45px;
+    //margin:10rem 0 0 45px;
 }
 
 .c-project-description--open{
