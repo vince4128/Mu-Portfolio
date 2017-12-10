@@ -86,7 +86,7 @@ class ProjectDetail extends Component {
             <section onWheel={(e) => this.handleWheel(e)}>
                 <div className="c-project-detail">
                     <Link to={`/projets/${this.props.project.id}`}>
-                        <button className="animated fadeInUp">Retour total</button>
+                        <span className="c-project-detail__retour animated fadeInLeft"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Retour</span>
                     </Link>
                 </div>
                 <ul className="no-overflow">
