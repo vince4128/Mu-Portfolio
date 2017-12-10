@@ -21,8 +21,7 @@ class ProjectSlider extends Component {
             status: '',
             currentProject: 0,
             projectsLength: [],
-            currentBg: 0,
-            descDisplayed:false
+            currentBg: 0
         }
 
         this.selectProject = this.selectProject.bind(this);
@@ -39,12 +38,6 @@ class ProjectSlider extends Component {
         //console.log("coucou" + id);
         //this.setState({currentBg : id});
         this.props.history.push(`/projets/${this.state.currentProject}/${id}`);
-    }
-
-    toggleDisplay(){
-        alert("coucou");
-        //this.setState({ descDisplayed: !this.state.descDisplayed });
-        alert("coucou" + this.state.descDisplayed);
     }
 
     //preloader les images
