@@ -5,11 +5,16 @@ import { Link } from 'react-router-dom';
 import { fetchCategory } from '../actions/index';
 
 import ProjectListDetail from '../components/ProjectListDetail';
+import ProjectListItem from '../components/ProjectListItem';
 
 class ProjectList extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            collapse:[]
+        }
 
         this.renderCategoryList = this.renderCategoryList.bind(this);
         this.renderProjectList = this.renderProjectList.bind(this);
@@ -36,7 +41,10 @@ class ProjectList extends Component {
                     </ul>
                 </li>
             );
+
         })
+
+        
     }
 
     renderProjectList(project) {
@@ -45,20 +53,18 @@ class ProjectList extends Component {
             <article>
                 { _.map(project, unicProject =>{
 
+                    //alert(JSON.stringify(tmpCollapse));
+
                     return(
-                        <li
+                        <span key={unicProject.id}>
+                        {/*<li
                             key={unicProject.id}
                             className="c-project-list__item"
-                        >
-                            <span className="c-project-list__item--line"></span>
-                            <span className="c-project-list__item--point">•</span>
-                            <article className="c-project-list__item__cell">{unicProject.year}</article>
-                            <article className="c-project-list__item__cell"><strong>{unicProject.title}</strong></article>
-                            <article className="c-project-list__item__cell">{unicProject.description}</article>
-                            <Link to={`/projets/${unicProject.id}/0`}>
-                                Voir le projet
-                            </Link>
-                        </li>
+                            onClick={()=>alert('coucou')}
+                        >*/}
+                        <ProjectListItem project={unicProject}/>
+                        {/*</li>*/}                        
+                        </span>
                     )
 
                 })}

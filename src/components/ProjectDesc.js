@@ -9,7 +9,7 @@ class ProjectDesc extends Component {
         }
 
         this.isOpened = this.isOpened.bind(this);
-        this.toggleDesc = this.toggleDesc;
+        this.toggleDesc = this.toggleDesc.bind(this);
     }
 
     static defaultProps = {
@@ -44,21 +44,21 @@ class ProjectDesc extends Component {
 
             <div className={"c-project-description " + this.isOpened()}>
     
-                <section className="c-project-description__toggle animated fadeInUp">
+                <section onClick={()=>this.toggleDesc()} className="c-project-description__toggle animated fadeIn">
                     <span>
-                        <button onClick={()=>this.toggleDesc()}>Afficher</button>
-                        <p>coucou : {(JSON.stringify(this.props.project.description))}</p>
+                        Description
                     </span>
                 </section>
     
                 <section className="c-project-description__desc animated fadeInUp">
                     <span>
-                        {/*<button onClick={()=>this.toggleDesc()}>Masquer</button>
+                        <i className="c-project-description__btn--close fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i>
                         <h1>{this.props.project.title}</h1>
                         <h1>{this.props.project.category} - {this.props.project.year}</h1>
                         <p>{this.props.project.description}</p>
                         <hr/>
-        <p>Les liens</p>*/}
+                        <p>Les liens</p>
+                        <p>{this.props.project.description}</p>
                     </span>
                 </section>
     

@@ -5,19 +5,12 @@ class ProjectListDetail extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            status: 'close',
-        }
     }
 
-    makeImageList(){
-        return '';
-    }
-
-    //collapsible component
     render(){
+
         return(
-            <div class="c-project-list__detail">
+            <div className="c-project-list__detail__images-wrapper ">
                 <ul>
                     {
                         _.map(this.props.images, image => {
@@ -26,12 +19,11 @@ class ProjectListDetail extends Component {
                                     key={image.index}
                                     className="c-project-list__detail__image"
                                     >
+                                    <div><img src={`img/${image.src}`}/></div>                                                
                                 </li>
                             )
                         })
                     }
-                    <li>
-                    </li>
                 </ul>
             </div>
         )
