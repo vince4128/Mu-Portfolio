@@ -21,7 +21,8 @@ class ProjectSlider extends Component {
             status: '',
             currentProject: 0,
             projectsLength: [],
-            currentBg: 0
+            currentBg: 0,
+            descDisplayed:false
         }
 
         this.selectProject = this.selectProject.bind(this);
@@ -38,6 +39,12 @@ class ProjectSlider extends Component {
         //console.log("coucou" + id);
         //this.setState({currentBg : id});
         this.props.history.push(`/projets/${this.state.currentProject}/${id}`);
+    }
+
+    toggleDisplay(){
+        alert("coucou");
+        //this.setState({ descDisplayed: !this.state.descDisplayed });
+        alert("coucou" + this.state.descDisplayed);
     }
 
     //preloader les images
@@ -58,17 +65,21 @@ class ProjectSlider extends Component {
 
     handleWheel(e) {
 
-        if (e.deltaY < 0) {
-            if (this.state.currentProject < Object.keys(this.props.projects).length - 1) {
-                this.selectProject(parseInt(this.state.currentProject) + 1);
-            } else {
-                this.selectProject(0);
-            }
-        } else if (e.deltaY > 0) {
-            if (this.state.currentProject > 0) {
-                this.selectProject(parseInt(this.state.currentProject) - 1);
-            } else {
-                this.selectProject(Object.keys(this.props.projects).length - 1);
+        //console.log(e.target.classList.value);
+
+        if(e.target.classList.value === 'c-prevnext__next' || e.target.classList.value === 'c-prevnext__prev' || e.target.classList.value.toString().indexOf('fa-angle-left') !== -1 || e.target.classList.value.toString().indexOf('fa-angle-right') !== -1){
+            if (e.deltaY < 0) {
+                if (this.state.currentProject < Object.keys(this.props.projects).length - 1) {
+                    this.selectProject(parseInt(this.state.currentProject) + 1);
+                } else {
+                    this.selectProject(0);
+                }
+            } else if (e.deltaY > 0) {
+                if (this.state.currentProject > 0) {
+                    this.selectProject(parseInt(this.state.currentProject) - 1);
+                } else {
+                    this.selectProject(Object.keys(this.props.projects).length - 1);
+                }
             }
         }
 
@@ -123,9 +134,9 @@ class ProjectSlider extends Component {
                 />
                 <Logo />
                 <Menu />
-                {<ProjectDescription
+                <ProjectDescription
                     project={project}
-                />}
+                />
                 <ProjectDetailPagination
                     //select={this.overList}
                     current={0}
