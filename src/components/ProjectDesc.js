@@ -45,9 +45,10 @@ class ProjectDesc extends Component {
             <div className={"c-project-description " + this.isOpened()}>
     
                 <section onClick={()=>this.toggleDesc()} className="c-project-description__toggle animated fadeIn">
-                    <span>
-                        Description
-                    </span>
+                    <div className={"c-projectName"}>
+                        <h1><strong>{this.props.project.title}</strong></h1>
+                        <h2>{this.props.project.category} - {this.props.project.year}</h2>
+                    </div>
                 </section>
     
                 <section className="c-project-description__desc animated fadeInUp">
