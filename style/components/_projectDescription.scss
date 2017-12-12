@@ -47,17 +47,7 @@
         display: none;
     }
     .c-project-description__toggle{
-        position:fixed;
         display: block;
-        width:6rem;
-        height:6rem;
-        line-height: 6rem;
-        border-radius: 50%;
-        top:150px;
-        left:45px;
-        text-align: center;
-        background-color: #000;
-        color:#fff;
         cursor:pointer;
     }
 }
