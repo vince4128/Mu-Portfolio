@@ -92,7 +92,6 @@ class ProjectDetail extends Component {
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
-                <Logo />
                 <Menu />
                 {/*<ProjectDescription project={this.props.project}/>*/}
                 <PrevNext

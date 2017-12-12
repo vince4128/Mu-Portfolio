@@ -7,6 +7,7 @@ import { fetchProjects } from '../actions/index';
 import ProjectAllViewer from '../components/ProjectAllViewer';
 import ProjectDetailPagination from '../components/ProjectDetailPagination';
 import ProjectDescription from '../components/ProjectDesc';
+import ProjectName from '../components/ProjectName';
 import Logo from '../components/logo';
 import Menu from '../components/Menu';
 import DetailButton from '../components/DetailButton';
@@ -125,11 +126,10 @@ class ProjectSlider extends Component {
                     current={parseInt(this.state.currentProject)}
                     total={Object.keys(this.props.projects).length}
                 />
-                <Logo />
                 <Menu />
                 <ProjectDescription
-                    project={project}
-                />
+                    project={project}>
+                </ProjectDescription>
                 <ProjectDetailPagination
                     //select={this.overList}
                     current={0}
