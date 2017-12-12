@@ -10,14 +10,13 @@
         span{
             position:fixed;
             right:45px;
-            width:40%;
+            width:20%;
             bottom:100px;
             display:none;
             transition: all .3s;
             img {
                 max-width:100%;
                 height:auto;
-                border:5px solid #000;
             }
         }
     }
