@@ -1,17 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Apropos from './Apropos';
 
 const Menu = (props) => {
 
     return (
         <ul className="c-menu">
-            <li>
-                <NavLink to="/list">
-                    <h3>| <span>Index</span></h3>
-                </NavLink>
+            <li className="c-menu--left">
+                <h3>| <Apropos txt={"À PROPOS"}/></h3>
             </li>
-            <li>
-                <h3>| <span>À propos</span></h3>
+            <li className="c-menu--right">
+                <NavLink to="/list">
+                    <h3>| <span>INDEX</span></h3>
+                </NavLink>
             </li>
         </ul>
     )
