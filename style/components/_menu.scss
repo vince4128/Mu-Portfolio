@@ -1,8 +1,12 @@
 .c-menu{
+    box-sizing: border-box;
     position:fixed;
     display: block;
+    width:100%;
     top:45px;
-    right:45px;
+    padding:0 45px;
+    margin:0;
+    //right:45px;
     li{
         display:inline-block;
         margin-right:1em;
@@ -10,6 +14,16 @@
             margin-left: 0.5em;
             font-weight: bold;
         }
+        &.c-menu--right{
+           float: right;
+        }
+    
+        &.c-menu--left{
+            float: left;
+        }
     }
     z-index:1000;
+    cursor: pointer;
+    //text-align: right;
+
 }
