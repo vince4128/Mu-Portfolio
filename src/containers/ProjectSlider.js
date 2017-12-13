@@ -12,6 +12,7 @@ import Logo from '../components/logo';
 import Menu from '../components/Menu';
 import DetailButton from '../components/DetailButton';
 import PrevNext from '../components/PrevNext';
+import Mainzone from '../components/Mainzone';
 
 class ProjectSlider extends Component {
 
@@ -118,14 +119,14 @@ class ProjectSlider extends Component {
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
-                <Link to={`/projets/${this.state.currentProject}/1`}>
-                    <DetailButton />
-                </Link>
                 <PrevNext
                     select={this.selectProject}
                     current={parseInt(this.state.currentProject)}
                     total={Object.keys(this.props.projects).length}
                 />
+                <Link to={`/projets/${this.state.currentProject}/1`}>
+                    <Mainzone/>
+                </Link>
                 <Menu />
                 <ProjectDescription
                     project={project}>
