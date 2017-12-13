@@ -62,7 +62,7 @@ class ProjectSlider extends Component {
 
         //console.log(e.target.classList.value);
 
-        if(e.target.classList.value === 'c-prevnext__next' || e.target.classList.value === 'c-prevnext__prev' || e.target.classList.value.toString().indexOf('fa-angle-left') !== -1 || e.target.classList.value.toString().indexOf('fa-angle-right') !== -1){
+        if(e.target.classList.value === 'c-prevnext__next' || e.target.classList.value === 'c-prevnext__prev' || e.target.classList.value === 'c-mainzone' || e.target.classList.value.toString().indexOf('fa-angle-left') !== -1 || e.target.classList.value.toString().indexOf('fa-angle-right') !== -1){
             if (e.deltaY < 0) {
                 if (this.state.currentProject < Object.keys(this.props.projects).length - 1) {
                     this.selectProject(parseInt(this.state.currentProject) + 1);
@@ -136,6 +136,7 @@ class ProjectSlider extends Component {
                     current={0}
                     total={this.state.projectsLength[this.state.currentProject]}
                     project={project}
+                    preview={true}
                 />
             </section>
         );
