@@ -17,6 +17,14 @@ const ProjectDetailPagination = (props) => {
         }
     }
 
+    function displayImg(){
+        if(props.project.images){
+            return <img src={`img/${props.project.images[i].src}`}/>;
+        }else{
+            return
+        }
+    }
+
     for(let i = 0; i<props.total; i++){
         if(isActive(i)){
             dot.push(<li
@@ -26,7 +34,9 @@ const ProjectDetailPagination = (props) => {
             onMouseOut={()=>props.over(i)}
             >
             <i className="fa fa-circle" aria-hidden="true"></i>
-            <span class="animated fadeIn"><img src={`img/${props.project.images[i].src}`}/></span>
+            <span class="animated fadeIn">
+                {props.preview ? <img src={`img/${props.project.images[i].src}`}/> : '-'}
+            </span>
             </li>);    
         }else{
             dot.push(<li
@@ -36,7 +46,9 @@ const ProjectDetailPagination = (props) => {
             onMouseOut={()=>props.over(0)}
             >
             <i className="fa fa-circle-o" aria-hidden="true"></i>
-            <span class="animated fadeIn"><img src={`img/${props.project.images[i].src}`}/></span>
+            <span class="animated fadeIn">
+                {props.preview ? <img src={`img/${props.project.images[i].src}`}/> : '-'}
+            </span>
             </li>);   
         }
     }
