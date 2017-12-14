@@ -17,7 +17,7 @@ class ProjectListItem extends Component{
 
     isOpened(){
         if(this.state.open){
-            return"c-project-list__detail--open";
+            return"c-project-list__detail--open animated fadeIn";
         }else{
             return"c-project-list__detail--close";
         }
