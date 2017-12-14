@@ -18,7 +18,7 @@
     width:100%;
     //border-bottom:1px solid #000;
     overflow: hidden;
-    cursor: pointer;
+    cursor: pointer;    
     & .c-project-list__item--line{
         position:absolute;
         display: block;
@@ -66,6 +66,7 @@
     cursor: pointer;
     overflow-y: auto;
     //overflow-x: hidden;
+    transition:all .3s ease;
 
     &.c-project-list__detail--open{
         display: block;

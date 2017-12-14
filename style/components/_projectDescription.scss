@@ -5,12 +5,13 @@
     top: 0;
     width: 100%;
     max-width:480px;
+    transition:all .3s ease;
     background:rgba(255,255,255,0.8);
 
     &.c-project-description--close{
-        width: 100px;
+        width: 50%;
         left: 0;
-        top: 150px;
+        top: 100%;
         height:auto;
     }
 
@@ -21,8 +22,18 @@
         height:100%;
         left: 0;
         top: 0;
-        //bottom:0;
     }
+
+    .c-project-description--title{
+        margin: .67em 0 .2em;
+    }
+
+    .c-project-description--category{
+        font-size:0.9em;
+        padding-bottom: 1em;
+        border-bottom: 2px solid #000;
+    }
+
 }
 
 .c-project-description__desc{
