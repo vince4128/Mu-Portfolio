@@ -9,9 +9,15 @@ class ProjectListDetail extends Component {
 
     render(){
 
+        let ulWidth =  0;
+
+        _.map(this.props.images, image => {
+            ulWidth++;
+        });
+
         return(
             <div className="c-project-list__detail__images-wrapper ">
-                <ul>
+                <ul style={{ width:`${ulWidth*375}px` }}>
                     {
                         _.map(this.props.images, image => {
                             return (
