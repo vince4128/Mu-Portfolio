@@ -53,12 +53,7 @@ class Apropos extends Component {
                     <section className="c-project-description__desc animated fadeInUp">
                         <span>
                             <i className="c-project-description__btn--close fa fa-2x fa-times" aria-hidden="true" onClick={() => this.toggleDesc()}></i>
-                            {/*<h1>{this.props.project.title}</h1>
-                            <h1>{this.props.project.category} - {this.props.project.year}</h1>
-                            <p>{this.props.project.description}</p>
-                            <hr/>
-                            <p>Les liens</p>
-            <p>{this.props.project.description}</p>*/}
+
                             <p>Mon travail de designer graphique a principalement pour objet la direction artistique et la réalisation de livres, d’identités visuelles, d’affiches, de vidéos, de dessin de caractère et de sites internet.
                             Je mène parallèlement à ma pratique de designer graphique, une pratique quotidienne d’écriture. Je suis ainsi parfois consultée par des studios pour la rédaction et la mise en page de contenus. J’écris aussi régulièrement des articles pour étapes, magazine dedesign graphique et de culture visuelle.
                             Mon parcours :
