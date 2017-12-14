@@ -43,8 +43,8 @@ class ProjectList extends Component {
             );
 
         })
-
-        
+       
+           
     }
 
     renderProjectList(project) {
