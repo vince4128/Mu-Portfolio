@@ -11,6 +11,11 @@ const Menu = (props) => {
             </li>
             <li className="c-menu--right">
                 <NavLink to="/list">
+                    <h3>| <span>X</span></h3>
+                </NavLink>
+            </li>
+            <li className="c-menu--right">
+                <NavLink to="/list">
                     <h3>| <span>INDEX</span></h3>
                 </NavLink>
             </li>
