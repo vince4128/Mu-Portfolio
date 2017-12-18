@@ -4,7 +4,7 @@
 
 .c-project-list--category{
     border-bottom: 3px solid #000;
-    h1{
+    h1,h2{
         text-decoration: underline;
         margin-left: 0.25em;
     }
@@ -15,39 +15,63 @@
 .c-project-list__item {
     display: table;
     position:relative;
-    width:100%;
+    width:95%;
+    margin-right: 5%;
     //border-bottom:1px solid #000;
     overflow: hidden;
-    cursor: pointer;    
+    cursor: pointer;
+    &:last-child{
+
+        .c-project-list__title,
+        .c-project-list__description{
+            padding:1em 1em 1em 0;
+            border-bottom:none;
+        }
+
+    }    
     & .c-project-list__item--line{
         position:absolute;
         display: block;
-        left:24px;
+        left:72px;
         top:0;
         bottom:0;
-        width:2px;
+        width:1px;
         height:100%;
         text-align: center;
         background-color: #000;
     }
+    /*.c-project-list__item--bottom-line{
+        display: inline-block;
+        position: absolute;
+        width:100%;
+        height:1px;
+        background-color: #000;
+        right:0;
+        bottom:0;
+    }*/
     & .c-project-list__item--point{
         position:absolute;
         display: block;
         font-size:1.6em;
         top:-10px;
         width:25px;
-        left:12px;
+        left:60px;
         height:100%;
         text-align: center;
     }
-    & .c-project-list__year,
+    //& .c-project-list__year,
     & .c-project-list__title,
     & .c-project-list__description{
         padding:1em 1em 1em 0;
         border-bottom:1px solid #000;
     }
+    & .c-project-list__description,
+    & .c-project-list__year,
+    & .c-project-list__item--point{
+        font-family: 'helveticaneue',sans-serif;
+    }
     & .c-project-list__year{
-        padding-left: 2em;
+        padding-left: 7rem;
     }
 }
 
@@ -85,7 +109,7 @@
     }
     li{
         display:inline-block;
-        margin-right:1em;
+        //margin-right:1em;
     }
 }
 
@@ -96,5 +120,5 @@
 
 .c-project-list__detail__image img{
     max-height:215px;
-    margin:15px 0 15px 15px;    
+    //margin:15px 0 15px 15px;    
 }
