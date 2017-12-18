@@ -58,8 +58,7 @@ class ProjectDesc extends Component {
                         <p class="c-project-description--category">{this.props.project.category} - {this.props.project.year}</p>
                         <p class="c-project-description--text">{this.props.project.description}</p>
                         <hr/>
-                        <p>Les liens</p>
-                        <p>{this.props.project.description}</p>
+                        {/*<p>Les liens</p>*/}
                     </span>
                 </section>
     

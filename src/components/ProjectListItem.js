@@ -38,10 +38,11 @@ class ProjectListItem extends Component{
                     <span className="c-project-list__item--point">•</span>
                     <article className="c-project-list__item__cell c-project-list__year">{this.props.project.year}</article>
                     <article className="c-project-list__item__cell c-project-list__title"><strong>{this.props.project.title}</strong></article>
-                    <article className="c-project-list__item__cell c-project-list__description">{this.props.project.description}</article>
+                    <article className="c-project-list__item__cell c-project-list__description">{this.props.project.shortdescription}</article>
+                    <span className="c-project-list__item--bottom-line"></span>
                 </li>
                 <span className={"c-project-list__detail " + this.isOpened()}>
-                <ProjectListDetail images={this.props.project.images} open={this.state.open}/>
+                <ProjectListDetail id={this.props.project.id} images={this.props.project.images} open={this.state.open}/>
                 </span>
             </span>
         )

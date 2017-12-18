@@ -6,6 +6,7 @@ import { fetchCategory } from '../actions/index';
 
 import ProjectListDetail from '../components/ProjectListDetail';
 import ProjectListItem from '../components/ProjectListItem';
+import Menu from '../components/Menu';
 
 class ProjectList extends Component {
 
@@ -35,7 +36,7 @@ class ProjectList extends Component {
                     key={project.id}
                     className="c-project-list--category"
                 >
-                    <h1>{project[0].category}</h1>
+                    <h2>{project[0].category}</h2>
                     <ul>
                         {this.renderProjectList(project)}
                     </ul>
@@ -74,9 +75,11 @@ class ProjectList extends Component {
 
     render() {
         return (
+            <span>
             <ul className="c-project-list">
                 {this.renderCategoryList()}
             </ul>
+            </span>
         )
     }
 
