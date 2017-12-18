@@ -84,15 +84,15 @@ class ProjectDetail extends Component {
 
         return (
             <section onWheel={(e) => this.handleWheel(e)}>
-                <div className="c-project-detail">
+                {/*<div className="c-project-detail">
                     <Link to={`/projets/${this.props.project.id}`}>
                         <span className="c-project-detail__retour animated fadeInLeft"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Retour</span>
                     </Link>
-                </div>
+        </div>*/}
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
-                <Menu />
+                <Menu parent={`/projets/${this.props.project.id}/`}/>
                 {/*<ProjectDescription project={this.props.project}/>*/}
                 <PrevNext
                     select={this.selectImageurl}
