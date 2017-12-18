@@ -3,11 +3,17 @@ h1{
 }
 
 h1,h2,h3,h4,h5{
-    font-family: 'lato-light',sans-serif;
+    //font-family: 'lato-light',sans-serif;
+    font-family: 'epilepsjaround-solid',sans-serif;
+}
+
+p,ul,li{
+    font-family: 'helveticaneue',sans-serif;
 }
 
 body{
-    font-family: 'lato-regular',sans-serif;
+    //font-family: 'lato-regular',sans-serif;
+    font-family: 'epilepsjaround-solid',sans-serif;
     //color:#fff;
 }
 
@@ -16,3 +22,7 @@ body{
 @include font-face('lato-light', '~node_modules/lato-webfont/fonts/Lato-Light');
 @include font-face('lato-bold', '~node_modules/lato-webfont/fonts/Lato-Bold');
 @include font-face('lato-semibold-italic', '~node_modules/lato-webfont/fonts/Lato-SemiBoldItalic');
+
+@include font-face('epilepsjaround-solid', '~fonts/EpilepsjaRound-Solid');
+
+@include font-face('helveticaneue','~fonts/HelveticaNeue-Light');
