@@ -15,7 +15,7 @@ const PROJECT = [
         year:'2016',
         images: [
             {
-                src:"DEVANT_1.jpg",
+                src:"DEVANT_5.jpg",
                 index:0
             },
             {
@@ -31,7 +31,7 @@ const PROJECT = [
                 index:3
             },
             {
-                src:"DEVANT_5.jpg",
+                src:"DEVANT_1.jpg",
                 index:4
             },
             {
