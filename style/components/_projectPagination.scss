@@ -1,8 +1,9 @@
 .c-projectPagination{
-    position:fixed;
+    /*position:fixed;
     right:45px;
     bottom:45px;
-    z-index:150;
+    z-index:150;*/
+    float:right;
     cursor:pointer;
     li{
         display:inline-block;

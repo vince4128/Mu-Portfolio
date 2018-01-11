@@ -42,27 +42,30 @@ class ProjectDesc extends Component {
 
         return(
 
-            <div className={"c-project-description " + this.isOpened()}>
+            <span>
     
-                <section onClick={()=>this.toggleDesc()} className="c-project-description__toggle animated fadeIn">
-                    <div className={"c-projectName"}>
-                        <h1><strong>{this.props.project.title}</strong></h1>
-                        <h2>{this.props.project.category} - {this.props.project.year}</h2>
-                    </div>
-                </section>
-    
-                <section className="c-project-description__desc animated fadeInUp">
-                    <span>
-                        <i className="c-project-description__btn--close fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i>
-                        <h1 class="c-project-description--title">{this.props.project.title}</h1>
-                        <p class="c-project-description--category">{this.props.project.category} - {this.props.project.year}</p>
-                        <p class="c-project-description--text">{this.props.project.description}</p>
-                        <hr/>
-                        {/*<p>Les liens</p>*/}
+                <span onClick={()=>this.toggleDesc()} className="c-project-description__toggle animated fadeIn">
+                    <span className={"c-projectName"}>
+                        {this.props.project.title} {this.props.project.category} - {this.props.project.year}
                     </span>
-                </section>
+                </span>
+
+                <div className={"c-project-description " + this.isOpened()}>
     
-            </div>
+                    <section className="c-project-description__desc animated fadeInUp">
+                        <span>
+                            <i className="c-project-description__btn--close fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i>
+                            <h1 class="c-project-description--title">{this.props.project.title}</h1>
+                            <p class="c-project-description--category">{this.props.project.category} - {this.props.project.year}</p>
+                            <p class="c-project-description--text">{this.props.project.description}</p>
+                            <hr/>
+                            {/*<p>Les liens</p>*/}
+                        </span>
+                    </section>
+
+                </div>
+    
+            </span>
         )
     }
     

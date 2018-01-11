@@ -128,16 +128,16 @@ class ProjectSlider extends Component {
                     <Mainzone/>
                 </Link>
                 <Menu />
-                <ProjectDescription
-                    project={project}>
-                </ProjectDescription>
-                <ProjectDetailPagination
-                    //select={this.overList}
-                    current={0}
-                    total={this.state.projectsLength[this.state.currentProject]}
-                    project={project}
-                    preview={true}
-                />
+                <nav className="nav-wrapper">
+                    <ProjectDetailPagination
+                        //select={this.overList}
+                        current={0}
+                        total={this.state.projectsLength[this.state.currentProject]}
+                        project={project}
+                        preview={true}
+                    />
+                    {<ProjectDescription project={project}></ProjectDescription>}
+                </nav>
             </section>
         );
     }

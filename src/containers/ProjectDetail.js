@@ -9,6 +9,7 @@ import Logo from '../components/logo';
 import Menu from '../components/Menu';
 import PrevNext from '../components/PrevNext';
 import ProjectDescription from '../components/ProjectDesc';
+import ProjectName from '../components/ProjectName';
 
 class ProjectDetail extends Component {
 
@@ -92,13 +93,15 @@ class ProjectDetail extends Component {
                 <ul className="no-overflow">
                     {this.renderList()}
                 </ul>
-                <Menu parent={`/projets/${this.props.project.id}/`}/>
+                {/*<Menu parent={`/projets/${this.props.project.id}/`}/>*/}
                 {/*<ProjectDescription project={this.props.project}/>*/}
                 <PrevNext
                     select={this.selectImageurl}
                     current={parseInt(this.state.currentImage)}
                     total={Object.keys(this.props.project.images).length}
                 />
+                <nav className="nav-wrapper">
+                <ProjectName/>
                 <ProjectDetailPagination
                     select={this.selectImageurl}
                     current={parseInt(this.state.currentImage)}
@@ -106,6 +109,7 @@ class ProjectDetail extends Component {
                     project={this.props.project}
                     preview={false}
                 />
+                </nav>
             </section>
         );
     }
