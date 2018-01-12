@@ -7,6 +7,7 @@ import ProjectDetailScreen from '../components/ProjectDetailScreen';
 import ProjectDetailPagination from '../components/ProjectDetailPagination';
 import Logo from '../components/logo';
 import Menu from '../components/Menu';
+import Retour from '../components/Retour';
 import PrevNext from '../components/PrevNext';
 import ProjectDescription from '../components/ProjectDesc';
 import ProjectName from '../components/ProjectName';
@@ -101,6 +102,7 @@ class ProjectDetail extends Component {
                     total={Object.keys(this.props.project.images).length}
                 />
                 <nav className="nav-wrapper">
+                <Retour parent={`/projets/${this.props.project.id}`} />
                 <ProjectName/>
                 <ProjectDetailPagination
                     select={this.selectImageurl}

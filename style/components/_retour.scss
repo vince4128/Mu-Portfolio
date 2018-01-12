@@ -1,0 +1,42 @@
+.c-retour{
+    box-sizing: border-box;
+    position:fixed;
+    display: block;
+    width:30px;
+    height:30px;
+    text-align: center;
+    top:35px;
+    right:35px;
+    //padding:0 45px;
+    margin:0;
+    background-color: rgba(255,255,255,0.8);
+    //right:45px;
+    border-radius:50%;
+    li{
+        //display:inline-block;
+        margin-right:1em;
+        span{
+            margin-left: 0.5em;
+            font-weight: bold;
+        }
+        &.c-menu--right{
+           float: right;
+        }
+    
+        &.c-menu--left{
+            float: left;
+        }
+        hr{
+            color:#000;
+            height:2px;
+            width:75px;
+            background-color: #000;
+            border: none;
+            margin-left: 20px
+        }
+    }
+    z-index:70;
+    cursor: pointer;
+    //text-align: right;
+
+}
