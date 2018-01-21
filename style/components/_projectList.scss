@@ -10,6 +10,12 @@
     }
     margin-bottom: 2em;
     //padding:1em 2em 1em 2.5em;
+
+    ul li:last-child{
+        article{
+            border:none;
+        }  
+    }
 }
 
 .c-project-list__item {
@@ -102,7 +108,6 @@
 
     div.c-project-list__detail__images-wrapper{
         overflow-y: auto;
-        background-color: rgba(0,0,0,0.3);
     }
     ul{
         min-width:100%;
@@ -121,4 +126,10 @@
 .c-project-list__detail__image img{
     max-height:215px;
     //margin:15px 0 15px 15px;    
+}
+
+.c-project-list__btn--close{
+    text-align: right;
+    margin-right: 15px;
+    cursor:pointer;
 }

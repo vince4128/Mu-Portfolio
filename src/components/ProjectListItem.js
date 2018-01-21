@@ -29,8 +29,9 @@ class ProjectListItem extends Component{
 
     render(){
         return (
-            <span key={this.props.project.id}>
-                <li
+            <li>
+                <span
+                    key={this.props.project.id}
                     className="c-project-list__item"
                     onClick={()=>this.toggleDesc()}                
                 >
@@ -40,11 +41,11 @@ class ProjectListItem extends Component{
                     <article className="c-project-list__item__cell c-project-list__title"><strong>{this.props.project.title}</strong></article>
                     <article className="c-project-list__item__cell c-project-list__description">{this.props.project.shortdescription}</article>
                     <span className="c-project-list__item--bottom-line"></span>
-                </li>
+                </span>
                 <span className={"c-project-list__detail " + this.isOpened()}>
                 <ProjectListDetail id={this.props.project.id} images={this.props.project.images} open={this.state.open}/>
                 </span>
-            </span>
+            </li>
         )
     }
 

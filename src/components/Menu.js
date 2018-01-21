@@ -26,13 +26,13 @@ const Menu = (props) => {
     } else{*/
         return (
             <ul className="c-menu">
-                <li className="">
+                <li>
                     <Apropos txt={"À PROPOS"}/>
                 </li>
                 <li><hr/></li>
-                <li className="">
+                <li>
                     <NavLink to="/list">
-                        <span>INDEX</span>
+                        <div className="c-menu--centered">INDEX</div>
                     </NavLink>
                 </li>
             </ul>

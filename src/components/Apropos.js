@@ -44,7 +44,7 @@ class Apropos extends Component {
 
             <span>
 
-                <span onClick={() => this.toggleDesc()}>
+                <span className="c-menu--centered" onClick={() => this.toggleDesc()}>
                     {this.props.txt}
                 </span>
 
@@ -52,23 +52,23 @@ class Apropos extends Component {
 
                     <section className="c-project-description__desc animated fadeInUp">
                         <span className="c-project-description--apropos">
-                            <i className="c-project-description__btn--close fa fa-2x fa-times" aria-hidden="true" onClick={() => this.toggleDesc()}></i>
+                        <p><i className="c-project-description__btn--close fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i></p>
                             <h4>À propos</h4>
                             <hr/>  
                             <p>Mon travail de designer graphique a principalement pour objet la direction artistique et la réalisation de livres, d’identités visuelles, d’affiches, de vidéos, de dessin de caractère et de sites internet.
                             Je mène parallèlement à ma pratique de designer graphique, une pratique quotidienne d’écriture. Je suis ainsi parfois consultée par des studios pour la rédaction et la mise en page de contenus. J’écris aussi régulièrement des articles pour étapes, magazine dedesign graphique et de culture visuelle.</p>
                             <h4>Mon parcours</h4>
                             <hr/>
-                            <ul><li>⁃	Diplôme National d’Expression Plastique à l’École Nationale Supérieure des Arts Décoratifs de Paris — Master concepteur – créateur en design graphique & multimédia</li>
-                            <li>⁃	Diplôme National d’Art Plastique en Design Graphique et Multimédia à l’Esad de Reims</li>
-                            <li>⁃	Hypokhâgne et Khâgne — Classes préparatoires littéraires</li>
+                            <ul><li>Diplôme National d’Expression Plastique à l’École Nationale Supérieure des Arts Décoratifs de Paris — Master concepteur – créateur en design graphique & multimédia</li>
+                            <li>Diplôme National d’Art Plastique en Design Graphique et Multimédia à l’Esad de Reims</li>
+                            <li>Hypokhâgne et Khâgne — Classes préparatoires littéraires</li>
                             </ul>
 
 <h4>J’ai eu l’occasion de travailler pour :</h4>
 <hr/>
 <p>L’atelier Grand Ensemble, Le Bureau des Affaires Graphiques, Hachette, Solar, La Bpi du Centre Pompidou, L’atelier Bastien Morin, Either Studio, étapes magazine</p>
 
-<h4>J’ai eu l’occasion de participer à des workshops avec :</h4><p>les designers graphiques
+<h4>J’ai eu l’occasion de participer à des workshops avec :</h4><hr /><p>les designers graphiques
 Johannes Bürgerhausen, Pierre di Sciullo, Na Kim, Benoît Bonnemaison-Fitte, Émilie Rigaud ainsi que le designer d’objet Sébastien Cordoleani, et les artistes Mathieu Chamagne et Kaori Ito.
 
                             </p>

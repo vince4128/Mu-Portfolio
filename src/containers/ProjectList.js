@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { fetchCategory } from '../actions/index';
 
 import ProjectListDetail from '../components/ProjectListDetail';
@@ -31,6 +31,10 @@ class ProjectList extends Component {
 
         return _.map(sortedCategory, project => {
 
+            //alert(JSON.stringify(project));
+
+            const sortedByYearProject = _.orderBy(project, ['year'],['desc']);
+
             return (
                 <li
                     key={project.id}
@@ -38,7 +42,7 @@ class ProjectList extends Component {
                 >
                     <h2>{project[0].category}</h2>
                     <ul>
-                        {this.renderProjectList(project)}
+                        {this.renderProjectList(sortedByYearProject)}
                     </ul>
                 </li>
             );
@@ -51,31 +55,26 @@ class ProjectList extends Component {
     renderProjectList(project) {
 
         return (
-            <article>
-                { _.map(project, unicProject =>{
+                _.map(project, unicProject =>{
 
                     //alert(JSON.stringify(tmpCollapse));
 
                     return(
-                        <span key={unicProject.id}>
-                        {/*<li
-                            key={unicProject.id}
-                            className="c-project-list__item"
-                            onClick={()=>alert('coucou')}
-                        >*/}
-                        <ProjectListItem project={unicProject}/>
-                        {/*</li>*/}                        
-                        </span>
+                        <ProjectListItem project={unicProject}/>   
                     )
 
-                })}
-            </article>
+                })
         );
     }
 
     render() {
         return (
             <span>
+                <p class="c-project-list__btn--close">
+                <NavLink to="/">
+                <i className="fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i>
+                </NavLink>
+                </p>
             <ul className="c-project-list">
                 {this.renderCategoryList()}
             </ul>
