@@ -210,3 +210,15 @@ require('../assets/img/23_PANNEAU_DEF_WEB/PANNEAU_5.jpg');
 require('../assets/img/24_TREMBLAY_DEF_WEB/Tremblay_1.jpg');
 require('../assets/img/24_TREMBLAY_DEF_WEB/Tremblay_2.jpg');
 require('../assets/img/24_TREMBLAY_DEF_WEB/Tremblay_3.jpg');
+
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_1.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_2.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_3.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_4.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_5.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_6.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_7.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_8.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_9.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_10.jpg');
+require('../assets/img/25_BASTIEN_MORIN_WEB/DA_11.jpg');

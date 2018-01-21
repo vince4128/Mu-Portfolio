@@ -11,7 +11,7 @@ const PROJECT = [
         title: 'Ton Dedans Devant',
         description: 'Le projet Ton Dedans Devant est né à l’occasion d’un workshop organisé par la danseuse Kaori Ito au Centre International de la Danse de Pantin. L’ensemble des participants étaient des néophytes n’ayant jamais eu vraiment l’occasion de danser devant les autres. Cette occasion d’apprendre à sortir de soi et à maîtriser les mouvements de son corps  à été pour moi l’occasion de réaliser un objet sur ce moment intime. Il comprend une série de photographies du danseur Antoine Mozziconacci ainsi qu’un petit livre contenant un dialogue écrit par mes soins.',
         shortdescription: 'Livre-objet Ton Dedans Devant — Centre International de la Danse de Pantin',
-        category: 'Éditorial',
+        category: 'Design éditorial',
         year:'2016',
         images: [
             {
@@ -113,7 +113,7 @@ const PROJECT = [
         title: 'Conversation',
         description: 'Conversation est un journal qui relie autour d’un thème commun écrivains, philosophes et photographes. Dans le premier numéro, Julien Gracq, Merleau-Ponty et Bill Brandt se retrouvent pour échanger sur le corps et sa relation au monde.',
         shortdescription: 'Premier numéro du journal Conversation.',
-        category: 'Éditorial',
+        category: 'Design éditorial',
         year: '2014',
         images: [
             {
@@ -259,7 +259,7 @@ const PROJECT = [
         title: 'Désherbés',
         description: 'Désherbés est un projet éditorial mené en partenariat avec la médiathèque Jean Falala de la ville de Reims. Un livre est réalisé tous les deux mois. Cette collection s’intéresse aux différents ouvrages qui vont être définitivement retirés de la bibliothèque (ouvrages dit « désherbés ») soit parce qu’ils ne sont plus empruntés par le public soit parce qu’ils vont être remplacés par une version numérique. Les livres qui disparaissent sont montrés dans l’ordre du système de classification  Dewey des fonds de bibliothèque. La collection constitue une nouvelle forme d’archivage de ses objets livres qui sombrent progressivement dans l’oubli.',
         shortdescription: 'Collection Désherbés — Médiathèque Jean Falala (Reims)',
-        category: 'Éditorial',
+        category: 'Design éditorial',
         year: '2013',
         images: [
             {
@@ -493,7 +493,7 @@ const PROJECT = [
         title: 'Car ils laissent passer la lumière',
         description: 'Livre sur le travail du photographe Richard Carnevali réalisé chez Grand Ensemble avec Julien Gineste & Stéphanie Pré. L’oeil aguerri du photographe saisit au fil des pages, les danseurs, acteurs, chorégraphes et musiciens qui évoluent sur la scène du centre culturel de la ville de Collégien entre ombres et lumières.',
         shortdescription: 'Livre sur le travail du photographe Richard Carnevali',
-        category: 'Éditorial',
+        category: 'Design éditorial',
         year: '2015',
         images: [
             {
@@ -579,7 +579,7 @@ const PROJECT = [
         title: 'Matthew Carter’s Galliard',
         description: 'Proposition de maquette pour le nouveau site internet de l’atelier Bastien Morin. Proposition non retenue.',
         shortdescription: 'Site internet de l’atelier Bastien Morin',
-        category: 'Éditorial',
+        category: 'Design éditorial',
         year: '2013',
         images: [
             {
@@ -763,7 +763,7 @@ const PROJECT = [
         title: 'Running Revolution',
         description: 'Conception de la maquette du livre Running Revolution dédié à 50 personnalités historiques de l’histoire de ce sport. Proposition non retenue.',
         shortdescription: 'Livre Running Revolution',
-        category: 'Éditorial',
+        category: 'Design éditorial',
         year: '2017',
         images: [
             {
@@ -844,6 +844,60 @@ const PROJECT = [
             },
             {
                 src:"Tremblay_3.jpg",
+                index:2
+            }
+        ]
+    },
+    {
+        id:22, 
+        title: 'Atelier Bastien Morin',
+        description: 'Réalisation des prises de vues des derniers projets de l’Atelier Bastien Morin pour la sortie du nouveau site web de l’atelier.',
+        shortdescription: 'Direction artistique et prises de vues — Atelier Bastien Morin',
+        category: 'Direction Artistique',
+        year: '2017',
+        images: [
+            {
+                src:"DA_1.jpg",
+                index:0
+            },
+            {
+                src:"DA_2.jpg",
+                index:1
+            },
+            {
+                src:"DA_3.jpg",
+                index:2
+            },
+            {
+                src:"DA_4.jpg",
+                index:2
+            },
+            {
+                src:"DA_5.jpg",
+                index:2
+            },
+            {
+                src:"DA_6.jpg",
+                index:2
+            },
+            {
+                src:"DA_7.jpg",
+                index:2
+            },
+            {
+                src:"DA_8.jpg",
+                index:2
+            },
+            {
+                src:"DA_9.jpg",
+                index:2
+            },
+            {
+                src:"DA_10.jpg",
+                index:2
+            },
+            {
+                src:"DA_11.jpg",
                 index:2
             }
         ]
