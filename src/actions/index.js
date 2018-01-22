@@ -397,22 +397,6 @@ const PROJECT = [
             {
                 src:"BB_7.jpg",
                 index:6
-            },
-            {
-                src:"BB_8.jpg",
-                index:7
-            },
-            {
-                src:"BB_9.jpg",
-                index:8
-            },
-            {
-                src:"BB_10.jpg",
-                index:9
-            },
-            {
-                src:"BB_11.jpg",
-                index:10
             }
         ]
     },
@@ -870,35 +854,35 @@ const PROJECT = [
             },
             {
                 src:"DA_4.jpg",
-                index:2
+                index:3
             },
             {
                 src:"DA_5.jpg",
-                index:2
+                index:4
             },
             {
                 src:"DA_6.jpg",
-                index:2
+                index:5
             },
             {
                 src:"DA_7.jpg",
-                index:2
+                index:6
             },
             {
                 src:"DA_8.jpg",
-                index:2
+                index:7
             },
             {
                 src:"DA_9.jpg",
-                index:2
+                index:8
             },
             {
                 src:"DA_10.jpg",
-                index:2
+                index:9
             },
             {
                 src:"DA_11.jpg",
-                index:2
+                index:10
             }
         ]
     },
