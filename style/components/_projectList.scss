@@ -1,5 +1,12 @@
-.c-project-list {
+ul.c-project-list {
+    margin:0;
+    padding:0;
+}
 
+.c-project-list__detail__images-wrapper ul,
+.c-project-list--category ul{
+    margin:0;
+    padding:0;
 }
 
 .c-project-list--category{
@@ -130,6 +137,9 @@
 
 .c-project-list__btn--close{
     text-align: right;
-    margin-right: 15px;
-    cursor:pointer;
+    a img{
+        padding: 15px;
+        max-width: 25px;
+        cursor:pointer;
+    }
 }

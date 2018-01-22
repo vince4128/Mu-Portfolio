@@ -1,8 +1,10 @@
-.c-projectPagination{
+ul.c-projectPagination{
     /*position:fixed;
     right:45px;
     bottom:45px;
     z-index:150;*/
+    margin:0;
+    padding:0;
     float:right;
     cursor:pointer;
     li{
