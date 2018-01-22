@@ -33,6 +33,10 @@ require("../style/style.scss");
 require('../assets/img/cursor-left.png');
 require('../assets/img/cursor-right.png');
 
+require('../assets/img/icon_mail.png');
+require('../assets/img/icon_insta.png');
+require('../assets/img/icon_quitter.png');
+
 require('../assets/img/01_TON_DEDANS_DEF_WEB/DEVANT_1.jpg');
 require('../assets/img/01_TON_DEDANS_DEF_WEB/DEVANT_2.jpg');
 require('../assets/img/01_TON_DEDANS_DEF_WEB/DEVANT_3.jpg');

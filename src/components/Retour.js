@@ -6,7 +6,8 @@ const Retour = (props) => {
     return(
         <span className="c-retour">
             <NavLink to={`${props.parent}`}>
-            <i className="fa fa-2x fa-times" aria-hidden="true"></i>
+                {/*<i className="fa fa-2x fa-times" aria-hidden="true"></i>*/}
+                <img src="img/icon_quitter.png" />
             </NavLink>
         </span>
     )

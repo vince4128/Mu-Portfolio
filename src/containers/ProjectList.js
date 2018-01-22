@@ -72,7 +72,8 @@ class ProjectList extends Component {
             <span>
                 <p class="c-project-list__btn--close">
                 <NavLink to="/">
-                <i className="fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i>
+                {/*<i className="fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i>*/}
+                <a href=""><img onClick={()=>this.toggleDesc()} src="img/icon_quitter.png" /></a>
                 </NavLink>
                 </p>
             <ul className="c-project-list">
