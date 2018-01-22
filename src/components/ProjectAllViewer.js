@@ -28,8 +28,7 @@ class ProjectAllViewer extends Component {
                     titleStatus: 'animated fadeIn'
                 });
                 //sens de l'animation
-                if ((nextProps.project.id > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 && nextProps.currentProject == this.props.total)) {
-
+                if ((parseInt(nextProps.project.id) > parseInt(this.props.currentProject) || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 && nextProps.currentProject == this.props.total)) {
                     this.setState({
                         status: 'c-projectScreen--active slideInRight'
                     });
@@ -52,8 +51,7 @@ class ProjectAllViewer extends Component {
             });
             if (this.state.isAnimated) {
                 //sens de l'animation
-                if ((nextProps.currentProject > this.props.currentProject || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 && nextProps.currentProject == this.props.total)) {
-
+                if ((parseInt(nextProps.currentProject) >parseInt(this.props.currentProject) || (this.props.currentProject == this.props.total && nextProps.currentProject == 0)) && !(this.props.currentProject == 0 && nextProps.currentProject == this.props.total)) {
                     this.setState({
                         status: 'c-projectScreen--prev slideOutLeft'
                     });
