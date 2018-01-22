@@ -46,17 +46,16 @@ class ProjectDesc extends Component {
     
                 <span onClick={()=>this.toggleDesc()} className="c-project-description__toggle animated fadeIn">
                     <span className={"c-projectName"}>
-                        {this.props.project.title} {this.props.project.category} - {this.props.project.year}
+                        {this.props.project.title} — {this.props.project.category} — {this.props.project.year}
                     </span>
                 </span>
 
                 <div className={"c-project-description " + this.isOpened()}>
     
                     <section className="c-project-description__desc animated fadeInUp">
-                    <p><i className="c-project-description__btn--close fa fa-2x fa-times" aria-hidden="true" onClick={()=>this.toggleDesc()}></i></p>
+                    <p className="c-project-description__btn--close"><span><a onClick={()=>this.toggleDesc()}><img src="img/icon_quitter.png" /></a></span></p>
                         <span>
-                            <h4>{this.props.project.title} — <span class="c-project-description--category">{this.props.project.category} - {this.props.project.year}</span>
-                            </h4>
+                            <h4>{this.props.project.title} — {this.props.project.category} — {this.props.project.year}</h4>
                             <hr/>
                             {/*<p class="c-project-description--category">— {this.props.project.category} - {this.props.project.year}</p>*/}
                             <p class="c-project-description--text">{this.props.project.description}</p>

@@ -12,7 +12,7 @@ const ProjectName = (props) => {
         return (
             
             <div className={"c-projectName"}>
-                <strong>{props.project.title}</strong>{props.project.category} - {props.project.year}
+                {props.project.title} — {props.project.category} — {props.project.year}
             </div>
         )
       }
