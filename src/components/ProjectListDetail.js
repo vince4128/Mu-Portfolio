@@ -18,7 +18,7 @@ class ProjectListDetail extends Component {
 
         return(
             <div className="c-project-list__detail__images-wrapper ">
-                <ul style={{ width:`${ulWidth*325}px` }}>
+                <ul style={{ width:`${ulWidth*340}px` }}>
                     {
                         _.map(this.props.images, image => {
                             return (
