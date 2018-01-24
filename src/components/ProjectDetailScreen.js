@@ -84,9 +84,9 @@ class ProjectDetailScreen extends Component {
             return (
                 <li key={this.props.id} className={"c-projectScreen animated " + this.state.status}>
                     <h1>VIDEO</h1>
-                        {/*<video width="320" height="240" autoplay>
-                            <source src="movie.mp4" type="video/mp4"/>
-                            <source src="movie.ogg" type="video/ogg"/>
+                        {/*<video class="c-projectScreen__video" autoplay>
+                            <source src={`../../mu/img/${this.props.image.src`} type="video/mp4"/>
+                            <source src={`../../mu/img/${this.props.image.src`} type="video/ogg"/>
                             Your browser does not support the video tag.
                         </video>*/}
                 </li>
