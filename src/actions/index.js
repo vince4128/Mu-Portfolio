@@ -9,7 +9,7 @@ const PROJECT = [
     {
         id:0,
         title: 'Ton Dedans Devant',
-        description: 'Le projet Ton Dedans Devant est né à l’occasion d’un workshop organisé par la danseuse Kaori Ito au Centre International de la Danse de Pantin. L’ensemble des participants étaient des néophytes n’ayant jamais eu vraiment l’occasion de danser devant les autres. Cette occasion d’apprendre à sortir de soi et à maîtriser les mouvements de son corps  à été pour moi l’occasion de réaliser un objet sur ce moment intime. Il comprend une série de photographies du danseur Antoine Mozziconacci ainsi qu’un petit livre contenant un dialogue écrit par mes soins.',
+        description: 'Le projet Ton Dedans Devant est né à l’occasion d’un workshop organisé par la danseuse Kaori Ito au Centre International de la Danse de Pantin. L’ensemble des participants étaient des néophytes n’ayant jamais eu vraiment l’occasion de danser devant les autres. Cette occasion d’apprendre à sortir de soi et à maîtriser les mouvements de son corps a été pour moi l’occasion de réaliser un objet sur ce moment intime. Il comprend une série de photographies du danseur Antoine Mozziconacci ainsi qu’un petit livre contenant un dialogue écrit par mes soins.',
         shortdescription: 'Livre-objet Ton Dedans Devant — Centre International de la Danse de Pantin',
         category: 'Design éditorial',
         year:'2016',
@@ -169,7 +169,7 @@ const PROJECT = [
     {
         id:4, 
         title: 'Parce qu’il ne faut pas seulement lire pour se souvenir',
-        description: 'Conception et réalisation d’une invitation sous forme de dépliant sérigraphié pour une exposition des différentes installations que j’ai pu réaliser avec Laura Williams (designer graphique) et Karolina Howorko (scénographe et architecte) à L’École Nationale Supérieure des Art Décoratifs de Paris.',
+        description: 'Conception et réalisation d’une invitation sous forme de dépliant sérigraphié pour une exposition des différentes installations que j’ai pu réaliser avec Laura Williams (designer graphique) et Karolina Howorko (scénographe et architecte) à L’École Nationale Supérieure des Arts Décoratifs de Paris.',
         shortdescription: 'Dépliant d’invitation Parce qu’il ne faut pas seulement lire pour se souvenir',
         category: 'Identité Visuelle',
         year: '2016',
@@ -207,7 +207,7 @@ const PROJECT = [
     {
         id:5, 
         title: 'Grands-parrains',
-        description: 'La mission de l’association Grands-parrains est de mettre en contact des personnes âgées et des enfants qui n’ont pas beaucoup de liens familiaux afin d’établir une relation affective durable. Pour parler de cette rencontre inter-générationnelle, l’identité visuelle développée associe deux univers graphiques : celui des vielles photos de familles à celui, plus spontané, des interventions manuelles. Les touches colorées évoquent l’énergie que les enfants peuvent apporter dans le vie des personnes âgées. Quant aux photos de familles, elles représentent les souvenirs que les deux générations vont pouvoir tisser ensemble grâce à l’association.',
+        description: 'La mission de l’association Grands-parrains est de mettre en contact des personnes âgées et des enfants qui n’ont pas beaucoup de liens familiaux afin d’établir une relation affective durable. Pour parler de cette rencontre inter-générationnelle, l’identité visuelle développée associe deux univers graphiques : celui des vielles photos de familles à celui, plus spontané, des interventions manuelles. Les touches colorées évoquent l’énergie que les enfants peuvent apporter dans la vie des personnes âgées. Quant aux photos de familles, elles représentent les souvenirs que les deux générations vont pouvoir tisser ensemble grâce à l’association.',
         shortdescription: 'Identité visuelle pour l’association Grands-parrains',
         category: 'Identité Visuelle',
         year: '2015',
@@ -257,7 +257,7 @@ const PROJECT = [
     {
         id:6, 
         title: 'Désherbés',
-        description: 'Désherbés est un projet éditorial mené en partenariat avec la médiathèque Jean Falala de la ville de Reims. Un livre est réalisé tous les deux mois. Cette collection s’intéresse aux différents ouvrages qui vont être définitivement retirés de la bibliothèque (ouvrages dit « désherbés ») soit parce qu’ils ne sont plus empruntés par le public soit parce qu’ils vont être remplacés par une version numérique. Les livres qui disparaissent sont montrés dans l’ordre du système de classification  Dewey des fonds de bibliothèque. La collection constitue une nouvelle forme d’archivage de ses objets livres qui sombrent progressivement dans l’oubli.',
+        description: 'Désherbés est un projet éditorial mené en partenariat avec la médiathèque Jean Falala de la ville de Reims. Un livre est réalisé tous les deux mois. Cette collection s’intéresse aux différents ouvrages qui vont être définitivement retirés de la bibliothèque (ouvrages dit désherbés) soit parce qu’ils ne sont plus empruntés par le public soit parce qu’ils vont être remplacés par une version numérique. Les livres qui disparaissent sont montrés dans l’ordre du système de classification  Dewey des fonds de bibliothèque. La collection constitue une nouvelle forme d’archivage de ses objets livres qui sombrent progressivement dans l’oubli.',
         shortdescription: 'Collection Désherbés — Médiathèque Jean Falala (Reims)',
         category: 'Design éditorial',
         year: '2013',
@@ -364,9 +364,9 @@ const PROJECT = [
     },
     {
         id:8, 
-        title: 'Barbe Bleue',
-        description: 'Dans cette installation participative, les visiteurs sont invités à jouer devant l’ordinateur des scènes clefs du conte de Charles Perrault, Barbe Bleue. Un espace de prises de vue ainsi que des costumes et des objets peints sont mis à leur disposition pour les aider dans cet échange complexe. L’ordinateur décrit en direct ce qu’il voit grâce à un logiciel de reconnaissance des images (Neural Talk 2). Les contresens et légendes absurdes que l’ordinateur peut produire sont bien loin du conte traditionnel. Elles sont pétries de références contemporaines (selfies, kite-surf, etc). Ainsi les légendes et les images que les visiteurs et l’ordinateur co-produisent forment une nouvelle couche au palimpseste du conte. Le résultat est un drôle de conte moderne co-écrit par l’homme et la machine.',
-        shortdescription: 'Installation interactive Barbe Bleue — EnsAD',
+        title: 'Barbe-Bleue',
+        description: 'Dans cette installation participative, les visiteurs sont invités à jouer devant l’ordinateur des scènes clefs du conte de Charles Perrault, Barbe-Bleue. Un espace de prises de vue ainsi que des costumes et des objets peints sont mis à leur disposition pour les aider dans cet échange complexe. L’ordinateur décrit en direct ce qu’il voit grâce à un logiciel de reconnaissance des images (Neural Talk 2). Les contresens et légendes absurdes que l’ordinateur peut produire sont bien loin du conte traditionnel. Elles sont pétries de références contemporaines (selfies, kite-surf, etc). Ainsi les légendes et les images que les visiteurs et l’ordinateur co-produisent forment une nouvelle couche au palimpseste du conte. Le résultat est un drôle de conte moderne co-écrit par l’homme et la machine.',
+        shortdescription: 'Installation interactive Barbe-Bleue — EnsAD',
         category: 'Installation interactive',
         year: '2016',
         images: [
@@ -682,7 +682,7 @@ const PROJECT = [
         id:18, 
         title: 'Neue Jo',
         description: 'Le caractère Neue Jo est inspiré du travail typographique de Gérard Unger et notamment de son caractère Swift. Le nom du caractère Neue Jo pour Neue Jonathan s’inscrit dans la série des noms de ses typographies inspirées des Voyages de Gulliver : Swift, Gulliver …',
-        shortdescription: 'Dessin de caractère Neue Jo',
+        shortdescription: 'Dessin de caractères Neue Jo',
         category: 'Dessin de caractères',
         year: '2013',
         images: [
@@ -728,16 +728,18 @@ const PROJECT = [
         id:19, 
         title: 'Les Ateliers du Lamantin',
         description: 'Conception et réalisation de l’identité visuelle d’un atelier réalisant des projets de vidéos et d’animations. Création du personnage du lamantin, réalisation du logotype animé et de leur carte de visite.',
-        shortdescription: 'identité visuelle pour Les Ateliers du Lamantin',
+        shortdescription: 'Identité visuelle pour Les Ateliers du Lamantin',
         category: 'Identité Visuelle',
         year: '2017',
         images: [
             {
                 src:"LAMENTIN_1.jpg",
+                video:true,
                 index:0
             },
             {
                 src:"LAMENTIN_2.jpg",
+                video:true,
                 index:1
             }
         ]
