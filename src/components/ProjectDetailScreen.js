@@ -79,11 +79,25 @@ class ProjectDetailScreen extends Component {
     }
 
     render() {
-        return (
-            <li key={this.props.id} className={"c-projectScreen animated " + this.state.status}>
-                <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../../mu/img/${this.props.image.src})` }}></div>
-            </li>
-        )
+        {/*conditionner l'affichage image / video*/}
+        if(this.props.image.video){
+            return (
+                <li key={this.props.id} className={"c-projectScreen animated " + this.state.status}>
+                    <h1>VIDEO</h1>
+                        {/*<video width="320" height="240" autoplay>
+                            <source src="movie.mp4" type="video/mp4"/>
+                            <source src="movie.ogg" type="video/ogg"/>
+                            Your browser does not support the video tag.
+                        </video>*/}
+                </li>
+            )
+        }else{        
+            return (
+                <li key={this.props.id} className={"c-projectScreen animated " + this.state.status}>
+                    <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../../mu/img/${this.props.image.src})` }}></div>
+                </li>
+            )
+        }
     }
 
 }
