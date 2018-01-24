@@ -226,3 +226,10 @@ require('../assets/img/25_BASTIEN_MORIN_WEB/DA_8.jpg');
 require('../assets/img/25_BASTIEN_MORIN_WEB/DA_9.jpg');
 require('../assets/img/25_BASTIEN_MORIN_WEB/DA_10.jpg');
 require('../assets/img/25_BASTIEN_MORIN_WEB/DA_11.jpg');
+
+require('../assets/img/26_EDDY_WEB/eddy1.jpg');
+require('../assets/img/26_EDDY_WEB/eddy2.jpg');
+require('../assets/img/26_EDDY_WEB/eddy3.jpg');
+require('../assets/img/26_EDDY_WEB/eddy4.jpg');
+require('../assets/img/26_EDDY_WEB/eddy5.jpg');
+require('../assets/img/26_EDDY_WEB/eddy6.jpg');
