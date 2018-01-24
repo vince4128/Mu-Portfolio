@@ -888,6 +888,40 @@ const PROJECT = [
             }
         ]
     },
+    {
+        id:23, 
+        title: 'Eddy',
+        description: 'J’écris régulièrement des articles pour le magazine étapes, magazine de design et de culture visuelle. Toujours à l’affût de nouvelles créations et studios en matière de design graphique, mon rôle de journaliste me permet de découvrir régulièrement de nouveaux talents, de me tenir au courant de la scène contemporaine et de rencontrer des personnalités avec lesquelles je partage une passion commune.',
+        shortdescription: 'Articles pour étapes magazine',
+        category: 'Rédaction',
+        year: '2017',
+        images: [
+            {
+                src:"eddy1.jpg",
+                index:0
+            },
+            {
+                src:"eddy2.jpg",
+                index:1
+            },
+            {
+                src:"eddy3.jpg",
+                index:2
+            },
+            {
+                src:"eddy4.jpg",
+                index:3
+            },
+            {
+                src:"eddy5.jpg",
+                index:4
+            },
+            {
+                src:"eddy6.jpg",
+                index:5
+            }
+        ]
+    }
 ]
 
 export function fetchProjects(){
