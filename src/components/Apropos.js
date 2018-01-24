@@ -50,16 +50,17 @@ class Apropos extends Component {
 
                 <div className={"c-project-description " + this.isOpened()}>
 
-                    <section className="c-project-description__desc animated fadeInUp">
-                        {/*<span className="c-project-description--apropos">*/}
+                    <section className="c-project-description__desc animated fadeInUp">                        
                         <p className="c-project-description__btn--close"><span><a onClick={()=>this.toggleDesc()}><img src="img/icon_quitter.png" /></a></span></p>
+                        <span className="c-project-description--apropos">
                             <h4>À propos</h4>
                             <hr/>  
                             <p>Mon travail de designer graphique a principalement pour objet la direction artistique et la réalisation de livres, d’identités visuelles, d’affiches, de vidéos, de dessin de caractères et de sites internet.
                             Je mène parallèlement à ma pratique de designer graphique, une pratique quotidienne d’écriture. Je suis ainsi parfois consultée par des studios pour la rédaction et la mise en page de contenus. J’écris aussi régulièrement des articles pour étapes, magazine de design graphique et de culture visuelle.</p>
                             <h4>Mon parcours</h4>
                             <hr/>
-                            <ul><li>Diplôme National d’Expression Plastique à l’École Nationale Supérieure des Arts Décoratifs de Paris — Master concepteur – créateur en design graphique & multimédia</li>
+                            <ul>
+                            <li>Diplôme National d’Expression Plastique à l’École Nationale Supérieure des Arts Décoratifs de Paris — Master concepteur – créateur en design graphique & multimédia</li>
                             <li>Diplôme National d’Art Plastique en Design Graphique et Multimédia à l’Esad de Reims</li>
                             <li>Hypokhâgne et Khâgne — Classes préparatoires littéraires</li>
                             </ul>
@@ -79,7 +80,7 @@ class Apropos extends Component {
                             <p>Ce site à été conçu et réalisé par Claire Mucchielli & Vincent Varlet</p>
                             <p>&copy; Aucune des images et textes présentés sur ce site ne peuvent être reproduits sans autorisation préalable de son auteur.</p>                              
                             <p>Politique de confidentialité.</p>
-                        {/*</span>*/}
+                        </span>                    
                     </section>
 
                 </div>

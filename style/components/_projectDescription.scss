@@ -17,7 +17,8 @@
     &.c-project-description--close{
         overflow-y: hidden;
         z-index: 200;
-        height:100%;
+        min-height:100vh;
+        height: 100%;
         left: 0;
         top: 100%;
     }
@@ -25,7 +26,8 @@
     &.c-project-description--open{
         overflow-y: auto;
         z-index: 200;
-        height:100%;
+        min-height:100vh;
+        height: 100%;
         left: 0;
         top: 0;
     }
@@ -41,7 +43,7 @@
 
     .c-project-description--apropos{
 
-        padding-right: 35px;
+        //padding-right: 35px;
         font-family: 'helveticaneue',sans-serif;
 
         hr{
