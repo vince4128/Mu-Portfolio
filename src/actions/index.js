@@ -561,8 +561,8 @@ const PROJECT = [
     {
         id:14, 
         title: 'Matthew Carter’s Galliard',
-        description: 'Proposition de maquette pour le nouveau site internet de l’atelier Bastien Morin. Proposition non retenue.',
-        shortdescription: 'Site internet de l’atelier Bastien Morin',
+        description: 'Ce livre rassemble textes et documents autour du caractère Galliard de Matthew Carter. Composé de cinq parties, il retrace la genèse de ce projet typographique. Différentes interviews du typographe permettent de comprendre la construction du caractère et son usage. Entre les pages, un spécimen sous forme de dépliant permet de mieux appréhender les dessins des différentes familles.',
+        shortdescription: 'Livre sur le caractère Galliard de Matthew Carter',
         category: 'Design éditorial',
         year: '2013',
         images: [
@@ -741,6 +741,14 @@ const PROJECT = [
                 src:"LAMENTIN_2.jpg",
                 video:true,
                 index:1
+            },
+            {
+                src:"LAMENTIN_1.jpg",
+                index:2
+            },
+            {
+                src:"LAMENTIN_2.jpg",
+                index:3
             }
         ]
     },
