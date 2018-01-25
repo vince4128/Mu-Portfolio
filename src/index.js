@@ -190,6 +190,10 @@ require('../assets/img/19_NEUE_JO_DEF_WEB/JO_9.jpg');
 
 require('../assets/img/20_LAMENTIN_DEF_WEB/LAMENTIN_1.jpg');
 require('../assets/img/20_LAMENTIN_DEF_WEB/LAMENTIN_2.jpg');
+require('../assets/img/20_LAMENTIN_DEF_WEB/LAMENTIN_2.jpg');
+require('../assets/video/20_LAMENTIN_DEF_WEB/LAMENTIN_2.lamentin_pour_anim.mp4');
+require('../assets/video/20_LAMENTIN_DEF_WEB/LAMENTIN_2.lamentin_pour_anim.ogv');
+require('../assets/video/20_LAMENTIN_DEF_WEB/LAMENTIN_2.lamentin_pour_anim.webm');
 
 require('../assets/img/21_RUNNING_DEF_WEB/RUN_1.jpg');
 require('../assets/img/21_RUNNING_DEF_WEB/RUN_2.jpg');

@@ -95,13 +95,34 @@ class ProjectAllViewer extends Component {
 
     render() {
         //alert(JSON.stringify(this.props.project));
-        return (
-            <div
-                className={"c-projectScreen animated " + this.state.status}
-            >
-                <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../mu/img/${this.props.project.images[this.props.background].src})` }}></div>
-            </div>
-        )
+        {/*conditionner l'affichage image / video*/}
+        if(this.props.project.images[this.props.background].video){
+
+            return (
+                <div
+                    className={"c-projectScreen animated " + this.state.status}
+                >
+                    <h1>VIDEO</h1>
+                        {/*<video class="c-projectScreen__video" autoplay>
+                            <source src={`../../mu/img/${this.props.image.src`} type="video/mp4"/>
+                            <source src={`../../mu/img/${this.props.image.src`} type="video/ogg"/>
+                            Your browser does not support the video tag.
+                        </video>*/}
+                </div>
+            )
+
+        }else{
+
+            return (
+                <div
+                    className={"c-projectScreen animated " + this.state.status}
+                >
+                    <div className="c-img-project-wrapper" style={{ backgroundImage: `url(../mu/img/${this.props.project.images[this.props.background].src})` }}></div>
+                </div>
+            )
+
+        }
+        
     }
 
 }
