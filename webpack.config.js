@@ -148,6 +148,18 @@ let config = {
                 ]
             },
             {
+                test: /\.(mp4|ogv|ogg|webm)$/,
+                use:[
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 4096,
+                            name:'video/[name].[ext]'
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(html|txt|json)$/,
                 use:[
                     {

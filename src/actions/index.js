@@ -733,22 +733,17 @@ const PROJECT = [
         year: '2017',
         images: [
             {
-                src:"LAMENTIN_1.jpg",
+                src:"lamentin_pour_anim",
                 video:true,
                 index:0
             },
             {
-                src:"LAMENTIN_2.jpg",
-                video:true,
+                src:"LAMENTIN_1.jpg",
                 index:1
             },
             {
-                src:"LAMENTIN_1.jpg",
-                index:2
-            },
-            {
                 src:"LAMENTIN_2.jpg",
-                index:3
+                index:2
             }
         ]
     },

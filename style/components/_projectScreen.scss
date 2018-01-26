@@ -23,6 +23,10 @@
 }
 
 .c-projectScreen__video{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     max-width:100%;
     height:auto;
     margin:0 auto;

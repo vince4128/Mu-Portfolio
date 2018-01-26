@@ -12,8 +12,13 @@ class ProjectDetailScreen extends Component {
     }
 
     componentWillReceiveProps(nextProps, oldProps) {
+
         //image a afficher        
         if (nextProps.image.index == nextProps.current) {
+            //est-ce une vidéo ? faut-il la lancer ?
+            if(nextProps.image.video){
+                this.refs.vidRef.play();
+            }
             //animation ?
             if (this.state.isAnimated) {
                 //sens de l'animation
@@ -34,6 +39,12 @@ class ProjectDetailScreen extends Component {
             }
         }//image précédente
         else if (nextProps.image.index == this.props.current) {
+
+            //est-ce une vidéo ? faut-il la stopper ?
+            if(nextProps.image.video){
+                this.refs.vidRef.pause();
+            }
+
             if (this.state.isAnimated) {
                 //sens de l'animation
                 if ((nextProps.current > this.props.current || (this.props.current == nextProps.total && nextProps.current == 0)) && !(this.props.current == 0 && nextProps.current == nextProps.total)) {
@@ -70,6 +81,10 @@ class ProjectDetailScreen extends Component {
             this.setState({
                 status: 'c-projectScreen--active'
             });
+            //est-ce une vidéo ? faut-il la lancer ?
+            if(this.props.image.video){
+                this.refs.vidRef.play();
+            }
         } else {
 
         }
@@ -84,11 +99,12 @@ class ProjectDetailScreen extends Component {
             return (
                 <li key={this.props.id} className={"c-projectScreen animated " + this.state.status}>
                     <h1>VIDEO</h1>
-                        {/*<video class="c-projectScreen__video" autoplay>
-                            <source src={`../../mu/img/${this.props.image.src`} type="video/mp4"/>
-                            <source src={`../../mu/img/${this.props.image.src`} type="video/ogg"/>
+                    <video ref="vidRef" class="c-projectScreen__video">
+                            <source src={`video/${this.props.image.src}.mp4`} type="video/mp4"/>
+                            <source src={`video/${this.props.image.src}.ogg`} type="video/ogg"/>
+                            <source src={`video/${this.props.image.src}.webm`} type="video/webm"/>
                             Your browser does not support the video tag.
-                        </video>*/}
+                        </video>
                 </li>
             )
         }else{        
