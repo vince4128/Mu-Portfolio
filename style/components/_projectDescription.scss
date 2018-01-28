@@ -94,23 +94,39 @@
     }
 }
 
-.c-project-description--open{
+/*.c-project-description--open{
     .c-project-description__toggle{
         display: none;
+
+        @include mq('tablet','max') {
+            width:100%;
+            float:none;
+            width:100%;
+        }
+
     }
     .c-project-description__desc{
         display: inline-block;
     }
-}
+}*/
 
 .c-project-description--close{
     .c-project-description__desc{
         display: none;
     }
-    .c-project-description__toggle{
+}
+
+.c-project-description__toggle{
+    //display: block;
+    cursor:pointer;
+
+    @include mq('tablet','max') {
+        width:100%;
+        float:none;
         display: block;
-        cursor:pointer;
+        width:100%;
     }
+
 }
 
 .c-project-description__btn--close{
@@ -136,4 +152,5 @@
     img{    
         max-width:100%;
     }
+
 }

@@ -14,4 +14,11 @@
     h2{
         font-family: 'helveticaneue',sans-serif;
     }
+
+    @include mq('tablet','max') {
+        float:none;
+        margin:0 auto 10px;
+        display: block;
+        text-align: center;
+    }
 }

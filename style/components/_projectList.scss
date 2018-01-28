@@ -86,6 +86,33 @@ ul.c-project-list {
     & .c-project-list__year{
         padding-left: 7rem;
     }
+
+    .c-project-list__year{
+        @include mq('tablet','max') {        
+            float:right;
+            width:80%;
+            //border-left:1px solid #000;
+            border-bottom:none;
+            padding: 0.5em 0.5em 1em 1em;
+        }
+    }
+    .c-project-list__description,
+    .c-project-list__title{
+        @include mq('tablet','max') {        
+            float:right;
+            width:68%;
+            //border-left:1px solid #000;
+            border-bottom:none;
+            padding: 0.5em 0.5em 1em 1em;
+        }
+    }
+
+    .c-project-list__description{
+        @include mq('tablet','max') {        
+            border-bottom:1px solid #000;
+        }
+    }
+
 }
 
 .c-project-list__item__cell {
@@ -116,6 +143,9 @@ ul.c-project-list {
     div.c-project-list__detail__images-wrapper{
         overflow-y: auto;
         margin-left:31.8%;
+        @include mq('tablet','max') {        
+            margin-left:0;
+        }
     }
     ul{
         min-width:100%;

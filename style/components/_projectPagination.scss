@@ -28,4 +28,12 @@ ul.c-projectPagination{
             display: block;
         }
     }
+
+    @include mq('tablet','max') {
+        float:none;
+        display: block;
+        width:100%;
+        margin:10px auto;
+        text-align: center;
+    }
 }
