@@ -91,7 +91,7 @@ class ProjectDetail extends Component {
                         <span className="c-project-detail__retour animated fadeInLeft"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Retour</span>
                     </Link>
         </div>*/}
-                <ul className="no-overflow">
+                <ul className="main-cont no-overflow">
                     {this.renderList()}
                 </ul>
                 {/*<Menu parent={`/projets/${this.props.project.id}/`}/>*/}

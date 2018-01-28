@@ -91,7 +91,7 @@ class ProjectSlider extends Component {
             this.state.projectsLength.push(project.images.length);
 
             return (
-                <li key={project.id}>
+                <li class="main-cont" key={project.id}>
                     {/*console.log('##projectSlider### ' + JSON.stringify(project) + "##projectsLength## " + this.state.projectsLength)*/}
                     <ProjectAllViewer
                         project={project}
@@ -115,8 +115,8 @@ class ProjectSlider extends Component {
 
         //console.log(this.state.projectsLength[0]);
         return (
-            <section className="no-scroll" onWheel={(e) => this.handleWheel(e)}>
-                <ul className="no-overflow">
+            <section className="no-scroll main-cont" onWheel={(e) => this.handleWheel(e)}>
+                <ul className="no-overflow main-cont">
                     {this.renderList()}
                 </ul>
                 <PrevNext
@@ -129,6 +129,7 @@ class ProjectSlider extends Component {
                 </Link>
                 <Menu />
                 <nav className="nav-wrapper">
+                    <ProjectDescription project={project}></ProjectDescription>
                     <ProjectDetailPagination
                         //select={this.overList}
                         current={0}
@@ -136,7 +137,6 @@ class ProjectSlider extends Component {
                         project={project}
                         preview={true}
                     />
-                    {<ProjectDescription project={project}></ProjectDescription>}
                 </nav>
             </section>
         );
