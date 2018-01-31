@@ -99,8 +99,6 @@ class ProjectSlider extends Component {
                         total={Object.keys(this.props.projects).length - 1}
                         background={this.state.currentBg}
                     />
-                    <img style={{ display: 'none' }} src={`../mu/img/${project.images[0].src}`}/>
-                    {/*console.log("### coucou ### " + project.images.length)*/}
                 </li>
             );
         })
@@ -108,10 +106,35 @@ class ProjectSlider extends Component {
 
     render() {
 
-        var project = this.props.projects[this.state.currentProject];
-        var description = project;
+        let project = this.props.projects[this.state.currentProject];
+        let description = project;
+        let preload = null;
 
-        //alert(JSON.stringify(project));
+        //preloading
+        let nextProject = null;
+        let prevProject = null;
+
+        if(parseInt(this.state.currentProject) === 0){            
+            nextProject = this.props.projects[parseInt(this.state.currentProject)+1];
+            prevProject = this.props.projects[_.size(this.props.projects)-1];
+            alert('premier projet ' + nextProject + " " + prevProject + " " + this.state.currentProject + " " + (_.size(this.props.projects)-1));
+        }else if(this.state.currentProject == _.size(this.props.projects)-1){
+            nextProject = this.props.projects[0];
+            prevProject = this.props.projects[parseInt(this.state.currentProject)-1];
+            alert('dernier projet ' + nextProject + " " + prevProject + " " + this.state.currentProject + " " + (_.size(this.props.projects)-1));
+        }else{
+            nextProject = this.props.projects[parseInt(this.state.currentProject)+1];
+            prevProject = this.props.projects[parseInt(this.state.currentProject)-1];
+            alert('classique projet ' + nextProject + " " + prevProject + " " + this.state.currentProject + " " + (_.size(this.props.projects)-1));
+        }
+
+        if(nextProject){
+            preload = <span style={{ display: 'none' }} ><img src={`../mu/img/${nextProject.images[0].src}`}/><img src={`../mu/img/${prevProject.images[0].src}`}/></span>;
+        } else {
+            preload = "";
+        }
+
+        //alert("nextProject " + nextProject);
 
         //console.log(this.state.projectsLength[0]);
         return (
@@ -138,6 +161,8 @@ class ProjectSlider extends Component {
                         preview={true}
                     />
                 </nav>
+                {/*prechargement*/}
+                {preload};
             </section>
         );
     }
