@@ -117,15 +117,12 @@ class ProjectSlider extends Component {
         if(parseInt(this.state.currentProject) === 0){            
             nextProject = this.props.projects[parseInt(this.state.currentProject)+1];
             prevProject = this.props.projects[_.size(this.props.projects)-1];
-            alert('premier projet ' + nextProject + " " + prevProject + " " + this.state.currentProject + " " + (_.size(this.props.projects)-1));
         }else if(this.state.currentProject == _.size(this.props.projects)-1){
             nextProject = this.props.projects[0];
             prevProject = this.props.projects[parseInt(this.state.currentProject)-1];
-            alert('dernier projet ' + nextProject + " " + prevProject + " " + this.state.currentProject + " " + (_.size(this.props.projects)-1));
         }else{
             nextProject = this.props.projects[parseInt(this.state.currentProject)+1];
             prevProject = this.props.projects[parseInt(this.state.currentProject)-1];
-            alert('classique projet ' + nextProject + " " + prevProject + " " + this.state.currentProject + " " + (_.size(this.props.projects)-1));
         }
 
         if(nextProject){
