@@ -141,7 +141,7 @@ let config = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 4096,
+                            limit: 2048,
                             name:'img/[name].[ext]'
                         }
                     }
@@ -153,7 +153,7 @@ let config = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 4096,
+                            limit: 2048,
                             name:'video/[name].[ext]'
                         }
                     }
@@ -179,7 +179,7 @@ let config = {
 
     devServer: {
         port:3005,
-        contentBase: path.join(__dirname, "src"),
+        contentBase: path.join(__dirname, "dist"),
         historyApiFallback: true
     },
 
@@ -217,7 +217,8 @@ if(!dev){
     config.plugins.push(new CleanWebpackPlugin(['dist'], {
         root: path.resolve('./'),
         verbose: true,
-        dry: false
+        dry: false,
+        exclude:['img','video']
       }))
     config.plugins.push(new webpack.DefinePlugin({
         'process.env': {

@@ -28,7 +28,7 @@ class ProjectListDetail extends Component {
                                     >
                                     <div>
                                         <Link to={`projets/${this.props.id}/${image.index}`}>
-                                        <img src={`img/${image.src}`}/>
+                                        <img src={`img/${(image.src).slice(0,-4)}_sm.jpg`}/>
                                         </Link>
                                     </div>                                                
                                 </li>

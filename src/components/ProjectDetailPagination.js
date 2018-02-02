@@ -26,6 +26,7 @@ const ProjectDetailPagination = (props) => {
     }
 
     for(let i = 0; i<props.total; i++){
+        const thumb = `img/${(props.project.images[i].src).slice(0,-4)}_sm.jpg`;
         if(isActive(i)){
             dot.push(<li
             key={i}
@@ -35,7 +36,8 @@ const ProjectDetailPagination = (props) => {
             >
             <i className="fa fa-circle" aria-hidden="true"></i>
             <span class="animated fadeIn">
-                {props.preview ? <img src={`img/${props.project.images[i].src}`}/> : '-'}
+                {/*props.preview ? <img src={`img/${props.project.images[i].src}`}/> : '-'*/}
+                {props.preview ? <img src={thumb}/> : '-'}
             </span>
             </li>);    
         }else{
@@ -47,7 +49,8 @@ const ProjectDetailPagination = (props) => {
             >
             <i className="fa fa-circle-o" aria-hidden="true"></i>
             <span class="animated fadeIn">
-                {props.preview ? <img src={`img/${props.project.images[i].src}`}/> : '-'}
+                {/*props.preview ? <img src={`img/${props.project.images[i].src}`}/> : '-'*/}
+                {props.preview ? <img src={thumb}/> : '-'}
             </span>
             </li>);   
         }
