@@ -127,6 +127,14 @@
         width:100%;
     }
 
+    .c-projet-description__toggle-details{
+
+        @include mq('phablet','max') {
+            display: none;
+        }
+
+    }
+
 }
 
 .c-project-description__btn--close{

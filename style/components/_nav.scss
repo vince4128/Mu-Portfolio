@@ -11,3 +11,13 @@
         height:auto;
     }
 }
+
+.nav-wrapper--slider{
+
+    @include mq('tablet','max') {
+        .c-projectPagination{
+            display: none;
+        }
+    }
+    
+}
