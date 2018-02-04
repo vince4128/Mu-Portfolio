@@ -85,7 +85,7 @@ let config = {
     output:{
         path:path.resolve('./dist'),
         filename: dev ? '[name].js' : '[name].[chunkhash:8].js',
-        publicPath: '/mu/'
+        publicPath: '/'
     },
 
     //alias (experimental (ok pour les url dans sass))
