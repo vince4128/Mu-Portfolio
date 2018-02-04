@@ -13,6 +13,7 @@ class ProjectListItem extends Component{
         }
         this.toggleDesc = this.toggleDesc.bind(this);
         this.isOpened = this.isOpened.bind(this);
+        this.rawDesc = this.rawDesc.bind(this);
     }
 
     isOpened(){
@@ -27,6 +28,11 @@ class ProjectListItem extends Component{
         this.setState({open : !this.state.open})
     }
 
+    rawDesc(){
+        let rawDesc = this.props.project.shortdescription;
+        return { __html: rawDesc };
+    }
+
     render(){
         return (
             <li>
@@ -39,7 +45,7 @@ class ProjectListItem extends Component{
                     <span className="c-project-list__item--point">•</span>
                     <article className="c-project-list__item__cell c-project-list__year">{this.props.project.year}</article>
                     <article className="c-project-list__item__cell c-project-list__title"><strong>{this.props.project.title}</strong></article>
-                    <article className="c-project-list__item__cell c-project-list__description">{this.props.project.shortdescription}</article>
+                    <article key={this.props.project.id} className="c-project-list__item__cell c-project-list__description" dangerouslySetInnerHTML={this.rawDesc()} />
                     <span className="c-project-list__item--bottom-line"></span>
                 </span>
                 <span className={"c-project-list__detail " + this.isOpened()}>
