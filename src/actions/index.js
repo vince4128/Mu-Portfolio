@@ -9,8 +9,8 @@ const PROJECT = [
     {
         id:0,
         title: 'Ton Dedans Devant',
-        description: 'Le projet Ton Dedans Devant est né à l’occasion d’un workshop organisé par la danseuse Kaori Ito au Centre International de la Danse de Pantin. L’ensemble des participants étaient des néophytes n’ayant jamais eu vraiment l’occasion de danser devant les autres. Cette occasion d’apprendre à sortir de soi et à maîtriser les mouvements de son corps a été pour moi l’occasion de réaliser un objet sur ce moment intime. Il comprend une série de photographies du danseur Antoine Mozziconacci ainsi qu’un petit livre contenant un dialogue écrit par mes soins.',
-        shortdescription: 'Livre-objet Ton Dedans Devant — Centre International de la Danse de Pantin',
+        description: 'Le projet <i>Ton Dedans Devant</i> est né à l’occasion d’un workshop organisé par la danseuse Kaori Ito au Centre International de la Danse de Pantin. L’ensemble des participants étaient des néophytes n’ayant jamais eu vraiment l’occasion de danser devant les autres. Cette occasion d’apprendre à sortir de soi et à maîtriser les mouvements de son corps a été pour moi l’occasion de réaliser un objet sur ce moment intime. Il comprend une série de photographies du danseur Antoine Mozziconacci ainsi qu’un petit livre contenant un dialogue écrit par mes soins.',
+        shortdescription: 'Livre-objet <i>Ton Dedans Devant</i> — Centre International de la Danse de Pantin',
         category: 'Design éditorial',
         year:'2016',
         images: [
@@ -43,8 +43,8 @@ const PROJECT = [
     {
         id:1, 
         title: 'Marie m’a dit',
-        description: 'Conception et réalisation d’une série d’affiches pour le spectacle de théâtre Marie m’a dit écrit et réalisé par le duo d’acteurs constitué de Véronique Jannaud et Paul Dorini.',
-        shortdescription: 'Série d’affiches pour le spectacle de théâtre Marie m’a dit ',
+        description: 'Conception et réalisation d’une série d’affiches pour le spectacle de théâtre <i>Marie m’a dit</i> écrit et réalisé par le duo d’acteurs constitué de Véronique Jannaud et Paul Dorini.',
+        shortdescription: 'Série d’affiches pour le spectacle de théâtre <i>Marie m’a dit</i>',
         category:'Identité Visuelle',
         year: '2017',
         images: [
@@ -112,7 +112,7 @@ const PROJECT = [
         id:3, 
         title: 'Conversation',
         description: 'Conversation est un journal qui relie autour d’un thème commun écrivains, philosophes et photographes. Dans le premier numéro, Julien Gracq, Merleau-Ponty et Bill Brandt se retrouvent pour échanger sur le corps et sa relation au monde.',
-        shortdescription: 'Premier numéro du journal Conversation.',
+        shortdescription: 'Premier numéro du journal <i>Conversation</i>.',
         category: 'Design éditorial',
         year: '2014',
         images: [
@@ -169,8 +169,8 @@ const PROJECT = [
     {
         id:4, 
         title: 'Parce qu’il ne faut pas seulement lire pour se souvenir',
-        description: 'Conception et réalisation d’une invitation sous forme de dépliant sérigraphié pour une exposition des différentes installations que j’ai pu réaliser avec Laura Williams (designer graphique) et Karolina Howorko (scénographe et architecte) à L’École Nationale Supérieure des Arts Décoratifs de Paris.',
-        shortdescription: 'Dépliant d’invitation Parce qu’il ne faut pas seulement lire pour se souvenir',
+        description: 'Conception et réalisation d’une invitation sous forme de dépliant sérigraphié pour une exposition des différentes installations que j’ai réalisé avec Laura Williams (designer graphique) et Karolina Howorko (scénographe et architecte) à L’École Nationale Supérieure des Arts Décoratifs de Paris.',
+        shortdescription: 'Dépliant d’invitation <i>Parce qu’il ne faut pas seulement lire pour se souvenir</i>',
         category: 'Identité Visuelle',
         year: '2016',
         images: [
@@ -257,8 +257,8 @@ const PROJECT = [
     {
         id:6, 
         title: 'Désherbés',
-        description: 'Désherbés est un projet éditorial mené en partenariat avec la médiathèque Jean Falala de la ville de Reims. Un livre est réalisé tous les deux mois. Cette collection s’intéresse aux différents ouvrages qui vont être définitivement retirés de la bibliothèque (ouvrages dit désherbés) soit parce qu’ils ne sont plus empruntés par le public soit parce qu’ils vont être remplacés par une version numérique. Les livres qui disparaissent sont montrés dans l’ordre du système de classification  Dewey des fonds de bibliothèque. La collection constitue une nouvelle forme d’archivage de ses objets livres qui sombrent progressivement dans l’oubli.',
-        shortdescription: 'Collection Désherbés — Médiathèque Jean Falala (Reims)',
+        description: 'Désherbés est un projet éditorial mené en partenariat avec la médiathèque Jean Falala de la ville de Reims. Un livre est réalisé tous les deux mois. Cette collection s’intéresse aux différents ouvrages qui vont être définitivement retirés de la bibliothèque (ouvrages dit <i>désherbés</i>) soit parce qu’ils ne sont plus empruntés par le public soit parce qu’ils vont être remplacés par une version numérique. Les livres qui disparaissent sont montrés dans l’ordre du système de classification  Dewey des fonds de bibliothèque. La collection constitue une nouvelle forme d’archivage de ses objets livres qui sombrent progressivement dans l’oubli.',
+        shortdescription: 'Collection <i>Désherbés</i> — Médiathèque Jean Falala (Reims)',
         category: 'Design éditorial',
         year: '2013',
         images: [
@@ -311,8 +311,8 @@ const PROJECT = [
     {
         id:7, 
         title: 'Aventurier',
-        description: 'Conception d’une famille de caractères à l’occasion de l’exposition Aventuriers des Mers, de Simbad à Marco Polo à l’Institut du Monde Arabe. Les formes de lettres s’associent aux courbes des ondulations marines.',
-        shortdescription: 'Dessin de caractères pour l’affiche Aventuriers des Mers, de Simbad à Marco Polo — Institut du Monde Arabe',
+        description: 'Conception d’une famille de caractères à l’occasion de l’exposition <i>Aventuriers des Mers, de Simbad à Marco Polo</i> à l’Institut du Monde Arabe. Les formes de lettres s’associent aux courbes des ondulations marines. Proposition non retenue.',
+        shortdescription: 'Dessin de caractères pour l’affiche <i>Aventuriers des Mers, de Simbad à Marco Polo</i> — Institut du Monde Arabe',
         category: 'Dessin de caractères',
         year: '2016',
         images: [
@@ -365,8 +365,8 @@ const PROJECT = [
     {
         id:8, 
         title: 'Barbe-Bleue',
-        description: 'Dans cette installation participative, les visiteurs sont invités à jouer devant l’ordinateur des scènes clefs du conte de Charles Perrault, Barbe-Bleue. Un espace de prises de vue ainsi que des costumes et des objets peints sont mis à leur disposition pour les aider dans cet échange complexe. L’ordinateur décrit en direct ce qu’il voit grâce à un logiciel de reconnaissance des images (Neural Talk 2). Les contresens et légendes absurdes que l’ordinateur peut produire sont bien loin du conte traditionnel. Elles sont pétries de références contemporaines (selfies, kite-surf, etc). Ainsi les légendes et les images que les visiteurs et l’ordinateur co-produisent forment une nouvelle couche au palimpseste du conte. Le résultat est un drôle de conte moderne co-écrit par l’homme et la machine.',
-        shortdescription: 'Installation interactive Barbe-Bleue — EnsAD',
+        description: 'Dans cette installation participative, les visiteurs sont invités à jouer devant l’ordinateur des scènes clefs du conte de Charles Perrault, <i>Barbe-Bleue</i>. Un espace de prises de vue ainsi que des costumes et des objets peints sont mis à leur disposition pour les aider dans cet échange complexe. L’ordinateur décrit en direct ce qu’il voit grâce à un logiciel de reconnaissance des images (Neural Talk 2). Les contresens et légendes absurdes que l’ordinateur peut produire sont bien loin du conte traditionnel. Elles sont pétries de références contemporaines (selfies, kite-surf, etc). Ainsi les légendes et les images que les visiteurs et l’ordinateur co-produisent forment une nouvelle couche au palimpseste du conte. Le résultat est un drôle de conte moderne co-écrit par l’homme et la machine.',
+        shortdescription: 'Installation interactive <i>Barbe-Bleue</i> — EnsAD',
         category: 'Installation interactive',
         year: '2016',
         images: [
@@ -403,8 +403,8 @@ const PROJECT = [
     {
         id:9, 
         title: 'Aventuriers des Mers — IMA',
-        description: 'Conception de l’affiche et des cartons d’invitation pour l’exposition Aventuriers des Mers, de Simbad à Marco Polo à l’Institut du Monde Arabe. Création à cette occasion d’une famille de caractères.Proposition non retenue',
-        shortdescription: 'Affiche et cartons d’invitation.Exposition Aventuriers des Mers, de Simbad à Marco Polo — Institut du Monde Arabe',
+        description: 'Conception de l’affiche et des cartons d’invitation pour l’exposition <i>Aventuriers des Mers, de Simbad à Marco Polo</i> à l’Institut du Monde Arabe. Création à cette occasion d’une famille de caractères. Proposition non retenue.',
+        shortdescription: 'Affiche et cartons d’invitation.Exposition <i>Aventuriers des Mers, de Simbad à Marco Polo</i> — Institut du Monde Arabe',
         category: 'Identité Visuelle',
         year: '2016',
         images: [
@@ -437,8 +437,8 @@ const PROJECT = [
     {
         id:10, 
         title: 'Claire Bretécher',
-        description: 'Réalisation aux côtés de Claire Mineur de la signalétique et de l’ensemble de la communication de l’exposition Claire Bretécher pour la Bibliothèque Publique d’Information du Centre Pompidou en novembre 2015.',
-        shortdescription: 'Signalétique et communication . Exposition Claire Bretécher — Bibliothèque Publique d’Information du Centre Pompidou',
+        description: 'Réalisation aux côtés de Claire Mineur de la signalétique et de l’ensemble de la communication de l’exposition <i>Claire Bretécher</i> pour la Bibliothèque Publique d’Information du Centre Pompidou en novembre 2015.',
+        shortdescription: 'Signalétique et communication . Exposition <i>Claire Bretécher</i> — Bibliothèque Publique d’Information du Centre Pompidou',
         category: 'Signalétique',
         year: '2015',
         images: [
@@ -517,7 +517,7 @@ const PROJECT = [
     {
         id:12, 
         title: 'Tryptique',
-        description: 'Création d’une série d’affiches associant le travail du cinéaste Luis Bunuel à celui du peintre Goya. Les deux artistes partagent cette attirance pour l’inquiétante étrangeté qui habite notre monde. Le film La Voie Lactée est ainsi associé à La Prière au Jardin des Oliviers, tandis que Le Charme discret de la Bourgeoisie rencontre le Saturne dévorant ses Fils et que Le Fantôme de la Liberté joue avec le tableau illustrant les événements du 3 mai 1808.',
+        description: 'Création d’une série d’affiches associant le travail du cinéaste Luis Bunuel à celui du peintre Goya. Les deux artistes partagent cette attirance pour l’inquiétante étrangeté qui habite notre monde. Le film <i>La Voie Lactée</i> est ainsi associé à <i>La Prière au Jardin des Oliviers</i>, tandis que <i>Le Charme discret de la Bourgeoisie</i> rencontre le <i>Saturne dévorant ses Fils</i> et que <i>Le Fantôme de la Liberté</i> joue avec le tableau illustrant les événements du <i>3 mai 1808</i>.',
         shortdescription: 'Série d’affiches autour du cinéaste Luis Bunuel et du peintre Goya.',
         category: 'Affiche',
         year: '2014',
@@ -549,11 +549,13 @@ const PROJECT = [
         year: '2017',
         images: [
             {
-                src:"BUNUEL_1.jpg",
+                src:"site_bastien_morin",
+                video:true,
                 index:0
             },
             {
-                src:"BUNUEL_2.jpg",
+                src:"site_bastien_morin",
+                video:true,
                 index:1
             }
         ]
@@ -603,7 +605,7 @@ const PROJECT = [
     {
         id:15, 
         title: 'Cherokee mon chéri',
-        description: 'Dessin d\'une famille de caractères de l\'alphabet Cherokee réalisé avec Laura Williams.Le Cherokee ne disposant actuellement que de peu de choix en matière de dessins de lettres, nous avons décidé de répondre à l’appel de Johannes Bergerhausen en développant une proposition pour l’écriture Cherokee. Ce travail s’inscrit dans le cadre d’une recherche typographique pour son projet Decodeunicod qui a pour but de faire que l’ensemble des lettres de tous les systèmes d’écritures soit présent dans un seul et même code, accessible à tous les utilisateurs d’ordinateurs. ',
+        description: 'Dessin d\'une famille de caractères de l\'alphabet Cherokee réalisé avec Laura Williams.Le Cherokee ne disposant actuellement que de peu de choix en matière de dessins de lettres, nous avons décidé de répondre à l’appel de Johannes Bergerhausen en développant une proposition pour l’écriture Cherokee. Ce travail s’inscrit dans le cadre d’une recherche typographique pour son projet <i>Decodeunicod</i> qui a pour but de faire que l’ensemble des lettres de tous les systèmes d’écritures soit présent dans un seul et même code, accessible à tous les utilisateurs d’ordinateurs. ',
         shortdescription: 'Dessin d\'une famille de caractères de l\'alphabet Cherokee.',
         category: 'Dessin de caractères',
         year: '2015',
@@ -621,8 +623,8 @@ const PROJECT = [
     {
         id:16, 
         title: 'Édith & Claude',
-        description: 'Deux sculptures identiques sont côte à côte. L’une est surélevée, l’autre est au sol. La première est tactile. Le spectateur doit parcourir avec ses doigts la surface ondulée qui se présente à lui. Petit à petit, la pellicule noire se dissipe sous la chaleur de ses mains laissant apparaître deux corps qui s’étreignent. La seconde, lui permet de comprendre ce qu’il entrevoit sous ses doigts. Elle lui révèle des extraits de la vidéo commune aux deux pièces.',
-        shortdescription: 'Sculpture tactile et mapping vidéo pour l’installation Édith & Claude  — EnsAD',
+        description: 'Deux sculptures identiques sont côte à côte. L’une est surélevée, l’autre est au sol. La première est tactile : le spectateur doit parcourir avec ses doigts la surface ondulée qui se présente à lui. Petit à petit, la pellicule noire se dissipe sous la chaleur de ses mains laissant apparaître deux corps qui s’étreignent. La seconde, lui permet de comprendre ce qu’il entrevoit sous ses doigts. Elle lui révèle des extraits de la vidéo commune aux deux pièces.',
+        shortdescription: 'Sculpture tactile et mapping vidéo pour l’installation <i>Édith & Claude</i>  — EnsAD',
         category: 'Installation interactive',
         year: '2016',
         images: [
@@ -643,7 +645,7 @@ const PROJECT = [
     {
         id:17, 
         title: 'Étapes',
-        description: 'J’écris régulièrement des articles pour le magazine étapes, magazine de design et de culture visuelle. Toujours à l’affût de nouvelles créations et studios en matière de design graphique, mon rôle de journaliste me permet de découvrir régulièrement de nouveaux talents, de me tenir au courant de la scène contemporaine et de rencontrer des personnalités avec lesquelles je partage une passion commune.',
+        description: 'J’écris régulièrement des articles pour le magazine <i>étapes</i>, magazine de design et de culture visuelle. Toujours à l’affût de nouvelles créations et studios en matière de design graphique, mon rôle de journaliste me permet de découvrir régulièrement de nouveaux talents, de me tenir au courant de la scène contemporaine et de rencontrer des personnalités avec lesquelles je partage une passion commune.',
         shortdescription: 'Articles pour étapes magazine',
         category: 'Rédaction',
         year: '2017',
@@ -681,7 +683,7 @@ const PROJECT = [
     {
         id:18, 
         title: 'Neue Jo',
-        description: 'Le caractère Neue Jo est inspiré du travail typographique de Gérard Unger et notamment de son caractère Swift. Le nom du caractère Neue Jo pour Neue Jonathan s’inscrit dans la série des noms de ses typographies inspirées des Voyages de Gulliver : Swift, Gulliver …',
+        description: 'Le caractère Neue Jo est inspiré du travail typographique de Gérard Unger et notamment de son caractère Swift. Le nom du caractère Neue Jo pour Neue Jonathan s’inscrit dans la série des noms de ses typographies inspirées des <i>Voyages de Gulliver</i> : Swift, Gulliver …',
         shortdescription: 'Dessin de caractères Neue Jo',
         category: 'Dessin de caractères',
         year: '2013',
@@ -733,7 +735,7 @@ const PROJECT = [
         year: '2017',
         images: [
             {
-                src:"lamentin_pour_anim",
+                src:"lamentin",
                 video:true,
                 index:0
             },
@@ -750,8 +752,8 @@ const PROJECT = [
     {
         id:20, 
         title: 'Running Revolution',
-        description: 'Conception de la maquette du livre Running Revolution dédié à 50 personnalités historiques de l’histoire de ce sport. Proposition non retenue.',
-        shortdescription: 'Livre Running Revolution',
+        description: 'Conception de la maquette du livre <i>Running Revolution</i> dédié à 50 personnalités historiques de l’histoire de ce sport. Proposition non retenue.',
+        shortdescription: 'Livre <i>Running Revolution</i>',
         category: 'Design éditorial',
         year: '2017',
         images: [
@@ -819,7 +821,7 @@ const PROJECT = [
         id:22, 
         title: 'Sanguine',
         description: 'Cette installation est un espace constitué de 8 panneaux en tissus qui sont autant de portes à franchir avant d’arriver à l’espace d’exposition. Sur les toiles, des phrases mystérieuses nous mettent peu à peu dans l’ambiance étrange qui se déploie tout au long de l’exposition inspirée de la nouvelle Sanguine de Bernard Quiriny. Cette installation a été réalisée avec Laura Williams (designer graphique) et Katarina Howorko (scénographe et architecte) à l’École Nationale Supérieure des Arts Décoratifs en juin 2016. ',
-        shortdescription: 'Panneaux typographiques pour l’exposition Sanguine — EnsAD',
+        shortdescription: 'Panneaux typographiques pour l’exposition <i>Sanguine</i> — EnsAD',
         category: 'Installation',
         year: '2016',
         images: [
@@ -862,11 +864,11 @@ const PROJECT = [
                 index:3
             },
             {
-                src:"DA_5.jpg",
+                src:"DA_6.jpg",
                 index:4
             },
             {
-                src:"DA_6.jpg",
+                src:"DA_5.jpg",
                 index:5
             },
             {
@@ -888,40 +890,6 @@ const PROJECT = [
             {
                 src:"DA_11.jpg",
                 index:10
-            }
-        ]
-    },
-    {
-        id:23, 
-        title: 'Eddy',
-        description: 'J’écris régulièrement des articles pour le magazine étapes, magazine de design et de culture visuelle. Toujours à l’affût de nouvelles créations et studios en matière de design graphique, mon rôle de journaliste me permet de découvrir régulièrement de nouveaux talents, de me tenir au courant de la scène contemporaine et de rencontrer des personnalités avec lesquelles je partage une passion commune.',
-        shortdescription: 'Articles pour étapes magazine',
-        category: 'Rédaction',
-        year: '2017',
-        images: [
-            {
-                src:"eddy1.jpg",
-                index:0
-            },
-            {
-                src:"eddy2.jpg",
-                index:1
-            },
-            {
-                src:"eddy3.jpg",
-                index:2
-            },
-            {
-                src:"eddy4.jpg",
-                index:3
-            },
-            {
-                src:"eddy5.jpg",
-                index:4
-            },
-            {
-                src:"eddy6.jpg",
-                index:5
             }
         ]
     }
