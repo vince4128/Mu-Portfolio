@@ -126,7 +126,7 @@ class ProjectSlider extends Component {
         }
 
         if(nextProject){
-            preload = <span style={{ display: 'none' }} ><img src={`../mu/img/${nextProject.images[0].src}`}/><img src={`../mu/img/${prevProject.images[0].src}`}/></span>;
+            preload = <span style={{ display: 'none' }} ><img src={`../img/${nextProject.images[0].src}`}/><img src={`../img/${prevProject.images[0].src}`}/></span>;
         } else {
             preload = "";
         }
@@ -148,7 +148,7 @@ class ProjectSlider extends Component {
                     <Mainzone/>
                 </Link>
                 <Menu />
-                <nav className="nav-wrapper">
+                <nav className="nav-wrapper nav-wrapper--slider">
                     <ProjectDescription project={project}></ProjectDescription>
                     <ProjectDetailPagination
                         //select={this.overList}

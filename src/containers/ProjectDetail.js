@@ -74,13 +74,37 @@ class ProjectDetail extends Component {
                         image={image}
                     />
                     {/*prechargement*/}
-                    {/*<img style={{ display: 'none' }} src={`../../mu/img/${image.src}`}/>*/}
+                    {/*<img style={{ display: 'none' }} src={`../../img/${image.src}`}/>*/}
                 </span>
             );
         })
     }
 
     render() {
+
+        let preload = null;
+
+        //preloading
+        let nextProject = null;
+        let prevProject = null;
+
+        if(parseInt(this.state.currentImage) === 0){
+            nextProject = this.props.project.images[1];
+            prevProject = this.props.project.images[Object.keys(this.props.project.images).length - 1];
+        }else if(parseInt(this.state.currentImage) === Object.keys(this.props.project.images).length - 1){
+            nextProject = this.props.project.images[0];
+            prevProject = this.props.project.images[parseInt(this.state.currentImage)-1];
+        }else{
+            nextProject = this.props.project.images[parseInt(this.state.currentImage)+1];
+            prevProject = this.props.project.images[parseInt(this.state.currentImage)-1];
+        }
+
+        if(nextProject){
+            preload = <span style={{ display:'none' }}><img src={`../img/${nextProject.src}`}/><img src={`../img/${prevProject.src}`}/></span>
+        }else{
+            preload = "";
+        }
+
         if (!this.props.project) {
             return <div className="c-project-detail">Aucun projet selectionné</div>;
         }
@@ -113,6 +137,8 @@ class ProjectDetail extends Component {
                     preview={false}
                 />
                 </nav>
+                {/*prechargement*/}
+                {preload};
             </section>
         );
     }
