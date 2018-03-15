@@ -110,6 +110,16 @@ class ProjectSlider extends Component {
         let description = project;
         let preload = null;
 
+        //img to display
+        var imgToDisplay = "1";
+        if(project){            
+            if(project.images.length <= 1){                
+                imgToDisplay = "0";
+            }else{
+                imgToDisplay = "1";
+            }
+        }
+        
         //preloading
         let nextProject = null;
         let prevProject = null;
@@ -144,9 +154,12 @@ class ProjectSlider extends Component {
                     current={parseInt(this.state.currentProject)}
                     total={Object.keys(this.props.projects).length}
                 />
-                <Link to={`/projets/${this.state.currentProject}/1`}>
+                {/*<Link to={`/projets/${this.state.currentProject}/1`}>
                     <Mainzone/>
-                </Link>
+                </Link>*/}
+                <Link to={`/projets/${this.state.currentProject}/${imgToDisplay}`}>
+                    <Mainzone/>
+                </Link>                 
                 <Menu />
                 <nav className="nav-wrapper nav-wrapper--slider">
                     <ProjectDescription project={project}></ProjectDescription>

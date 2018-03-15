@@ -552,11 +552,6 @@ const PROJECT = [
                 src:"site_bastien_morin",
                 video:true,
                 index:0
-            },
-            {
-                src:"site_bastien_morin",
-                video:true,
-                index:1
             }
         ]
     },
@@ -605,7 +600,7 @@ const PROJECT = [
     {
         id:15, 
         title: 'Cherokee mon chéri',
-        description: 'Dessin d\'une famille de caractères de l\'alphabet Cherokee réalisé avec Laura Williams.Le Cherokee ne disposant actuellement que de peu de choix en matière de dessins de lettres, nous avons décidé de répondre à l’appel de Johannes Bergerhausen en développant une proposition pour l’écriture Cherokee. Ce travail s’inscrit dans le cadre d’une recherche typographique pour son projet <i>Decodeunicod</i> qui a pour but de faire que l’ensemble des lettres de tous les systèmes d’écritures soit présent dans un seul et même code, accessible à tous les utilisateurs d’ordinateurs. ',
+        description: 'Réalisation de dessins de caractères de l\'alphabet Cherokee et de deux affiches dans le cardre de l\'appel à projet projet "Decodeunicod" (en&nbsp;itallique) mené par Johannes Bergerhausen. ',
         shortdescription: 'Dessin d\'une famille de caractères de l\'alphabet Cherokee.',
         category: 'Dessin de caractères',
         year: '2015',
@@ -613,10 +608,6 @@ const PROJECT = [
             {
                 src:"cherokee_1.jpg",
                 index:0
-            },
-            {
-                src:"cherokee_2.jpg",
-                index:1
             }
         ]
     },
@@ -742,10 +733,6 @@ const PROJECT = [
             {
                 src:"LAMENTIN_1.jpg",
                 index:1
-            },
-            {
-                src:"LAMENTIN_2.jpg",
-                index:2
             }
         ]
     },
